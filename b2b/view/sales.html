@@ -1,0 +1,181 @@
+<div class="content-wrapper">
+  <!-- Content -->
+
+  <div class="container-xxl flex-grow-1 container-p-y">
+
+    <div class="row mb-2">
+      <div class="col-md-4">
+        <div class="w-auto d-inline-block mb-2">
+          <label>Select Date Range :</label>
+          <input type="text" class="form-control" id="daterange" name="daterange" readonly="">
+        </div>
+        <button type="button" id="exportSalesReport" class="btn btn-primary ms-1">
+          <i class="bx bx-download"></i>
+        </button>
+      </div>
+      <!-- <div class="col-md-8 text-end mt-4">
+        <a href="/add-sales" class="btn btn-primary">+ Create New</a>
+      </div> -->
+    </div>
+
+
+    <div class="card p-3">
+      <h4>Sales</h4>
+      <div class="table-responsive text-nowrap">
+        <table class="table" id="salesReportTable">
+          <thead>
+            <tr>
+              <th>Sr No.</th>
+              <th style="width: 30%">Agent Name</th>
+              <th>Manager Name</th>
+              <th>Date</th>
+              <th>Location</th>
+              <th>Email I.d</th>
+              <th>Contact no</th>
+              <th>Agreement Status</th>
+              <th>Signed Contract Date</th>
+              <th>Training Date</th>
+              <th>Training Time</th>
+              <th>for Fintech+CRM, Fintech, CRM</th>
+              <th>Expected Max GIC in which Bank</th>
+              <th>GIC Commitment</th>
+              <th>GIC Reward</th>
+              <th>Total GIC</th>
+            </tr>
+          </thead>
+          <tbody id="salesTbody">
+          </tbody>
+        </table>
+      </div>
+      <div class="col px-3">
+        <nav aria-label="Page navigation">
+           <ul class="pagination my-3 pagination-sm" id="pagination"></ul>
+        </nav>
+     </div>
+    </div>
+  </div>
+</div>
+<script src="js/table2excel.js" type="text/javascript"></script>
+<script type="text/javascript">
+  $(function () {
+    $("#exportSalesReport").click(function () {
+      $("#salesReportTable").table2excel({
+        filename: "sales_report.xls"
+      });
+    });
+  });
+
+</script>
+
+<script src="https://cdn.rawgit.com/rainabba/jquery-table2excel/1.1.0/dist/jquery.table2excel.min.js"></script>
+<!-- Modal -->
+<div class="modal fade" id="editSalesModal" tabindex="-1" aria-labelledby="exampleModal1Label" aria-hidden="true">
+  <div class="modal-dialog modal-xl">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Edit Sales Data</h4>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+
+      <div class="modal-body">
+
+        <form id="updateSales">
+          <div class="row mb-2">
+            <div class="col-md-4 mb-0">
+              <label for="emailBasic" class="form-label">AGENT</label>
+              <input type="hidden" name="_action" value="updateSalesDetails" />
+              <input type="hidden" name="payload" value="add-sales" />
+              <input type="hidden" name="id" value="" id="recordId" />
+              <input type="text" id="agentName" required="" class="form-control" placeholder=" " name="agent_name">
+            </div>
+            <div class="col-md-4 mb-0">
+              <label for="emailBasic" class="form-label">LOCATION</label>
+              <input type="text" id="location" required="" class="form-control" placeholder=" " name="location">
+            </div>
+            <div class="col-md-4 mb-0">
+              <label for="emailBasic" class="form-label">EMAIL I.D</label>
+              <input type="text" id="emailId" required="" class="form-control" placeholder=" " name="email_id">
+            </div>
+            <div class="col-md-4 mb-0">
+              <label for="emailBasic" class="form-label">CONTACT NO</label>
+              <input type="text" id="contactNumber" required="" class="form-control" placeholder=" "
+                name="contact_number">
+            </div>
+            <div class="col-md-4 mb-0">
+              <label for="emailBasic" class="form-label">AGREEMENT STATUS</label>
+              <select class="form-control form-select" id="agreementStatus" name="agreement_status">
+                <option value="SIGNED">SIGNED</option>
+                <option value="UNDER PROCESS">UNDER PROCESS</option>
+                <option value="NOT SIGNED">NOT SIGNED</option>
+              </select>
+            </div>
+            <div class="col-md-4 mb-0">
+              <label for="emailBasic" class="form-label">SIGNED CONTRACT DATE</label>
+              <input type="date" id="contractSignedAt" required="" class="form-control" placeholder=" "
+                name="contract_signed_at">
+            </div>
+            <div class="col-md-4 mb-0">
+              <label for="emailBasic" class="form-label">TRAINING DATE</label>
+              <input type="date" id="trainingDate" required="" class="form-control" placeholder=" "
+                name="training_date">
+            </div>
+            <div class="col-md-4 mb-0">
+              <label for="emailBasic" class="form-label">TRAINING TIME</label>
+              <input type="time" id="trainingTime" required="" class="form-control" placeholder=" "
+                name="training_time">
+            </div>
+            <div class="col-md-4 mb-0">
+              <label for="emailBasic" class="form-label">FOR FINTECH+CRM, FINTECH, CRM</label>
+              <input type="text" id="purpose" required="" class="form-control" placeholder=" " name="purpose">
+            </div>
+            <div class="col-md-4 mb-0">
+              <label for="emailBasic" class="form-label">EXPECTED MAX GIC IN WHICH BANK</label>
+              <input type="text" id="gicBank" required="" class="form-control" placeholder=" " name="gic_bank">
+            </div>
+            <div class="col-md-4 mb-0">
+              <label for="emailBasic" class="form-label">GIC COMMITMENT</label>
+              <input type="text" id="gicCommitment" required="" class="form-control" placeholder=" "
+                name="gic_commitment">
+            </div>
+            <div class="col-md-4 mb-0">
+              <label for="emailBasic" class="form-label">GIC REWARD</label>
+              <input type="text" id="gicReward" required="" class="form-control" placeholder=" " name="gic_reward">
+            </div>
+            <div class="col-md-4 mb-0">
+              <label for="emailBasic" class="form-label">TOTAL GIC</label>
+              <input type="text" id="totalGic" required="" class="form-control" placeholder=" " name="total_gic">
+            </div>
+            <div class="col-md-4 mb-0">
+              <label for="emailBasic" class="form-label">REMITTANCE COMMITMENT</label>
+              <input type="text" id="remittanceCommitement" required="" class="form-control" placeholder=" "
+                name="remittance_commitment">
+            </div>
+            <div class="col-md-4 mb-0">
+              <label for="emailBasic" class="form-label">REMITANCE REWARD</label>
+              <input type="text" id="remittanceReward" required="" class="form-control" placeholder=" "
+                name="remittance_reward">
+            </div>
+            <div class="col-md-4 mb-0">
+              <label for="emailBasic" class="form-label">FOLLOW UP DATE</label>
+              <input type="date" id="followUpDate" required="" class="form-control" placeholder=" "
+                name="followup_date">
+            </div>
+            <div class="col-md-8 mb-0">
+              <label for="emailBasic" class="form-label">REMARK</label>
+              <textarea type="text" id="remarks" required="" class="form-control" placeholder=" "
+                name="remarks"></textarea>
+            </div>
+            <div class=" mt-3">
+              <button class="btn btn-primary">Save</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Button trigger modal -->
+
+
+<div id="_pdf" class=""></div>

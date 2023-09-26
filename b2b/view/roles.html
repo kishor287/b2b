@@ -1,0 +1,131 @@
+<div class="content-wrapper">
+   <!-- Content -->
+   <div class="container-xxl flex-grow-1 container-p-y">
+      <div class="row">
+         <div class="col-md-6">
+            <h4 class="fw-bold py-3 mb-2"><span class="text-muted fw-light">User Roles </span></h4>
+         </div>
+         <div class="col-md-6">  
+            <button type="button" class="btn btn-primary float-end" data-bs-toggle="modal" data-bs-target="#basicModal">
+            Add User Roles
+            </button>
+         </div>
+      </div>
+      <div class="card">
+         <div class="table-responsive text-nowrap">
+            <table class="table ">
+               <thead></thead>
+               <tbody></tbody>
+            </table>
+         </div>
+         <div class="col px-3">
+            <nav aria-label="Page navigation">
+               <ul class="pagination my-3 pagination-sm"></ul>
+            </nav>
+         </div>
+      </div>
+   </div>
+</div>
+<!-- Button trigger modal -->
+<!-- Modal -->
+<div class="modal fade" id="basicModal" tabindex="-1" aria-hidden="true">
+   <div class="modal-dialog" role="document">
+      <div class="modal-content">
+         <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel1"> User Roles Details</h5>
+            <button
+               type="button"
+               class="btn-close"
+               data-bs-dismiss="modal"
+               aria-label="Close"
+               ></button>
+         </div>
+         <form  id="user_role_form">
+            <div class="modal-body">
+               <div class="row">
+                  <div class="col-sm-6 mb-0">
+                     <label for="dobBasic" class="form-label">Add new Role</label>
+                     <input type="text" id="role" required name="assigned_role" class="form-control" placeholder="Eg: Admin, Manager, tester..etc" />
+                  </div>
+                   <div class="col-sm-6 mb-0">
+                     <label for="roleType" class="form-label">Role Type</label>
+                     <select id="roleType" name="roleType"  class="form-select">
+                        <option value="1">Single Role</option>
+                       <option value="2">Reporting Role</option>
+                     </select>
+                  </div>
+                  <div class="col-sm-12 mb-0" id="selectPagesForRole">
+                     <label for="defaultSelect" class="form-label">Navbar (<small class="text-primary fw-bold">press Ctrl for multiple selection</small>)</label>
+                     <select id="_navbar" style="height:100px" name="navbar[]" multiple="" required="" class="form-select">
+                       
+                     </select>
+                  </div>
+                  <div id="_nav_form"></div>
+               </div>
+            </div>
+            <div class="modal-footer">
+               <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
+               Close
+               </button>
+               <button type="submit" class="btn btn-primary">Add Role</button>
+            </div>
+         </form>
+      </div>
+   </div>
+</div>
+<!-- Button trigger modal -->
+<!-- Edit Modal for editing the users details -->
+<div class="modal fade" id="basicModaledit" tabindex="-1" aria-hidden="true">
+   <div class="modal-dialog" role="document">
+      <div class="modal-content">
+         <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel1"> User Roles Details</h5>
+            <button
+               type="button"
+               class="btn-close"
+               data-bs-dismiss="modal"
+               aria-label="Close"
+               ></button>
+         </div>
+         <form  id="user_role_form_edit">
+            <div class="modal-body">
+               <div class="row">
+                  <input type="hidden"  name="id" id="_id">
+                  <div class="col mb-0">
+                     <label for="dobBasic" class="form-label">Edit Role</label>
+                     <input type="text" id="role" required name="assigned_role" class="form-control" placeholder="Eg: Admin, Manager, tester..etc" />
+                  </div>
+                  <div class="col-12 mb-0" id="pagePermissionSelectionEdit">
+                     <label for="defaultSelect" class="form-label">Navbar (<small class="text-primary fw-bold">press Ctrl for multiple selection</small>)</label>
+                     <select id="_navbar_" style="height:100px" name="navbar[]" multiple="" required="" class="form-select">
+                       
+                     </select>
+                  </div>
+                  <div id="_nav_form_"></div>
+               </div>
+            </div>
+            <div class="modal-footer">
+               <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
+               Close
+               </button>
+               <button type="submit" class="btn btn-primary">Update Role</button>
+            </div>
+         </form>
+      </div>
+   </div>
+</div>
+<!-- Button trigger modal -->
+<!-- Button trigger modal -->
+<div class="modal fade bd-example-modal-sm "  data-backdrop="static" data-keyboard="false" id="_delete_modal" style="display: none;"  aria-hidden="true">
+   <div class="modal-dialog modal-sm">
+      <div class="modal-content">
+         <form id="_delete_roles_form">
+            <div class="alert alert-danger notification mb-0">
+               <p class="notificaiton-title mb-4 mt-3"><strong>Do you really want to remove?</strong></p>
+               <button type="submit" class="btn btn-danger btn-sm">Confirm</button>
+               <button type="button" data-bs-dismiss="modal" class="btn btn-link btn-sm">Cancel</button>
+            </div>
+         </form>
+      </div>
+   </div>
+</div>

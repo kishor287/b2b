@@ -1,0 +1,237 @@
+<div class="content-wrapper">
+  <!-- Content -->
+  <div class="container-xxl flex-grow-1 container-p-y">
+    <div class="row py-2">
+      <div class="col-md-6">
+        <h4 class="fw-bold  mb-2"><span class="text-muted fw-light">Organization Registration </span></h4>
+      </div>
+      <form id="filter">
+        <div class="my-3 d-inline-block gx-2 row">
+          <div class="w-auto d-inline-block mb-2">
+            <label>Search</label>
+            <div class="input-group input-group-merge">
+              <span class="input-group-text" id=""><i class="bx bx-search"></i></span>
+              <input type="text" name="searchOrganization" id="searchOrganization" class="form-control"
+                placeholder="Search By Organization " aria-label="Search..." aria-describedby="basic-addon-search31">
+            </div>
+          </div>
+          <div class="w-auto d-inline-block mt-2">
+            <button type="button" id="applyFiltersBtn" class="btn btn-primary">Apply Filters </button>
+            <button type="button" id="resetBtn" class="btn btn-secondary">Reset </button>
+          </div>
+        </div>
+      </form>
+      <div class="col-md-12 mb-2">
+        <button type="button" class="btn btn-primary btn-sm float-end" data-bs-toggle="modal"
+          data-bs-target="#basicModal">
+          Add Organization
+        </button>
+      </div>
+    </div>
+    <div class="card">
+      <div class="table-responsive text-nowrap">
+        <table class="table ">
+          <thead></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+      <div class="col px-3">
+        <nav aria-label="Page navigation">
+          <ul class="pagination my-3 pagination-sm"></ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Button trigger modal -->
+<!-- Modal -->
+<div class="modal fade" id="basicModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel1"> Organization Details</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <form id="organization_form">
+        <div class="modal-body">
+          <div class="row">
+            <div class="col mb-0">
+              <label for="defaultSelect" class="form-label">Sub Domain</label>
+              <select id="_dir" name="sub_domain" required class="form-select">
+                <option>Sub Domains</option>
+              </select>
+            </div>
+            <div class="col mb-0">
+              <label for="nameBasic" class="form-label ">Organization Name</label>
+              <input type="text" id="nameBasic" name="organization" class="form-control" required
+                placeholder="Enter Name" />
+            </div>
+          </div>
+          <div class="row g-2">
+            <div class="col mb-0">
+              <label for="formFile" class="form-label">Organization Logo</label>
+              <input class="form-control" type="file" id="_logo" name="logo" required>
+            </div>
+          </div>
+          <div class="row g-2">
+            <div class="col mb-0">
+              <label for="emailBasic" class="form-label">Email</label>
+              <input type="text" id="_email" name="email" required class="form-control" placeholder="xxxx@xxx.xx" />
+            </div>
+            <div class="col mb-0">
+              <label for="dobBasic" class="form-label">Phone</label>
+              <input type="text" id="_phone" required name="phone" class="form-control" placeholder="+91 xxxxx xxxxx" />
+            </div>
+            <div class="col mb-0">
+              <label for="dobBasic" class="form-label">Website</label>
+              <input type="text" id="_website" required name="website" class="form-control"
+                placeholder="Eg: www.innerxcrm.com" />
+            </div>
+            <div class="col mb-0 d-none">
+              <div id="qrcode"></div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
+            Close
+          </button>
+          <button type="submit" class="btn btn-primary">Save changes</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- Button trigger modal -->
+
+<!-- Modal -->
+<div class="modal fade" id="basicModaledit" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel1"> Organization Details</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <form id="organization_form_edit">
+        <div class="modal-body">
+          <div class="row">
+            <input type="hidden" name="id" id="_id">
+            <div class="col mb-0">
+              <label for="nameBasic" class="form-label">Organization Name</label>
+              <input type="text" id="nameBasic" name="organization" class="form-control" required
+                placeholder="Enter Name" />
+            </div>
+          </div>
+          <div class="row g-2">
+            <div class="col mb-0">
+              <label for="formFile" class="form-label">Organization Logo</label>
+              <input class="form-control" type="file" id="_logo" name="logo">
+            </div>
+          </div>
+          <div class="row g-2">
+            <div class="col mb-0">
+              <label for="emailBasic" class="form-label">Email</label>
+              <input type="text" id="_email" name="email" required class="form-control" placeholder="xxxx@xxx.xx" />
+            </div>
+
+            <div class="col mb-0">
+              <label for="dobBasic" class="form-label">Phone</label>
+              <input type="text" id="_phone" required name="phone" class="form-control" placeholder="+91 xxxxx xxxxx" />
+            </div>
+            <div class="col mb-0">
+              <label for="dobBasic" class="form-label">Website</label>
+              <input type="text" id="_website" required name="website" class="form-control"
+                placeholder="Eg: www.innerxcrm.com" />
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-6 mb-0 form-group">
+              <button type="button" id="qrCodeGeneratorBtn" class="btn btn-dark">Generate Qr Code</button>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="submit" class="btn btn-primary">Save changes</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+<!-- Button trigger modal -->
+
+
+<!-- Modal -->
+<div class="modal fade" id="basicModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel1"> Organization Details</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <form id="organization_form">
+            <div class="col mb-0">
+              <label for="defaultSelect" class="form-label">Sub Domain</label>
+              <select id="_dir" name="sub_domain" required class="form-select">
+                <option value="">Sub Domains</option>
+              </select>
+            </div>
+
+            <div class="col mb-0">
+              <label for="nameBasic" class="form-label">Organization Name</label>
+              <input type="text" id="nameBasic" name="organization" class="form-control" required
+                placeholder="Enter Name" />
+            </div>
+        </div>
+
+        <div class="row g-2">
+          <div class="col mb-0">
+            <label for="formFile" class="form-label">Organization Logo</label>
+            <input class="form-control" type="file" id="_logo" name="logo" required id="formFile">
+          </div>
+        </div>
+        <div class="row g-2">
+          <div class="col mb-0">
+            <label for="emailBasic" class="form-label">Email</label>
+            <input type="text" id="_email" name="email" required class="form-control" placeholder="xxxx@xxx.xx" />
+          </div>
+
+          <div class="col mb-0">
+            <label for="dobBasic" class="form-label">Phone</label>
+            <input type="text" id="_phone" required name="phone" class="form-control" placeholder="+91 xxxxx xxxxx" />
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
+          Close
+        </button>
+        <button type="submit" class="btn btn-primary">Save changes</button>
+
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Button trigger modal -->
+<div class="modal fade bd-example-modal-sm " data-backdrop="static" data-keyboard="false" id="_delete_modal"
+  style="display: none;" aria-hidden="true">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <form id="_delete_form">
+        <div class="alert alert-danger notification mb-0">
+          <p class="notificaiton-title mb-4 mt-3"><strong>Do you really want to remove <span id="organizationName"></span>?</strong></p>
+          <button type="submit" class="btn btn-danger btn-sm">Confirm</button>
+          <button type="button" data-bs-dismiss="modal" class="btn btn-link btn-sm">Cancel</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+
+</div>

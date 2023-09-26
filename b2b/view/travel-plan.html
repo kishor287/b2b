@@ -1,0 +1,120 @@
+<script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+<div class="content-wrapper">
+  <!-- Content -->
+  <div class="container-xxl flex-grow-1 container-p-y">
+    <div class="row mb-2">
+      <div class="col-md-4">
+        <div class="w-auto d-inline-block mb-2">
+          <label>Select Date Range :</label>
+          <input type="text" class="form-control" id="daterange" name="daterange" readonly="">
+        </div>
+        <button type="button" id="exportTravelPlanReport" class="btn btn-primary ms-1">
+          <i class="bx bx-download"></i>
+        </button>
+      </div>
+      <div class="col-md-8 text-end mt-4">
+        <a href="/add-travel-plan" class="btn btn-primary">+ Create New</a>
+      </div>
+    </div>
+
+
+    <div class="card p-3">
+      <h5>Travel Plan</h5>
+      <div class="table-responsive text-nowrap">
+        <table class="table" id="travelPlanTable">
+          <thead>
+            <tr>
+              <th>Actions</th>
+              <th>Date</th>
+              <th>Agent Name</th>
+              <th>City</th>
+              <th>Location</th>
+              <th>Revisit/ Unique</th>
+              <th>Category</th>
+              <th>Remarks</th>
+            </tr>
+          </thead>
+          <tbody id="travelPlanTbody"></tbody>
+        </table>
+      </div>
+      <div class="col px-3">
+        <nav aria-label="Page navigation">
+          <ul class="pagination my-3 pagination-sm" id="pagination"></ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="js/table2excel.js" type="text/javascript"></script>
+<script type="text/javascript">
+  $(function () {
+    $("#exportTravelPlanReport").click(function () {
+      $("#travelPlanTable").table2excel({
+        filename: "travel_plan_report.xls"
+      });
+    });
+  });
+
+</script>
+
+<script src="https://cdn.rawgit.com/rainabba/jquery-table2excel/1.1.0/dist/jquery.table2excel.min.js"></script>
+
+<!-- Modal -->
+<div class="modal fade" id="editTravelPlanModal" tabindex="-1" aria-labelledby="exampleModal1Label" aria-hidden="true">
+  <div class="modal-dialog modal-xl">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Edit Travel Plan</h4>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+
+      <div class="modal-body">
+        <form id="updateTravelPlan">
+          <div class="row mb-2">
+            <!-- <div class="col-md-8 "> -->
+            <input type="hidden" value="updateTravelPlan" name="_action" />
+            <input type="hidden" value="add-travel-plan" name="payload" />
+            <input type="hidden" id="recordId" name="id" />
+            <!-- <label class="form-label">AGENCY NAME</label>
+                  <select class="form-select" id="agencyInput" name="organization_id" data-placeholder="Choose one thing">
+                  </select>
+              </div> -->
+            <div class="col-md-4">
+              <label class="form-label">AGENT NAME</label>
+              <input class="form-control" type="text" id="agentName" name="agent_name"
+                data-placeholder="Choose one thing" />
+            </div>
+            <div class="col-md-4 mb-0">
+              <label class="form-label">CITY</label>
+              <input type="text" id="city" required="" class="form-control" placeholder=" " name="city">
+            </div>
+            <div class="col-md-4 mb-0">
+              <label class="form-label">LOCATION</label>
+              <input type="text" id="location" required="" class="form-control" placeholder=" " name="location">
+            </div>
+            <div class="col-md-4 mb-0">
+              <label class="form-label">REVISIT/ UNIQUE</label>
+              <input type="text" id="revisit" required="" class="form-control" placeholder=" " name="revisit">
+            </div>
+            <div class="col-md-4 mb-0">
+              <label class="form-label">CATEGORY</label>
+              <input type="text" id="silver" required="" class="form-control" placeholder=" " name="silver">
+            </div>
+            <div class="col-md-4 mb-0">
+              <label class="form-label">REMARKS</label>
+              <input type="text" id="remarks" required="" class="form-control" placeholder=" " name="remarks">
+            </div>
+            <div class="mt-3">
+              <button class="btn btn-primary" type="submit">Update</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Button trigger modal -->
+
+
+<div id="_pdf" class=""></div>

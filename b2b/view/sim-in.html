@@ -1,0 +1,49 @@
+<div class="content-wrapper">
+    <!-- Content -->
+    <div class="container-xxl flex-grow-1 container-p-y">
+        <div class="card  p-3">
+            <h5 class="card-title text-primary">SIM Inventory</h5>
+            <form id="addSimInventoryForm" class="">
+                <div class=" mb-2">
+                    <input type="hidden" name="_action" value="saveSimInventory" />
+                    <input type="hidden" name="payload" value="sim-inventory" />
+                    <div class="w-auto d-inline-block mb-2">
+                        <label class="form-label">Sim Number</label>
+                        <input type="text" id="" required="" class="form-control" placeholder=" " name="sim_number">
+                    </div>
+
+                    <div class="w-auto d-inline-block mb-2">
+                        <label class="form-label">Barcode</label>
+                        <input type="file" required="" class="form-control" placeholder=" " name="barcode">
+                    </div>
+
+                    <div class="w-auto d-inline-block mb-2">
+                        <label class="form-label">Country</label>
+                        <select class="form-select" name="country">
+                            <option value="CANADA">Canada</option>
+                            <option value="USA">USA</option>
+                        </select>
+                    </div>
+
+                    <div class="w-auto d-inline-block mb-2">
+                        <label class="form-label">Upload By</label>
+                        <select class="form-select" name="uploaded_by">
+                            <option value="Name1">Madhu</option>
+                            <option value="Name2">Sitender</option>
+                        </select>
+                    </div>
+
+                    <div class="w-auto d-inline-block mb-2">
+                        <button class="btn btn-primary">Save</button>
+                    </div>
+
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- Button trigger modal -->
+
+
+<div id="_pdf" class=""></div>

@@ -1,0 +1,73 @@
+<div class="content-wrapper">
+    <!-- Content -->
+    <div class="container-xxl flex-grow-1 container-p-y">
+        <div class="row mb-2">
+            <div class="col-md-12 text-start mt-4">
+              <a href="loan" class="btn btn-dark"> << Back </a>
+            </div>
+          </div>
+        <div class="card  p-3">
+            <h5 class="card-title text-primary">Loan</h5>
+            <form id="saveLoan">
+                <input type="hidden" name="_action" value="saveLoan" />
+                <input type="hidden" name="payload" value="add-loan" />
+
+                <div class="row mb-2"> 
+                    <div class="col-md-4 mb-0">
+                        <label for="agentName" class="form-label">AGENT NAME</label>
+                         <input type="text" id="agentName" required="" class="form-control" name="agent_name">
+                        </div>
+                   
+                    <div class="col-md-4 mb-0">
+                        <label for="studentName" class="form-label">STUDENT NAME</label>
+                         <input type="text" id="studentName" required="" class="form-control" name="student_name">
+                    </div>
+                    <div class="col-md-4 mb-0">
+                        <label for="contactNumber" class="form-label">CONTACT NO</label>
+                         <input type="text" id="contactNumber" required="" class="form-control" name="contact_number">
+                    </div>
+                    <div class="col-md-4 mb-0">
+                        <label for="location" class="form-label">LOCATION</label>
+                         <input type="text" id="location" required="" class="form-control" name="location">
+                    </div>
+                   
+               
+                    
+                     <div class="col-md-4 mb-0">
+                        <label for="amount" class="form-label">LOAN AMOUNT</label>
+                         <input type="number" id="amount" required="" class="form-control" name="amount">
+                    </div>
+                    
+                     <div class="col-md-4 mb-0">
+                        <label  class="form-label">STATUS</label>
+                        <select class="form-select" name="status">
+                             <option value="UNDER PROCESS">Under Process</option>
+                             <option value="REJECT">Reject</option>
+                             <option value="APPROVED">Approved</option>
+                         </select>
+                    </div>  
+                    
+                       
+                     <div class="col-md-4 mb-0">
+                        <label  class="form-label">BANK NAME</label>
+                         <select class="form-select" name="bank_name">
+                             <option value="ICICI">ICICI</option>
+                         </select>
+                    </div>  
+                      
+                      
+                  
+                    <div class=" mt-2">
+                        <button class="btn btn-primary">Save</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+    <!-- Button trigger modal -->
+    
+                
+    <div id="_pdf" class=""></div>
+

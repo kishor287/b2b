@@ -1,0 +1,241 @@
+<div class="content-wrapper">
+
+
+
+  <div class="container-xxl flex-grow-1 container-p-y">
+    <div class="row">
+      <div class="col-md-6 d-none">
+        <h5 class="fw-bold py-1 mb-2"><span class="text-muted fw-light">Organization Registration </span></h5>
+      </div>
+
+
+      <form id="filterAgreement">
+
+        <div class="row d-inline-block gx-2">
+          <div class="w-auto d-inline-block mb-2">
+            <label>Select Date Range :</label>
+            <input type="text" class="form-control bg-white" name="daterange" value="01/01/2018 - 01/15/2018"
+              id="dateRange" readonly />
+          </div>
+          <div class="w-auto d-inline-block mb-2">
+            <label>Search</label>
+            <div class="input-group input-group-merge">
+              <span class="input-group-text" id=""><i class="bx bx-search"></i></span>
+              <input type="text" name="searchOrganization" id="searchOrganization" class="form-control"
+                placeholder="Search By Organization " aria-label="Search..." aria-describedby="basic-addon-search31">
+            </div>
+          </div>
+          <div class="w-auto d-inline-block mb-2">
+            <label>Trainer</label>
+            <select class="form-select" id="trainerFilter" name="trainer_filter" aria-label="">
+              <option value="">All</option>
+            </select>
+          </div>
+          <div class="w-auto d-inline-block mb-2">
+            <label>Manager</label>
+            <select class="form-select" id="managerFilter" name="manager_filter" aria-label="">
+              <option value="">All</option>
+            </select>
+          </div>
+          <div class="w-auto d-inline-block mb-2">
+            <label class="form-label mb-0">Source</label>
+            <select name="source" id="sourceFilter" class="form-select">
+              <option value="">All</option>
+              <option value="Website">Website</option>
+              <option value="Socialmedia">Socialmedia</option>
+              <option value="Sales Team">Sales Team</option>
+            </select>
+          </div>
+          <div class="w-auto d-inline-block mb-2">
+            <label>Status</label>
+            <select class="form-select" id="statusFilter" name="status_filter" aria-label="">
+              <option value="">All</option>
+              <option value="BOOKED">Booked</option>
+              <option value="INTERESTED">Interested</option>
+              <option value="NOT INTERESTED">Not Interested</option>
+              <option value="NOT SURE">Not Sure</option>
+            </select>
+          </div>
+          <div class="w-auto d-inline-block mb-2">
+            <label>Sub-Status</label>
+            <select class="form-select" id="substatusFilter" name="sub_status_filter" aria-label="">
+              <option value="">All</option>
+              <option value="Interested">Interested</option>
+              <option value="Call Back">Call Back</option>
+              <option value="Line Busy">Line Busy</option>
+              <option value="Ringing Not Responding">Ringing Not Responding</option>
+              <option value="Hangup">Hangup</option>
+              <option value="Switched Off">Switched Off</option>
+              <option value="Not Reachable">Not Reachable</option>
+              <option value="Invalid No">Invalid No</option>
+              <option value="Not Enquired">Not Enquired</option>
+              <option value="No Out of Service">No Out of Service</option>
+              <option value="Wrong No">Wrong No</option>
+              <option value="Not Interested">Not Interested</option>
+              <option value="Already Booked">Already Booked</option>
+            </select>
+          </div>
+
+          <!-- <div class="w-auto d-inline-block mb-2">-->
+          <!--   <label>Contracts</label>-->
+          <!--   <select class="form-select" id="contractFilter" name="contract" aria-label="">-->
+          <!--       <option value="" selected>Select</option>-->
+          <!--      <option value="2">Pending</option>-->
+          <!--      <option value="1">Done</option>-->
+          <!--   </select>-->
+          <!--</div>-->
+
+
+
+          <!-- <div class="w-auto d-inline-block mb-2">-->
+          <!--   <label>Today-Follow-up</label>-->
+          <!--   <select class="form-select" id="todayfollowupFilter" name="today-followup" aria-label="">-->
+          <!--       <option value="" selected>Select</option>-->
+          <!--      <option value="2">2</option>-->
+          <!--      <option value="1">1</option>-->
+          <!--   </select>-->
+          <!--</div>-->
+
+
+          <!-- <div class="w-auto d-inline-block mb-2">-->
+          <!--   <label>Today Meeting</label>-->
+          <!--   <select class="form-select" id="todaymeetingFilter" name="Today Meeting" aria-label="">-->
+          <!--       <option value="" selected>Select</option>-->
+          <!--      <option value="2">2</option>-->
+          <!--      <option value="1">1</option>-->
+          <!--   </select>-->
+          <!--</div>-->
+
+
+          <div class="w-auto d-inline-block mt-2">
+
+            <button class="btn btn-primary" type="button" id="applyFilters">
+              <div class="spinner-border d-none" id="filterSpinner" style="color: white;width:1rem;height:1rem;" role="status">
+              </div>
+              <span id="applyFilterBtn">Apply Filters</span>
+              </button>
+            <button type="reset" class="btn btn-secondary " id="reset">Reset</button>
+
+          </div>
+
+        </div>
+
+      </form>
+
+      <div class="col-md-12 mt-1 mb-2">
+        <button type="button" class="btn btn-primary btn-xs  py-1  _admin_access d-none float-end mx-1"
+          data-bs-toggle="modal" data-bs-target="#_assign_modal">
+          Assign
+        </button>
+        <button type="button" class="btn btn-primary  btn-xs  py-1 _admin_access d-none float-end mx-1"
+          data-bs-toggle="modal" data-bs-target="#_reassign_modal">
+          Re-Assign
+        </button>
+
+
+      </div>
+
+
+
+    </div>
+
+    <!--start-->
+    <div class="card">
+      <div class="table-responsive text-nowrap">
+        <table class="table ">
+          <thead></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+      <div class="col px-3">
+        <nav aria-label="Page navigation">
+          <ul class="pagination my-3 pagination-sm"></ul>
+        </nav>
+      </div>
+    </div>
+    <!-- end-->
+
+  </div>
+</div>
+
+
+
+<div class="modal fade" id="_assign_modal" tabindex="-1" style="display: none;" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel1">Assign</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <form id="assigning_lead">
+        <div class="modal-body">
+          <div class="row">
+            <div class="mb-2 col-md-6">
+              <input type="hidden" id="lead_id" name="lead_id" value="">
+              <input type="hidden" id="manager_lead_id" name="manager_lead_id" value="">
+              <select class="form-select" name="usertype" aria-label="">
+                <option value="">Select UserType</option>
+                <option value="Marketing">Marketing</option>
+                <option value="Trainer">Trainer</option>
+              </select>
+            </div>
+
+            <div class="mb-2 col-md-6">
+              <select class="form-select" name="user" aria-label=""></select>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="Submit" class="btn btn-primary">Assign</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="_reassign_modal" tabindex="-1" style="display: none;" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel1">Re-Assign</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <form id="reassigning_lead">
+        <div class="modal-body">
+          <div class="row">
+            <div class="mb-0 col-md-3">
+              <label for="leadid">Lead ID:</label>
+              <input class="form-control" type="text" id="leadid" name="leadid" placeholder="Lead ID">
+            </div>
+
+            <div class="mb-2 col-md-3">
+              <label for="select">Select</label>
+              <select class="form-select" name="select" aria-label="">
+                <option value="Marketing">Follow-up</option>
+                <option value="Trainer">Training</option>
+                <option value="Meeting">Meeting</option>
+              </select>
+            </div>
+            <div class="mb-2 col-md-3">
+              <label for="usertypeee">Usertype:</label>
+              <select class="form-select" name="usertypeee" aria-label="">
+                <option value="">Select UserType</option>
+                <option value="Marketing">Marketing</option>
+                <option value="Trainer">Trainer</option>
+              </select>
+            </div>
+            <div class="mb-2 col-md-3">
+              <label for="userss">Names:</label>
+              <select class="form-select" name="userss" aria-label=""></select>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="Submit" id="reAssignSubmitBtn" class="btn btn-primary">Re-Assign</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,126 @@
+<div class="content-wrapper">
+  <div class="container-xxl flex-grow-1 container-p-y">
+
+    <div class="row">
+      <h4 class="p-2">Forex Requests</h4>
+      <div class="col-lg-12 mb-4">
+        <div class="card bg-light">
+          <div class="table-responsive table  text-nowrap">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>Action</th>
+                  <th>Sr No.</th>
+                  <th>Company Name</th>
+                  <th>Sub Domain</th>
+                  <!-- <th>Ebix Order Id</th>
+                  <th>CRM Generated Order Id</th> -->
+                  <th>Phone No.</th>
+                  <th>First Name</th>
+                  <th>Last Name</th>
+                  <th>Date Of Birth</th>
+                  <th>Email</th>
+                  <th>Passport</th>
+                  <th>College</th>
+                  <th>City</th>
+                  <th>Country</th>
+                  <th>Vendor</th>
+                  <th>Ebix Order Id</th>
+                  <th>Crm Order Id</th>
+                  <th>Student Offer letter</th>
+                  <th>Student Passport File</th>
+                  <th>Student Visa File</th>
+                  <th>Relation</th>
+                  <th>Adhar Card</th>
+                  <th>Pan Card</th>
+                  <th>Cheque Copy</th>
+                  <th>Forex type</th>
+                  <th>Forex total</th>
+                  <th>Margin</th>
+                  <th>Base Conversion Rate</th>
+                  <th>Forex (Paisa)</th>
+                  <th>Conversion rate</th>
+                  <th>Total fees</th>
+                  <th>Gst</th>
+                  <th>Processing charge</th>
+                  <th>Tcs</th>
+                  <th>Total amount</th>
+                  <th>Remarks</th>
+                  <th>Currency</th>
+                  <th>Beneficiary account no</th>
+                  <th>Beneficiary branch address</th>
+                  <th>Beneficiary swift code</th>
+                  <th>Beneficiary message</th>
+                  <th>Beneficiary iban no</th>
+                  <th>Beneficiary bank name</th>
+                  <th>Beneficiary branch name</th>
+                  <th>Beneficiary name</th>
+                  <th>Beneficiary address</th>
+                  <th>Created At</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td colspan="37">Loading...</td>
+                </tr>
+              </tbody>
+            </table>
+            <div>
+            
+            </div>
+            <div class="col px-3">
+              <nav aria-label="Page navigation">
+                 <ul class="pagination my-3 pagination-sm" id="pagination"></ul>
+              </nav>
+           </div>
+          </div>
+
+        </div>`
+
+
+      </div>
+      <!--/ Transactions -->
+    </div>
+  </div>
+</div>
+
+
+
+<div class="modal" id="myModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="modal-title">Add Remarks</h4>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body">
+        <input type="hidden" id="requestId" name="requestId" />
+        <input type="hidden" id="requestService" name="service" />
+        <input type="hidden" id="requestSubdomain" name="request_subdomain" />
+        <div class="col-md-12">
+          <label for="sta_tus" class="form-label">Status</label>
+          <select class="form-select" id="requestStatus" name="status">
+            <option value="UNDER REVIEW">Waiting</option>
+            <option value="APPROVED">Approved</option>
+            <option value="REJECTED">Rejected</option>
+          </select>
+        </div>
+
+        <div class="col-md-12">
+          <div class="mb-3 mt-3">
+            <label for="remarks">Remarks</label>
+            <textarea class="form-control" rows="2" id="requestRemarks" name="remarks"></textarea>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal footer -->
+      <div class="modal-footer">
+        <button type="button" id="saveRemarks" class="btn  btn-primary" data-bs-dismiss="modal">Save</button>
+      </div>
+    </div>
+  </div>
+</div>

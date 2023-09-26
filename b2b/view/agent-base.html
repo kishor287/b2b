@@ -1,0 +1,147 @@
+<div class="content-wrapper">
+  <!-- Content -->
+  <!-- Content -->
+  <div class="container-xxl flex-grow-1 container-p-y">
+
+    <div class="row mb-2">
+      <div class="col-md-4">
+        <div class="w-auto d-inline-block mb-2">
+          <label>Select Date Range :</label>
+          <input type="text" class="form-control" id="daterange" name="daterange" readonly="">
+        </div>
+        <button type="button" id="exportAgentBaseReport" class="btn btn-primary ms-1">
+          <i class="bx bx-download"></i>
+        </button>
+      </div>
+      <div class="col-md-8 text-end mt-4">
+        <a href="/add-agent-base" class="btn btn-primary">Create New</a>
+      </div>
+    </div>
+
+    <div class="card p-3">
+
+
+      <div class="table-responsive text-nowrap">
+        <table class="table" id="agentBaseReportTable">
+          <thead>
+            <tr>
+              <th>Action</th>
+              <th>Manager Name</th>
+              <th>Agency</th>
+              <th>Contact Person Name</th>
+              <th>Contact Person Email</th>
+              <th>City</th>
+              <th>State</th>
+              <th>Date</th>
+              <th>Agent</th>
+              <th>Location</th>
+              <th>Email I.d</th>
+              <th>Contact no</th>
+              <!-- <th>Agreement Signed</th>
+              <th>Meeting</th>
+              <th>Visit Type</th> -->
+              <th>Remark</th>
+            </tr>
+          </thead>
+          <tbody id="agentBaseDetailsTbody">
+            <tr>
+              <td colspan="10"></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="col px-3">
+        <nav aria-label="Page navigation">
+          <ul class="pagination my-3 pagination-sm" id="pagination"></ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="js/table2excel.js" type="text/javascript"></script>
+<script type="text/javascript">
+  $(function () {
+    $("#exportAgentBaseReport").click(function () {
+      $("#agentBaseReportTable").table2excel({
+        filename: "agent_base_report.xls"
+      });
+    });
+  });
+
+</script>
+
+<script src="https://cdn.rawgit.com/rainabba/jquery-table2excel/1.1.0/dist/jquery.table2excel.min.js"></script>
+<!-- Modal -->
+<div class="modal fade" id="editAgentBase" tabindex="-1" aria-labelledby="exampleModal1Label" aria-hidden="true">
+  <div class="modal-dialog modal-xl">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Edit Agent Base Details</h4>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+
+      <div class="modal-body">
+        <form id="agentBase">
+          <div class="row mb-2">
+            <div class="col-md-4 mb-0">
+              <label for="emailBasic" class="form-label">AGENT</label>
+              <input type="text" id="agentName" required="" class="form-control" placeholder=" " name="agent_name">
+            </div>
+            <div class="col-md-4 mb-0">
+              <label for="emailBasic" class="form-label">AGENCY NAME</label>
+               <select name="organization_id" class="form-select" id="organizationId" ></select>
+          </div>
+            <!-- <div class="col-md-4 mb-0">
+                  <label for="emailBasic" class="form-label">MANAGER NAME</label>
+                   <input type="text" id="" required="" class="form-control" placeholder=" " name="manager_name"> -->
+            <input type="hidden" value="updateAgentBaseDetails" name="_action">
+            <input type="hidden" name="payload" value="add-agent-base">
+            <input type="hidden" name="id" id="recordId">
+            <!-- </div> -->
+            <div class="col-md-4 mb-0">
+              <label for="emailBasic" class="form-label">LOCATION</label>
+              <input type="text" id="location" class="form-control" placeholder=" " name="location">
+            </div>
+            <div class="col-md-4 mb-0">
+              <label for="emailBasic" class="form-label">EMAIL I.D</label>
+              <input type="text" id="emailId" class="form-control" placeholder=" " name="email_id">
+            </div>
+            <div class="col-md-4 mb-0">
+              <label for="emailBasic" class="form-label">CONTACT NO</label>
+              <input type="text" id="contactNumber" class="form-control" placeholder=" " name="contact_number">
+            </div>
+            <!-- <div class="col-md-4 mb-0">
+              <label for="emailBasic" class="form-label">AGREEMENT STATUS</label>
+              <input type="text" id="agreementStatus" class="form-control" placeholder=" " name="agreement_status">
+              <select name="agreement_status" id="agreementStatus" class="form-select">
+                <option value="UNDER PROCESS">Under Process</option>
+                <option value="SIGNED">Signed</option>
+                <option value="NOT INTERESTED">Not Interested</option>
+              </select>
+            </div>
+            <div class="col-md-4 mb-0">
+              <label for="emailBasic" class="form-label">MEETING</label>
+              <input type="text" id="meeting" class="form-control" placeholder=" " name="meeting">
+            </div>
+            <div class="col-md-4 mb-0">
+              <label for="emailBasic" class="form-label">VISIT TYPE</label>
+              <input type="text" id="visitType" class="form-control" placeholder=" " name="visit_type">
+            </div> -->
+            <div class="col-md-4 mb-0">
+              <label for="emailBasic" class="form-label">REMARK</label>
+              <input type="text" id="remarks" class="form-control" placeholder=" " name="remarks">
+            </div>
+            <div class="my-3">
+              <button class="btn btn-primary" type="submit">Update</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Button trigger modal -->
+
+
+<div id="_pdf" class=""></div>

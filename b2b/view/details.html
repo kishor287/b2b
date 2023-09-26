@@ -1,0 +1,383 @@
+<div class="content-wrapper">
+    <!-- Content -->
+
+    <div class="container-xxl flex-grow-1 container-p-y">
+        <div class="row">
+           
+           <div class="col-md-12  select-c my-3">
+
+    <div class="nav-align-top mb-4">
+      <ul class="nav nav-tabs nav-fill" role="tablist">
+        <li class="nav-item">
+          <button type="button" class="nav-link active" role="tab" data-bs-toggle="tab" data-bs-target="#navs-justified-profile" aria-controls="navs-justified-home" aria-selected="true"><i class="tf-icons bx bx-user"></i> Profile </button>
+        </li>
+        
+        <li class="nav-item">
+          <button type="button" class="nav-link" role="tab" data-bs-toggle="tab" data-bs-target="#navs-justified-followups" aria-controls="navs-justified-profile" aria-selected="false"><i class="tf-icons bx bx-calendar"></i> Followups </button>
+        </li>
+        
+        <li class="nav-item">
+          <button type="button" class="nav-link" role="tab" data-bs-toggle="tab" data-bs-target="#navs-justified-messages" aria-controls="navs-justified-messages" aria-selected="false"><i class="tf-icons bx bx-message-square"></i> Messages</button>
+        </li>
+      </ul>
+      
+      <div class="tab-content">
+          
+        <div class="tab-pane fade active show" id="navs-justified-profile" role="tabpanel">
+        
+        <div>
+                  <div class="row">
+                     <p class="mb-2 text-primary">Organization Details :</p>
+                     <div class="mb-2 col-md-4">
+                        <label class="form-label mb-0">Name</label>
+                        <input type="text" name="name" class="form-control" placeholder="Enter Name">
+                     </div>
+                     
+                     <div class="mb-2 col-md-4">
+                        <label class="form-label mb-0">Phone <span class="text-danger">*</span></label>
+                        <input type="text" name="phone" placeholder="Enter Phone" class="form-control" required="">
+                     </div>
+                     <div class="mb-2 col-md-4">
+                        <label class="form-label mb-0">Website</label>
+                        <input type="text" name="website" placeholder="URL" class="form-control">
+                     </div>
+                     
+                     <div class="mb-2 col-md-4">
+                        <label class="form-label mb-0">Email</label>
+                        <input type="text" name="email" class="form-control" placeholder="Enter Email">
+                     </div>
+                     
+                     <div class="mb-2 col-md-4">
+                        <label class="form-label mb-0">State</label>
+                        <input type="text" name="state" class="form-control" placeholder="Enter State">
+                     </div>
+                     
+                     <div class="mb-2 col-md-4">
+                        <label class="form-label mb-0">City</label>
+                        <input type="text" name="city" class="form-control" placeholder="Enter State">
+                     </div>
+                     
+                     <div class="mb-2 col-md-8">
+                        <label class="form-label mb-0">Address</label>
+                        <textarea type="text" name="address" class="form-control" placeholder="Enter Address"> </textarea>
+                     </div>
+                     
+                     <div class="mb-0 col-md-9">
+                        <label class="form-label mb-0 w-100"> More than one location</label>
+                        <div class="form-check form-check-inline">
+                           <input class="form-check-input" type="radio" name="location_radio" id="inlineRadio1" value="yes">
+                           <label class="form-check-label" for="inlineRadio1">Yes</label>
+                        </div>
+                        
+                     <div class="form-check form-check-inline">
+                           <input class="form-check-input" type="radio" name="location_radio" id="inlineRadio2" value="no">
+                           <label class="form-check-label" for="inlineRadio2">No</label>
+                        </div>
+                     </div>
+                     
+                     <div class="mb-2 col-md-11 d-none" id="_more_locations">
+                        <div class="input-group">
+                           <input type="text" aria-label="city" placeholder="City" name="location_city[]" class="form-control">
+                           <input type="text" aria-label="state" placeholder="State" name="location_state[]" class="form-control">
+                           <span id="_add_location" class="cursor-pointer input-group-text"><i class=" bx bx-plus"></i> </span>
+                        </div>
+                     </div>
+                     
+                     <div id="newinput"></div>
+                     <div class="mb-1 col-md-7">
+                        <label class="form-label mb-0 w-100">Services </label>
+                        <div class="form-check form-check-inline">
+                           <input class="form-check-input" type="checkbox" name="visa" value="visa" id="defaultCheck1">
+                           <label class="form-check-label" for="defaultCheck1">
+                           Visa
+                           </label>
+                     </div>
+                        
+                     <div class="form-check form-check-inline">
+                           <input class="form-check-input" type="checkbox" name="ielts" value="ielts" id="defaultCheck2">
+                           <label class="form-check-label" for="defaultCheck2">
+                           IELTS
+                           </label>
+                     </div>
+                     
+                     <div class="form-check form-check-inline">
+                           <input class="form-check-input" type="checkbox" name="vistor_visa" value="vistor_visa" id="defaultCheck3">
+                           <label class="form-check-label" for="defaultCheck3">
+                           Vistor Visa
+                           </label>
+                     </div>
+                     
+                     <div class="form-check form-check-inline">
+                           <input class="form-check-input" type="checkbox" name="work_visa" value="work_visa" id="defaultCheck4">
+                           <label class="form-check-label" for="defaultCheck4">
+                           Work Visa
+                           </label>
+                     </div>
+                     
+                     <div class="form-check form-check-inline">
+                           <input class="form-check-input" type="checkbox" name="pr" value="pr" id="defaultCheck5">
+                           <label class="form-check-label" for="defaultCheck5">
+                           PR
+                           </label>
+                        </div>
+                     </div>
+                     
+                     <div class="mb-2 col-md-4">
+                        <label class="form-label mb-0">Other Services </label>
+                        <input type="text" name="other_services" class="form-control" placeholder="Enter Here">
+                     </div>
+                     <p class="text-primary mb-1 mt-2">Software Usage:</p>
+                     <div class="mb-2 col-md-4">
+                        <label class="form-label mb-0 w-100">  Are they using any other CRM software?</label>
+                        <div class="form-check form-check-inline">
+                           <input class="form-check-input rad" type="radio" name="crm_soft" id="inlineRadio11" value="yes">
+                           <label class="form-check-label" for="inlineRadio11">Yes</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                           <input class="form-check-input" type="radio" name="crm_soft" id="inlineRadio22" value="no">
+                           <label class="form-check-label" for="inlineRadio22">No</label>
+                        </div>
+                        <textarea class="form-control d-none" id="exampleFormControlTextarea1" rows="2" name="crm_soft_text"></textarea>
+                     </div>
+                     
+                     <div class="mb-2 col-md-4">
+                        <label class="form-label mb-0 w-100">  Are they using any Calling software?</label>
+                        <div class="form-check form-check-inline">
+                           <input class="form-check-input" type="radio" name="calling_soft" id="inlineRadio13" value="yes">
+                           <label class="form-check-label" for="inlineRadio13">Yes</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                           <input class="form-check-input" type="radio" name="calling_soft" id="inlineRadio14" value="no">
+                           <label class="form-check-label" for="inlineRadio14">No</label>
+                        </div>
+                           <textarea class="form-control d-none" id="exampleFormControlTextarea1" rows="2" name="calling_soft_text"></textarea>
+                     </div>
+                     
+                     <div class="mb-2 col-md-4">
+                        <label class="form-label mb-0 w-100">  Are they using any SMS software?</label>
+                        <div class="form-check form-check-inline">
+                           <input class="form-check-input" type="radio" name="sms_soft" id="inlineRadio15" value="yes">
+                           <label class="form-check-label" for="inlineRadio15">Yes</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                           <input class="form-check-input" type="radio" name="sms_soft" id="inlineRadio16" value="no">
+                           <label class="form-check-label" for="inlineRadio16">No</label>
+                        </div>
+                        <textarea class="form-control d-none" id="exampleFormControlTextarea1" rows="2" name="sms_soft_text"></textarea>
+                     </div>
+                     
+                     <div class="mb-2 col-md-4">
+                        <label class="form-label mb-0 w-100">  Are they using any WhatsApp software?</label>
+                        <div class="form-check form-check-inline">
+                           <input class="form-check-input" type="radio" name="whatsapp_soft" id="inlineRadio17" value="yes">
+                           <label class="form-check-label" for="inlineRadio17">Yes</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                           <input class="form-check-input" type="radio" name="whatsapp_soft" id="inlineRadio18" value="no">
+                           <label class="form-check-label" for="inlineRadio18">No</label>
+                        </div>
+                        <textarea class="form-control d-none" id="exampleFormControlTextarea1" rows="2" name="whatsapp_soft_text"></textarea>
+                     </div>
+                     
+                     <div class="mb-2 col-md-4">
+                        <label class="form-label mb-0 w-100">  Are they using any Email software?</label>
+                        <div class="form-check form-check-inline">
+                           <input class="form-check-input" type="radio" name="email_soft" id="inlineRadio19" value="yes">
+                           <label class="form-check-label" for="inlineRadio19">Yes</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                           <input class="form-check-input" type="radio" name="email_soft" id="inlineRadio20" value="no">
+                           <label class="form-check-label" for="inlineRadio20">No</label>
+                        </div>
+                        <textarea class="form-control d-none" id="exampleFormControlTextarea1" rows="2" name="email_soft_text"></textarea>
+                     </div>
+                     
+                     <div class="mb-2 col-md-4">
+                        <label class="form-label mb-0 w-100">  Are they using any Pais Ads software?</label>
+                        <div class="form-check form-check-inline">
+                           <input class="form-check-input" type="radio" name="paid_ads_soft" id="inlineRadio21" value="yes">
+                           <label class="form-check-label" for="inlineRadio21">Yes</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                           <input class="form-check-input" type="radio" name="paid_ads_soft" id="inlineRadio22" value="no">
+                           <label class="form-check-label" for="inlineRadio22">No</label>
+                        </div>
+                        <textarea class="form-control d-none" id="exampleFormControlTextarea1" rows="2" name="paid_ads_soft_text"></textarea>
+                     </div>
+                     
+                     <div class="mb-2 col-md-4">
+                        <label class="form-label mb-0">Users they are expecting to use  CRM</label>
+                        <select class="form-select" name="crm_users" aria-label="Years of experience">
+                           <option value="1 - 15 employees">1 - 15 employees</option>
+                           <option value="16 - 100 employees">16 - 100 employees</option>
+                           <option value="101 - 500 employees">101 - 500 employees</option>
+                           <option value="501 - 1500 employees">501 - 1500 employees</option>
+                           <option value="1501+ employees">1501+ employees</option>
+                        </select>
+                     </div>
+               
+                     <p class="text-primary mb-1 mt-2">Contract:</p>
+                     <div class="col-md-6 mb-3">
+                        <label for="formFile" class="form-label">
+                        Upload Contract
+                        </label>
+                        <input class="form-control" type="file" id="formFile" name="contract">
+                     </div>
+                     
+                     <div class="mb-1 col-md-4">
+                        <label class="form-label mb-0 w-100">
+                        Send Link
+                        </label>
+                        <div class="form-check form-check-inline">
+                           <input class="form-check-input" type="checkbox" name="link_email" value="email" id="Email">
+                           <label class="form-check-label" for="Email">
+                           Email
+                           </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                           <input class="form-check-input" type="checkbox" name="link_whatsapp" value="whatsapp" id="WhatsApp">
+                           <label class="form-check-label" for="WhatsApp">
+                           WhatsApp
+                           </label>
+                        </div>
+                     </div>
+                     
+                     <div class="mb-3  mt-3 col-md-12"> 
+                        <!--<a href="/" class="btn  btn-primary  px-5">-->
+                        <!--Save Details-->
+                        <!--</a>-->
+                        <button type="submit" class="btn btn-primary">Save Lead</button>
+                     </div>
+                     
+                  </div>
+               </div>  
+        
+        </div>
+        
+        <div class="tab-pane fade" id="navs-justified-followups" role="tabpanel">
+         
+         <div class="mt-2">
+          <!-- Button trigger modal -->
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#basicModal">
+           Add Followups
+          </button>
+       
+          <div class="card mt-4">
+
+                <div class="table-responsive text-nowrap">
+          <table class="table">
+        <thead>
+            <tr>
+                <th>Status</th>
+                <th>Sub Status</th>
+                <th>Next Followup Update</th>
+                <th>Remarks</th>
+                <th>Created</th>
+                <th>Updated</th>
+            </tr>
+        </thead>
+        
+        <tbody>
+            <tr>
+                <td>INTERESTED</td>
+                <td>Ringing Not Responding</td>
+                <td>2023-04-18</td>
+                <td></td>
+                <td>2023-04-20 13:16:25</td>
+                <td>2023-04-20 13:16:25</td>
+            </tr>
+         </tbody>
+         
+        </table>
+    
+    </div>
+       
+               </div>         
+         
+        </div>
+        </div>
+        
+        
+        <div class="tab-pane fade" id="navs-justified-" role="tabpanel">
+          
+        </div>
+      </div>
+    </div>
+     
+         </div>
+            
+         </div>
+
+    </div>
+</div>
+
+   <!-- Modal -->
+          <div class="modal fade" id="basicModal" tabindex="-1" style="display: none;" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel1">Add Folowups</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <div class="row">
+                 
+                  <div class="mb-2 col-md-4">
+                        <label class="form-label mb-0">Status <span class="text-danger">*</span></label>
+                        <select class="form-select" name="followup_status" required="">
+                           <option value="">All</option>
+                           <option value="BOOKED">Booked</option>
+                           <option value="INTERESTED">Interested</option>
+                           <option value="NOT INTERESTED">Not Interested</option>
+                           <option value="NOT SURE">Not Sure</option>
+                        </select>
+                     </div>
+                     
+        <div class="mb-2 col-md-4">
+                        <label class="form-label mb-0">Sub Status <span class="text-danger">*</span></label>
+                        <select class="form-select" name="followup_substatus" required="">
+                           <option value="">All</option>
+                           <option value="Interested">Interested</option>
+                           <option value="Call Back">Call Back</option>
+                           <option value="Line Busy">Line Busy</option>
+                           <option value="Ringing Not Responding">Ringing Not Responding</option>
+                           <option value="Hangup">Hangup</option>
+                           <option value="Switched Off">Switched Off</option>
+                           <option value="Not Reachable">Not Reachable</option>
+                           <option value="Invalid No">Invalid No</option>
+                           <option value="Not Enquired">Not Enquired</option>
+                           <option value="No Out of Service">No Out of Service</option>
+                           <option value="Wrong No">Wrong No</option>
+                           <option value="Not Interested">Not Interested</option>
+                           <option value="Already Booked">Already Booked</option>
+                        </select>
+        </div>
+                     
+            
+            
+        <div class="mb-2 col-md-4">
+                        <label class="form-label mb-0">
+                         Date
+                       <span class="text-danger">*</span></label>
+                        <input type="datetime-local" name="next_followup_date" placeholder="Enter Here " class="form-control" required="">
+        </div>    
+            
+        <div class="mb-2 col-md-12"> 
+                        <label class="form-label mb-0">
+                        Remarks
+                        </label>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="2" name="remarks"></textarea>
+         </div>     
+                     
+                 
+                  </div>
+                </div>
+                
+        <div class="modal-footer">
+                  <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+              </div>
+            </div>
+        </div>
+   

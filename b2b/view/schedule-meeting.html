@@ -1,0 +1,779 @@
+<div class="content-wrapper">
+   <div class="container-xxl flex-grow-1 container-p-y">
+      <form id="meetingFilters">
+         <div class="row d-inline-block gx-2 mb-2">
+              <div class="w-auto d-inline-block mb-2">
+               <label for="date-range">Date-Range</label>
+
+               <input type="text" class="form-control bg-white" name="daterange" id="dateRange" value="01/01/2018 - 01/15/2018"
+                  readonly="">
+            </div>
+                <div class="w-auto d-inline-block mb-2">
+               <label>Search</label>
+               <div class="input-group input-group-merge">
+                  <span class="input-group-text" id="searchFilter"><i class="bx bx-search"></i></span>
+                  <input type="text" name="searchOrganization" id="searchOrganization" class="form-control"
+                     placeholder="Search By ID,Phone,Organization " aria-label="Search..."
+                     aria-describedby="basic-addon-search31">
+               </div>
+            </div>
+            <div class="w-auto d-inline-block trainerDontHaveAccess">
+               <label for="sale-manager">Sale-Manager</label>
+               <select class="form-select" id="saleManagerFilter" name="saleManagerFilter"></select>
+            </div>
+            <div class="w-auto d-inline-block trainerDontHaveAccess">
+               <label for="status">Status</label>
+               <select class="form-select" id="statusFilter" name="statusFilter">
+                  <option value="">Select</option>
+                  <option value="Visited">Visited</option>
+                  <option value="Rescheduled">Reschedule</option>
+                  <option value="Scheduled">Schedule</option>
+               </select>
+            </div>
+            
+              <div class="w-auto d-inline-block mt-2">
+               <button type="submit" class="btn btn-primary ">Apply Filters</button>
+               <button type="reset" class="btn btn-secondary " id="resetFilters">Reset</button>
+            </div>
+         </div>
+      </form>
+      
+      <div class="card">
+         <div class="table-responsive text-nowrap">
+            <table class="table border">
+               <thead></thead>
+               <tbody id="meetingsList"></tbody>
+            </table>
+         </div>
+      </div>
+      <div class="col px-3">
+         <nav aria-label="Page navigation">
+            <ul class="pagination my-3 pagination-sm"></ul>
+         </nav>
+      </div>
+   </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="basicModal" tabindex="-1" aria-hidden="true">
+   <div class="modal-dialog modal-xl" role="document">
+      <div class="modal-content">
+         <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel1"> Agreements Details</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+         </div>
+         <form id="organization_form">
+
+            <div class="modal-body">
+
+               <div class="row">
+                  <input type="hidden" name="id" id="_id" value="">
+                  <p class="text-primary mb-0">Business Owner Details:</p>
+                  <div class="col-md-4 mb-0">
+                     <label for="emailBasic" class="form-label">
+                        Name
+                     </label>
+                     <input type="text" id="" required class="form-control" placeholder="" name="companyowner" />
+                  </div>
+
+
+                  <div class="col-md-4 mb-0">
+                     <label for="emailBasic" class="form-label">
+                        Phone
+                     </label>
+                     <input type="text" id="" required class="form-control" placeholder="" name="companyphone" />
+                  </div>
+
+                  <div class="col-md-4 mb-0">
+                     <label for="nameBasic" class="form-label">Email</label>
+                     <input type="text" id="nameBasic" name="companyemail" class="form-control" required
+                        placeholder="" />
+                  </div>
+
+
+                  <p class="text-primary mt-3 mb-0">Contact Person/Project Manager Details:</p>
+
+                  <div class="col-md-4 mb-0">
+                     <label for="emailBasic" class="form-label">
+                        Name
+                     </label>
+                     <input type="text" id="c_name" class="form-control" placeholder=" " name="c_name" />
+                  </div>
+
+
+                  <div class="col-md-4 mb-0">
+                     <label for="emailBasic" class="form-label">
+                        Phone
+                     </label>
+                     <input type="text" id="c_phone" class="form-control" placeholder="" name="c_phone" />
+                  </div>
+
+                  <div class="col-md-4 mb-0">
+                     <label class="form-label">Email</label>
+                     <input type="text" name="c_email" class="form-control" id="c_email" />
+                  </div>
+
+
+                  <p class="text-primary mb-1 mt-3">Fintech Details:</p>
+
+                  <div class="col-md-6 mb-0">
+                     <label for="emailBasic" class="form-label">Number of GIC(s) (yearly)</label>
+                     <input type="text" id="" required class="form-control" placeholder=" " name="committed" />
+                  </div>
+
+
+                  <div class="col-md-6 mb-0">
+                     <label for="emailBasic" class="form-label">GIC Reward (CAD)</label>
+                     <input type="text" id="" required class="form-control" placeholder="" name="reward" />
+                  </div>
+
+
+                  <div>
+                     <label for="dobBasic" class="form-label">Credit Card with a limit of CAD</label>
+
+                     <div class="d-flex mb-0">
+
+                        <input type="text" required name="credit_card" class="form-control" placeholder="" />
+                        <input type="text" name="credit_card2" class="form-control d-none" placeholder=""
+                           name="address" />
+                     </div>
+                  </div>
+
+                  <div class="col mb-0">
+                     <label for="dobBasic" class="form-label">Loan Benefit for Partner</label>
+                     <input type="text" required name="benefits" class="form-control" placeholder="" />
+                  </div>
+
+                  <div class="col mb-0">
+                     <label for="dobBasic" class="form-label">Forex (paisa)</label>
+                     <input type="text" required name="forex" class="form-control" placeholder="" />
+                  </div>
+
+
+                  <div class=" mb-0">
+                     <label for="dobBasic" class="form-label"> Other Services</label>
+                     <input type="text" required name="fintech_otherservice" class="form-control" placeholder="" />
+                  </div>
+
+
+
+                  <div class="row">
+                     <p class=" text-primary mb-1 mt-3">Organization Details :</p>
+                     <div class="mb-2 col-md-4">
+
+                        <label for="nameBasic" class="form-label"> Name</label>
+                        <input type="text" id="nameBasic" name="organization" class="form-control" required
+                           placeholder="" />
+
+                     </div>
+                     <div class="mb-2 col-md-4">
+                        <label class="form-label mb-0">Phone <span class="text-danger">*</span></label>
+                        <input type="phone" name="organization_phone" minlength="10" maxlength="10"
+                           placeholder="Enter Phone" class="form-control" required="">
+                     </div>
+                     <div class="mb-2 col-md-4">
+                        <label class="form-label mb-0">Website</label>
+                        <input type="text" name="website" placeholder="URL" class="form-control">
+                     </div>
+                     <div class="mb-2 col-md-4">
+                        <label class="form-label mb-0">Email</label>
+                        <input type="text" name="organization_email" class="form-control" placeholder="Enter Email">
+                     </div>
+                     <div class="mb-2 col-md-4">
+                        <label class="form-label mb-0">State</label>
+                        <input type="text" name="state" class="form-control" placeholder="Enter State">
+                     </div>
+                     <div class="mb-2 col-md-4">
+                        <label class="form-label mb-0">City</label>
+                        <input type="text" name="city" class="form-control" placeholder="Enter State">
+                     </div>
+                     <div class="mb-2 col-md-6">
+
+                        <label for="exampleFormControlTextarea1" class="form-label mb-">Address</label>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" name="address"></textarea>
+
+
+                     </div>
+
+
+                     <div class="col-md-6 mb-0">
+                        <label for="emailBasic" class="form-label">
+                           Nature of Business
+                        </label>
+                        <textarea type="text" id="nature" required="" class="form-control" placeholder=" "
+                           name="companytype"></textarea>
+                     </div>
+
+                     <div class="mb-0 col-md-9">
+                        <label class="form-label mb-0 w-100"> More than one location</label>
+                        <div class="form-check form-check-inline">
+                           <input class="form-check-input" type="radio" name="location_radio" id="inlineRadio1"
+                              value="yes">
+                           <label class="form-check-label" for="inlineRadio1">Yes</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                           <input class="form-check-input" type="radio" name="location_radio" id="inlineRadio2"
+                              value="no">
+                           <label class="form-check-label" for="inlineRadio2">No</label>
+                        </div>
+                     </div>
+                     <div class="mb-2 col-md-11 d-none" id="_more_locations">
+                        <div class="input-group">
+                           <input type="text" aria-label="city" placeholder="City" name="location_city[]"
+                              class="form-control">
+                           <input type="text" aria-label="state" placeholder="State" name="location_state[]"
+                              class="form-control">
+                           <span id="_add_location" class="cursor-pointer input-group-text"><i class=" bx bx-plus"></i>
+                           </span>
+                        </div>
+                     </div>
+                     <div id="newinput"></div>
+                     <div class="mb-1 col-md-7">
+                        <label class="form-label mb-0 w-100">Services </label>
+                        <div class="form-check form-check-inline">
+                           <input class="form-check-input" type="checkbox" name="visa" value="visa" id="defaultCheck1">
+                           <label class="form-check-label" for="defaultCheck1">
+                              Visa
+                           </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                           <input class="form-check-input" type="checkbox" name="ielts" value="ielts"
+                              id="defaultCheck2">
+                           <label class="form-check-label" for="defaultCheck2">
+                              IELTS
+                           </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                           <input class="form-check-input" type="checkbox" name="vistor_visa" value="vistor_visa"
+                              id="defaultCheck3">
+                           <label class="form-check-label" for="defaultCheck3">
+                              Vistor Visa
+                           </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                           <input class="form-check-input" type="checkbox" name="work_visa" value="work_visa"
+                              id="defaultCheck4">
+                           <label class="form-check-label" for="defaultCheck4">
+                              Work Visa
+                           </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                           <input class="form-check-input" type="checkbox" name="pr" value="pr" id="defaultCheck5">
+                           <label class="form-check-label" for="defaultCheck5">
+                              PR
+                           </label>
+                        </div>
+                     </div>
+                     <div class="mb-2 col-md-4">
+                        <label class="form-label mb-0">Other Services </label>
+                        <input type="text" name="other_services" class="form-control" placeholder="Enter Here">
+                     </div>
+                     <p class="text-primary mb-1 mt-4">Software Usage:</p>
+                     <div class="mb-2 col-md-4">
+                        <label class="form-label mb-0 w-100"> Are they using any other CRM software?</label>
+                        <div class="form-check form-check-inline">
+                           <input class="form-check-input rad" type="radio" name="crm_soft" id="inlineRadio11"
+                              value="yes">
+                           <label class="form-check-label" for="inlineRadio11">Yes</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                           <input class="form-check-input" type="radio" name="crm_soft" id="inlineRadio22" value="no">
+                           <label class="form-check-label" for="inlineRadio22">No</label>
+                        </div>
+                        <textarea class="form-control d-none" id="exampleFormControlTextarea1" rows="2"
+                           name="crm_soft_text"></textarea>
+                     </div>
+                     <div class="mb-2 col-md-4">
+                        <label class="form-label mb-0 w-100"> Are they using any Calling software?</label>
+                        <div class="form-check form-check-inline">
+                           <input class="form-check-input" type="radio" name="calling_soft" id="inlineRadio13"
+                              value="yes">
+                           <label class="form-check-label" for="inlineRadio13">Yes</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                           <input class="form-check-input" type="radio" name="calling_soft" id="inlineRadio14"
+                              value="no">
+                           <label class="form-check-label" for="inlineRadio14">No</label>
+                        </div>
+                        <textarea class="form-control d-none" id="exampleFormControlTextarea1" rows="2"
+                           name="calling_soft_text"></textarea>
+                     </div>
+                     <div class="mb-2 col-md-4">
+                        <label class="form-label mb-0 w-100"> Are they using any SMS software?</label>
+                        <div class="form-check form-check-inline">
+                           <input class="form-check-input" type="radio" name="sms_soft" id="inlineRadio15" value="yes">
+                           <label class="form-check-label" for="inlineRadio15">Yes</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                           <input class="form-check-input" type="radio" name="sms_soft" id="inlineRadio16" value="no">
+                           <label class="form-check-label" for="inlineRadio16">No</label>
+                        </div>
+                        <textarea class="form-control d-none" id="exampleFormControlTextarea1" rows="2"
+                           name="sms_soft_text"></textarea>
+                     </div>
+                     <div class="mb-2 col-md-4">
+                        <label class="form-label mb-0 w-100"> Are they using any WhatsApp software?</label>
+                        <div class="form-check form-check-inline">
+                           <input class="form-check-input" type="radio" name="whatsapp_soft" id="inlineRadio17"
+                              value="yes">
+                           <label class="form-check-label" for="inlineRadio17">Yes</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                           <input class="form-check-input" type="radio" name="whatsapp_soft" id="inlineRadio18"
+                              value="no">
+                           <label class="form-check-label" for="inlineRadio18">No</label>
+                        </div>
+                        <textarea class="form-control d-none" id="exampleFormControlTextarea1" rows="2"
+                           name="whatsapp_soft_text"></textarea>
+                     </div>
+                     <div class="mb-2 col-md-4">
+                        <label class="form-label mb-0 w-100"> Are they using any Email software?</label>
+                        <div class="form-check form-check-inline">
+                           <input class="form-check-input" type="radio" name="email_soft" id="inlineRadio19"
+                              value="yes">
+                           <label class="form-check-label" for="inlineRadio19">Yes</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                           <input class="form-check-input" type="radio" name="email_soft" id="inlineRadio20" value="no">
+                           <label class="form-check-label" for="inlineRadio20">No</label>
+                        </div>
+                        <textarea class="form-control d-none" id="exampleFormControlTextarea1" rows="2"
+                           name="email_soft_text"></textarea>
+                     </div>
+
+                     <div class="mb-2 col-md-4">
+                        <label class="form-label mb-0">Users they are expecting to use CRM</label>
+                        <select class="form-select" name="crm_users" aria-label="Years of experience">
+                           <option value="1 - 15 employees">1 - 15 employees</option>
+                           <option value="16 - 100 employees">16 - 100 employees</option>
+                           <option value="101 - 500 employees">101 - 500 employees</option>
+                           <option value="501 - 1500 employees">501 - 1500 employees</option>
+                           <option value="1501+ employees">1501+ employees</option>
+                        </select>
+                     </div>
+
+
+
+                     <div class="mb-2 col-md-6">
+                        <label class="form-label mb-0"> Their availability <span class="text-primary">(schedule)</span>
+                           for “Innerx CRM introduction</label>
+                        <input type="datetime-local" name="schedule_date" placeholder="Enter Here "
+                           class="form-control">
+                     </div>
+
+
+
+
+                     <div class="mb-2 col-md-6">
+                        <label class="form-label mb-0"> Remarks </label>
+                        <input type="text" name="remarks" placeholder="Enter Here " class="form-control">
+                     </div>
+
+
+
+                  </div>
+
+                  <div class="modal-footer">
+                     <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
+                        Close
+                     </button>
+                     <button type="submit" class="btn btn-primary">Save changes</button>
+
+
+                  </div>
+         </form>
+
+
+
+      </div>
+   </div>
+</div>
+</div>
+</div>
+<!-- Button trigger modal -->
+
+<!-- Modal -->
+<div class="modal fade" id="basicModaledit" tabindex="-1" aria-hidden="true">
+   <div class="modal-dialog modal-xl" role="document">
+      <div class="modal-content">
+         <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel1"> Agreement Details</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+         </div>
+         <form id="organization_form_edit">
+            <div class="modal-body">
+               <div class="row">
+                  <input type="hidden" name="id" id="_id" value="">
+                  <p class="text-primary mb-0">Business Owner Details:</p>
+                  <div class="col-md-4 mb-0">
+                     <label for="emailBasic" class="form-label">
+                        Name
+                     </label>
+                     <input type="text" id="" required class="form-control" placeholder=" " name="companyowner" />
+                  </div>
+                  <div class="col-md-4 mb-0">
+                     <label for="emailBasic" class="form-label">
+                        Phone
+                     </label>
+                     <input type="text" id="" required class="form-control" placeholder="" name="companyphone" />
+                  </div>
+
+                  <div class="col-md-4 mb-0">
+                     <label for="nameBasic" class="form-label">Email</label>
+                     <input type="text" id="nameBasic" name="companyemail" class="form-control" required
+                        placeholder="" />
+                  </div>
+                  <p class="text-primary mt-3 mb-0">Contact Person/Project Manager Details:</p>
+                  <div class="col-md-4 mb-0">
+                     <label for="emailBasic" class="form-label">
+                        Name
+                     </label>
+                     <input type="text" id="c_name" class="form-control" placeholder=" " name="c_name" />
+                  </div>
+                  <div class="col-md-4 mb-0">
+                     <label for="emailBasic" class="form-label">
+                        Phone
+                     </label>
+                     <input type="text" id="c_phone" class="form-control" placeholder="" name="c_phone" />
+                  </div>
+                  <div class="col-md-4 mb-0">
+                     <label class="form-label">Email</label>
+                     <input type="text" name="c_email" class="form-control" id="c_email" />
+                  </div>
+                  <p class="text-primary mb-1 mt-3">Fintech Details:</p>
+                  <div class="col-md-6 mb-0">
+                     <label for="emailBasic" class="form-label">Number of GIC(s) (yearly)</label>
+                     <input type="text" id="" required class="form-control" placeholder=" " name="committed" />
+                  </div>
+
+
+                  <div class="col-md-6 mb-0">
+                     <label for="emailBasic" class="form-label">GIC Reward (CAD)</label>
+                     <input type="text" id="" required class="form-control" placeholder=" " name="reward" />
+                  </div>
+
+
+
+                  <div>
+                     <label for="dobBasic" class="form-label">Credit Card with a limit of CAD</label>
+
+                     <div class="d-flex mb-0">
+
+                        <input type="text" required name="credit_card" class="form-control" placeholder="" />
+                        <input type="text" name="credit_card2" class="form-control d-none" placeholder=""
+                           name="address" />
+                     </div>
+                  </div>
+
+                  <div class="col mb-0">
+                     <label for="dobBasic" class="form-label">Loan Benefit for Partner</label>
+                     <input type="text" required name="benefits" class="form-control" placeholder="" />
+                  </div>
+
+                  <div class="col mb-0">
+                     <label for="dobBasic" class="form-label">Forex (paisa)</label>
+                     <input type="text" required name="forex" class="form-control" placeholder="" />
+                  </div>
+
+
+                  <div class=" mb-0">
+                     <label for="dobBasic" class="form-label"> Other Services</label>
+                     <input type="text" required name="fintech_otherservice" class="form-control" placeholder="" />
+                  </div>
+
+
+
+                  <div class="row">
+                     <p class=" text-primary mb-1 mt-3">Organization Details :</p>
+                     <div class="mb-2 col-md-4">
+
+                        <label for="nameBasic" class="form-label"> Name</label>
+                        <input type="text" id="nameBasic" name="organization" class="form-control" required
+                           placeholder="" />
+
+                     </div>
+                     <div class="mb-2 col-md-4">
+                        <label class="form-label mb-0">Phone <span class="text-danger">*</span></label>
+                        <input type="phone" name="organization_phone" minlength="10" maxlength="10"
+                           placeholder="Enter Phone" class="form-control" required="">
+                     </div>
+                     <div class="mb-2 col-md-4">
+                        <label class="form-label mb-0">Website</label>
+                        <input type="text" name="website" placeholder="URL" class="form-control">
+                     </div>
+                     <div class="mb-2 col-md-4">
+                        <label class="form-label mb-0">Email</label>
+                        <input type="text" name="organization_email" class="form-control" placeholder="Enter Email">
+                     </div>
+                     <div class="mb-2 col-md-4">
+                        <label class="form-label mb-0">State</label>
+                        <input type="text" name="state" class="form-control" placeholder="Enter State">
+                     </div>
+                     <div class="mb-2 col-md-4">
+                        <label class="form-label mb-0">City</label>
+                        <input type="text" name="city" class="form-control" placeholder="Enter State">
+                     </div>
+                     <div class="mb-2 col-md-6">
+
+                        <label for="exampleFormControlTextarea1" class="form-label mb-">Address</label>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" name="address"></textarea>
+
+
+                     </div>
+
+
+                     <div class="col-md-6 ">
+                        <label for="emailBasic" class="form-label">
+                           Nature of Business
+                        </label>
+                        <textarea type="text" id="nature" required="" class="form-control" placeholder=" "
+                           name="companytype"></textarea>
+                     </div>
+
+
+                     <div class="mb-1 col-md-7">
+                        <label class="form-label mb-0 w-100">Services </label>
+                        <div class="form-check form-check-inline">
+                           <input class="form-check-input" type="checkbox" name="visa" value="visa" id="defaultCheck1">
+                           <label class="form-check-label" for="defaultCheck1">
+                              Visa
+                           </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                           <input class="form-check-input" type="checkbox" name="ielts" value="ielts"
+                              id="defaultCheck2">
+                           <label class="form-check-label" for="defaultCheck2">
+                              IELTS
+                           </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                           <input class="form-check-input" type="checkbox" name="vistor_visa" value="vistor_visa"
+                              id="defaultCheck3">
+                           <label class="form-check-label" for="defaultCheck3">
+                              Vistor Visa
+                           </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                           <input class="form-check-input" type="checkbox" name="work_visa" value="work_visa"
+                              id="defaultCheck4">
+                           <label class="form-check-label" for="defaultCheck4">
+                              Work Visa
+                           </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                           <input class="form-check-input" type="checkbox" name="pr" value="pr" id="defaultCheck5">
+                           <label class="form-check-label" for="defaultCheck5">
+                              PR
+                           </label>
+                        </div>
+                     </div>
+                     <div class="mb-2 col-md-4">
+                        <label class="form-label mb-0">Other Services </label>
+                        <input type="text" name="other_services" class="form-control" placeholder="Enter Here">
+                     </div>
+                     <p class="text-primary mb-1 mt-4">Software Usage:</p>
+                     <div class="mb-2 col-md-4">
+                        <label class="form-label mb-0 w-100"> Are they using any other CRM software?</label>
+                        <div class="form-check form-check-inline">
+                           <input class="form-check-input rad" type="radio" name="crm_soft" id="inlineRadio11"
+                              value="yes">
+                           <label class="form-check-label" for="inlineRadio11">Yes</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                           <input class="form-check-input" type="radio" name="crm_soft" id="inlineRadio22" value="no">
+                           <label class="form-check-label" for="inlineRadio22">No</label>
+                        </div>
+                        <textarea class="form-control d-none" id="exampleFormControlTextarea1" rows="2"
+                           name="crm_soft_text"></textarea>
+                     </div>
+                     <div class="mb-2 col-md-4">
+                        <label class="form-label mb-0 w-100"> Are they using any Calling software?</label>
+                        <div class="form-check form-check-inline">
+                           <input class="form-check-input" type="radio" name="calling_soft" id="inlineRadio13"
+                              value="yes">
+                           <label class="form-check-label" for="inlineRadio13">Yes</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                           <input class="form-check-input" type="radio" name="calling_soft" id="inlineRadio14"
+                              value="no">
+                           <label class="form-check-label" for="inlineRadio14">No</label>
+                        </div>
+                        <textarea class="form-control d-none" id="exampleFormControlTextarea1" rows="2"
+                           name="calling_soft_text"></textarea>
+                     </div>
+                     <div class="mb-2 col-md-4">
+                        <label class="form-label mb-0 w-100"> Are they using any SMS software?</label>
+                        <div class="form-check form-check-inline">
+                           <input class="form-check-input" type="radio" name="sms_soft" id="inlineRadio15" value="yes">
+                           <label class="form-check-label" for="inlineRadio15">Yes</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                           <input class="form-check-input" type="radio" name="sms_soft" id="inlineRadio16" value="no">
+                           <label class="form-check-label" for="inlineRadio16">No</label>
+                        </div>
+                        <textarea class="form-control d-none" id="exampleFormControlTextarea1" rows="2"
+                           name="sms_soft_text"></textarea>
+                     </div>
+                     <div class="mb-2 col-md-4">
+                        <label class="form-label mb-0 w-100"> Are they using any WhatsApp software?</label>
+                        <div class="form-check form-check-inline">
+                           <input class="form-check-input" type="radio" name="whatsapp_soft" id="inlineRadio17"
+                              value="yes">
+                           <label class="form-check-label" for="inlineRadio17">Yes</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                           <input class="form-check-input" type="radio" name="whatsapp_soft" id="inlineRadio18"
+                              value="no">
+                           <label class="form-check-label" for="inlineRadio18">No</label>
+                        </div>
+                        <textarea class="form-control d-none" id="exampleFormControlTextarea1" rows="2"
+                           name="whatsapp_soft_text"></textarea>
+                     </div>
+                     <div class="mb-2 col-md-4">
+                        <label class="form-label mb-0 w-100"> Are they using any Email software?</label>
+                        <div class="form-check form-check-inline">
+                           <input class="form-check-input" type="radio" name="email_soft" id="inlineRadio19"
+                              value="yes">
+                           <label class="form-check-label" for="inlineRadio19">Yes</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                           <input class="form-check-input" type="radio" name="email_soft" id="inlineRadio20" value="no">
+                           <label class="form-check-label" for="inlineRadio20">No</label>
+                        </div>
+                        <textarea class="form-control d-none" id="exampleFormControlTextarea1" rows="2"
+                           name="email_soft_text"></textarea>
+                     </div>
+
+                     <div class="mb-2 col-md-4">
+                        <label class="form-label mb-0">Users they are expecting to use CRM</label>
+                        <select class="form-select" name="crm_users" aria-label="Years of experience">
+                           <option value="1 - 15 employees">1 - 15 employees</option>
+                           <option value="16 - 100 employees">16 - 100 employees</option>
+                           <option value="101 - 500 employees">101 - 500 employees</option>
+                           <option value="501 - 1500 employees">501 - 1500 employees</option>
+                           <option value="1501+ employees">1501+ employees</option>
+                        </select>
+                     </div>
+
+
+
+                  </div>
+               </div>
+               <div class="modal-footer">
+                  <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
+                     Close
+                  </button>
+                  <button type="submit" class="btn btn-primary">Update</button>
+
+
+               </div>
+         </form>
+
+
+
+      </div>
+      </form>
+   </div>
+</div>
+</div>
+<!-- Button trigger modal -->
+
+<div class="modal fade" id="basicModalemail" tabindex="-1" aria-hidden="true">
+   <div class="modal-dialog" role="document">
+      <div class="modal-content">
+         <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel1"> Email Agreement</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+         </div>
+         <form id="organization_form_email">
+            <div class="modal-body">
+               <div class="row">
+
+
+                  <input type="hidden" name="id" id="_id">
+
+
+
+                  <div class=" mb-0">
+                     <label for="nameBasic" class="form-label">Emails <small> (support multiple emails)</small></label>
+                     <input type="text" id="nameBasic" name="emails" class="form-control" required
+                        placeholder="abc@xyz.com, xyz@company.com" />
+                  </div>
+
+               </div>
+            </div>
+            <div class="modal-footer">
+               <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
+                  Close
+               </button>
+               <button type="submit" class="btn btn-primary">Send</button>
+
+
+            </div>
+         </form>
+      </div>
+   </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="basicModal" tabindex="-1" aria-hidden="true">
+   <div class="modal-dialog" role="document">
+      <div class="modal-content">
+         <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel1"> Organization Details</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+         </div>
+         <div class="modal-body">
+            <div class="row">
+               <form id="organization_form">
+                  <div class="col mb-0">
+                     <label for="defaultSelect" class="form-label">Sub Domain</label>
+                     <select id="_dir" name="sub_domain" required class="form-select">
+                        <option value="">Sub Domains</option>
+                     </select>
+                  </div>
+
+                  <div class="col mb-0">
+                     <label for="nameBasic" class="form-label">Organization Name</label>
+                     <input type="text" id="nameBasic" name="organization" class="form-control" required
+                        placeholder="Enter Name" />
+                  </div>
+            </div>
+
+            <div class="row g-2">
+               <div class="col mb-0">
+                  <label for="formFile" class="form-label">Organization Logo</label>
+                  <input class="form-control" type="file" id="_logo" name="logo" required id="formFile">
+               </div>
+            </div>
+            <div class="row g-2">
+               <div class="col mb-0">
+                  <label for="emailBasic" class="form-label">Email</label>
+                  <input type="text" id="_email" name="email" required class="form-control" placeholder="xxxx@xxx.xx" />
+               </div>
+
+               <div class="col mb-0">
+                  <label for="dobBasic" class="form-label">Phone</label>
+                  <input type="text" id="_phone" required name="phone" class="form-control"
+                     placeholder="+91 xxxxx xxxxx" />
+               </div>
+            </div>
+         </div>
+         <div class="modal-footer">
+            <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
+               Close
+            </button>
+            <button type="submit" class="btn btn-primary">Save changes</button>
+
+            </form>
+         </div>
+      </div>
+   </div>
+</div>
+
+<!-- Button trigger modal -->
+
+
+
+
+<div id="_pdf" class=""></div>

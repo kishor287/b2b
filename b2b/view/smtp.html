@@ -1,0 +1,181 @@
+   <div class="content-wrapper">
+       <!-- Content -->
+       <div class="container-xxl flex-grow-1 container-p-y">
+           <div class="row">
+               <div class="col-md-6">
+                   <h4 class="fw-bold py-3 mb-2"><span class="text-muted fw-light">SMTP Registration</span></h4>
+               </div>
+               <div class="col-md-6 mb-2">
+                   <button type="button" class="btn btn-primary float-end" data-bs-toggle="modal" data-bs-target="#basicModal">
+                       Add SMTP
+                   </button>
+               </div>
+           </div>
+           <div class="card">
+               <div class="table-responsive text-nowrap">
+                   <table class="table ">
+                       <thead></thead>
+                       <tbody></tbody>
+                   </table>
+               </div>
+               <div class="col px-3">
+                   <nav aria-label="Page navigation">
+                       <ul class="pagination my-3 pagination-sm"></ul>
+                   </nav>
+               </div>
+           </div>
+       </div>
+   </div>
+   <!-- Button trigger modal -->
+   <!-- Modal -->
+   <div class="modal fade" id="basicModal" tabindex="-1" aria-hidden="true">
+       <div class="modal-dialog modal-lg" role="document">
+           <div class="modal-content">
+               <div class="modal-header">
+                   <h5 class="modal-title" id="exampleModalLabel1">SMTP Details</h5>
+                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+               </div>
+               <form id="organization_form">
+                   <div class="modal-body">
+                       <div class="row">
+                         
+                         <div class="col-12 mb-0">
+                               <label for="defaultSelect" class="form-label">Organization Name</label>
+                               <select id="_dir" name="organization" required class="form-select">
+                                   <option value="">Organization</option>
+                               </select>
+                           </div>
+                           
+                           <div class="col-12 mb-0">
+                               <label for="dobBasic" class="form-label">Primary SMTP <small>(Admissions)</small></label>
+                               <div class="input-group">
+                                   <input type="text" name="p_host" aria-label="First name" class="form-control" placeholder="Host (smtp.gmail.com)">
+                                   <input type="text" name="p_email" aria-label="First name" class="form-control" placeholder="Email (abc@gmail.com)">
+                                   <input type="password" name="p_pass" aria-label="Last name" class="form-control" placeholder="Password (**********)">
+                                 <div class="col-2 ">
+                               <select id="" name="p_type" required class="form-select rounded-0">
+                                  <option value="">Encrypts</option>
+                                   <option value="ssl">ssl</option>
+                                   <option value="tls">tls</option>
+                               </select>
+                               </div>
+                               
+                                 <div class="col-2 ">
+                                  <input type="text" name="p_port" aria-label="Last name" class="form-control rounded-0 " placeholder="PORT (587)">
+                                   </div>
+                               
+                               </div>
+                           </div>
+                           
+                             <div class="col-12 mb-0">
+                               <label for="dobBasic" class="form-label">Secondary SMTP <small>(no-reply)</small></label>
+                               <div class="input-group">
+                                   <input type="text" name="s_host" aria-label="First name" class="form-control" placeholder="Host (smtp.gmail.com)">
+                                   <input type="text" name="s_email" aria-label="First name" class="form-control" placeholder="Email (abc@gmail.com)">
+                                   <input type="password" name="s_pass" aria-label="Last name" class="form-control" placeholder="Password (**********)">
+                                 <div class="col-2 ">
+                               <select id="" name="s_type" required class="form-select rounded-0">
+                                   <option value="">Encrypts</option>
+                                   <option value="ssl">ssl</option>
+                                   <option value="tls">tls</option>
+                               </select>
+                               </div>
+                               
+                                 <div class="col-2 ">
+                                  <input type="text" name="s_port" aria-label="Last name" class="form-control rounded-0 " placeholder="PORT (587)">
+                                   </div>
+                               
+                               </div>
+                           </div>
+                       </div>
+                   </div>
+                   <div class="modal-footer">
+                       <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
+                           Close
+                       </button>
+                       <button type="submit" class="btn btn-primary">Save changes</button>
+                   </div>
+               </form>
+           </div>
+       </div>
+   </div>
+   <!-- Button trigger modal -->
+   <!-- Modal -->
+   <div class="modal fade" id="basicModaledit" tabindex="-1" aria-hidden="true">
+       <div class="modal-dialog" role="document">
+           <div class="modal-content">
+               <div class="modal-header">
+                   <h5 class="modal-title" id="exampleModalLabel1"> APIs Details</h5>
+                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+               </div>
+               <form id="organization_form_edit">
+                   <div class="modal-body">
+                       <div class="row">
+                      <input type="hidden" name="id" id="_id">
+                         <div class="col-12 mb-0">
+                               <label for="dobBasic" class="form-label">Primary SMTP <small>(Admissions)</small></label>
+                               <div class="input-group">
+                                   <input type="text" name="p_host" aria-label="First name" class="form-control" placeholder="Host (smtp.gmail.com)">
+                                   <input type="text" name="p_email" aria-label="First name" class="form-control" placeholder="Email (abc@gmail.com)">
+                                   <input type="text" name="p_pass" aria-label="Last name" class="form-control" placeholder="Password (**********)">
+                                 <div class="col-2 ">
+                               <select id="ptype" name="p_type" required class="form-select rounded-0">
+                                  <option value="">Encrypts</option>
+                                   <option value="ssl">ssl</option>
+                                   <option value="tls">tls</option>
+                               </select>
+                               </div>
+                               
+                                 <div class="col-2 ">
+                                  <input type="text" name="p_port" aria-label="Last name" class="form-control rounded-0 " placeholder="PORT (587)">
+                                   </div>
+                               
+                               </div>
+                           </div>
+                           
+                             <div class="col-12 mb-0">
+                               <label for="dobBasic" class="form-label">Secondary SMTP <small>(no-reply)</small></label>
+                               <div class="input-group">
+                                   <input type="text" name="s_host" aria-label="First name" class="form-control" placeholder="Host (smtp.gmail.com)">
+                                   <input type="text" name="s_email" aria-label="First name" class="form-control" placeholder="Email (abc@gmail.com)">
+                                   <input type="text" name="s_pass" aria-label="Last name" class="form-control" placeholder="Password (**********)">
+                                 <div class="col-2 ">
+                               <select id="stype" name="s_type" required class="form-select rounded-0">
+                                   <option value="">Encrypts</option>
+                                   <option value="ssl">ssl</option>
+                                   <option value="tls">tls</option>
+                               </select>
+                               </div>
+                               
+                                 <div class="col-2 ">
+                                  <input type="text" name="s_port" aria-label="Last name" class="form-control rounded-0 " placeholder="PORT (587)">
+                                   </div>
+                               
+                               </div>
+                           </div>
+                       </div>
+                   </div>
+                   <div class="modal-footer">
+                       <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
+                           Close
+                       </button>
+                       <button type="submit" class="btn btn-primary">Save changes</button>
+                   </div>
+               </form>
+           </div>
+       </div>
+   </div>
+   <!-- Button trigger modal -->
+   <div class="modal fade bd-example-modal-sm " data-backdrop="static" data-keyboard="false" id="_delete_modal" style="display: none;" aria-hidden="true">
+       <div class="modal-dialog modal-sm">
+           <div class="modal-content">
+               <form id="_delete_form">
+                   <div class="alert alert-danger notification mb-0">
+                       <p class="notificaiton-title mb-4 mt-3"><strong>Do you really want to remove?</strong></p>
+                       <button type="submit" class="btn btn-danger btn-sm">Confirm</button>
+                       <button type="button" data-bs-dismiss="modal" class="btn btn-link btn-sm">Cancel</button>
+                   </div>
+               </form>
+           </div>
+       </div>
+   </div>

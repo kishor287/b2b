@@ -1,0 +1,74 @@
+<div class="content-wrapper">
+    <!-- Content -->
+    <div class="container-xxl flex-grow-1 container-p-y">
+        <div class="row mb-2">
+            <div class="col-md-12 text-start mt-4">
+                <a href="/loan-and-simcard" class="btn btn-dark">
+                    << Back</a>
+            </div>
+        </div>
+        <div class="card  p-3">
+            <h5 class="card-title text-primary">Sim Card</h5>
+            <form id="saveSimLoan" class="">
+                <div class="row mb-2">
+                    <div class="col-md-4 mb-0">
+                        <label for="emailBasic" class="form-label">AGENT NAME</label>
+                        <input type="text" id="agentName" required="" class="form-control" 
+                            name="agent_name">
+                    </div>
+                    <div class="col-md-4 mb-0">
+                        <label for="emailBasic" class="form-label">STUDENT NAME</label>
+                        <input type="text" id="studentName" required="" class="form-control" 
+                            name="student_name">
+                    </div>
+                    <div class="col-md-4 mb-0">
+                        <label for="emailBasic" class="form-label">CONTACT NUMBER</label>
+                        <input type="text" id="contactNumber" required="" class="form-control" 
+                            name="contact_number">
+                    </div>
+                    <div class="col-md-4 mb-0">
+                        <label for="emailBasic" class="form-label">LOCATION</label>
+                        <input type="text" id="location" required="" class="form-control" 
+                            name="location">
+                    </div>
+                    <div class="col-md-4 mb-0">
+                        <label for="emailBasic" class="form-label">SIM CARD QUANTITY ISSUED</label>
+                        <input type="text" id="" required="" class="form-control" 
+                            name="sim_card_quantity">
+                    </div>
+                    <div class="col-md-4 mb-0">
+                        <label for="emailBasic" class="form-label">SIM CARD NUMBER</label>
+                        <input type="number" id="simCardNumber" required="" class="form-control" 
+                            name="sim_card_number">
+                        <input type="hidden" name="_action" value="saveSimAndLoan" />
+                        <input type="hidden" name="payload" value="add-sim-and-loan" />
+                    </div>
+                    <div class="col-md-4 mb-0">
+                        <label for="emailBasic" class="form-label">AMOUNT</label>
+                        <input type="number" id="amount" required="" class="form-control"  name="amount">
+                    </div>
+                    <div class="col-md-4 mb-0">
+                        <label for="emailBasic" class="form-label">STATUS</label>
+                        <!-- <input type="text" id="status" required="" class="form-control"  name="status"> -->
+                        <select id="status" class="form-control" name="status">
+                            <option value="COMPLETE">Complete</option>
+                            <option value="PENDING">Pending</option>
+                        </select>
+                    </div>
+                    <div class="col-md-4 mb-0">
+                        <label for="simbarCode" class="form-label">Sim Card Barcode</label>
+                        <input type="file" id="simbarCode" required="" class="form-control" accept="image/*"  name="sim_card_barcode">
+                    </div>
+                    <div class=" mt-2">
+                        <button class="btn btn-primary">Save</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- Button trigger modal -->
+
+
+<div id="_pdf" class=""></div>

@@ -1,0 +1,189 @@
+<div class="content-wrapper">
+  <!-- Content -->
+
+  <div class="container-xxl flex-grow-1 container-p-y">
+    <div class="row">
+      <div class="col-lg-12 text-end py-2">
+        <button id="addNewPricingPlan" class="btn btn-primary" data-bs-toggle="modal"
+          data-bs-target="#staticBackdrop">Create New</button>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-12 mb-4 order-0">
+        <div class="card bg-light p-3">
+          <div class="col-md-12">
+            <h5>User Registration plans</h5>
+          </div>
+          <div class="col-md-12">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>Actions</th>
+                  <th>Title </th>
+                  <th>Pricing</th>
+                  <th>Maximum Discount</th>
+                  <th>Description</th>
+                  <th>Created At</th>
+                </tr>
+              </thead>
+              <tbody id="pricingPlansBody"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="content-backdrop fade"></div>
+</div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+  aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel">Add Pricing Plan</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form id="pricingPlansForm">
+          <div class="row p-3">
+            <div class="col-md-6 mb-4">
+              <label for="title" class="form-label mb-0">Title</label>
+              <input type="text" class="form-control" id="title" placeholder="Enter here" name="title" required>
+            </div>
+            <div class="col-md-6 mb-4">
+              <label for="price" class="form-label mb-0">Price</label>
+              <input type="number" class="form-control" id="price" placeholder="Enter price" name="price" required>
+            </div>
+            <div class="col-md-6 mb-4">
+              <label for="maximum_discount" class="form-label mb-0">Maximum Discount</label>
+              <input type="number" class="form-control"  id="maximum_discount" placeholder="Enter here"
+                name="maximum_discount">
+            </div>
+
+            <div class="col-md-6 mb-4">
+              <label for="description">Description</label>
+              <textarea class="form-control" rows="2" id="description" name="description"
+                placeholder="Enter here"></textarea>
+            </div>
+            <div class="col-md-6 mb-4 d-none">
+              <label for="payment_method" class="form-label mb-0">Payment Method</label>
+              <select class="form-select" id="payment_method" name="payment_method">
+                <option class="">Select</option>
+                <option value="Cash">Cash</option>
+                <option value="Online">Online</option>
+                <option value="Cheque">Cheque</option>
+                <option value="Paypal">Paypal</option>
+                <option value="Wallet">Wallet</option>
+              </select>
+            </div>
+            <div class="col-md-12 text-end mt-3">
+              <button type="submit" class="btn btn-sm btn-primary px-3 py-2">Save</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="editPlanModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+  aria-labelledby="editPlanModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="editPlanModalLabel">Add Pricing Plan</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form id="updatePricingPlansForm">
+          <div class="row p-3">
+            <div class="col-md-6 mb-4">
+              <label for="title" class="form-label mb-0">Title</label>
+              <input type="hidden" id="planId" name="id" />
+              <input type="text" class="form-control" id="editTitle" placeholder="Enter here" name="title" required>
+            </div>
+            <div class="col-md-6 mb-4">
+              <label for="price" class="form-label mb-0">Price</label>
+              <input type="number" class="form-control" id="editPrice" placeholder="Enter price" name="price" required>
+            </div>
+            <div class="col-md-6 mb-4">
+              <label for="maximum_discount" class="form-label mb-0">Maximum Discount</label>
+              <input type="number" class="form-control"  id="editMaxDiscount" placeholder="Enter here"
+                name="maximum_discount">
+            </div>
+
+            <div class="col-md-6 mb-4">
+              <label for="description">Description</label>
+              <textarea class="form-control" rows="2" id="editDescription" name="description"
+                placeholder="Enter here"></textarea>
+            </div>
+            <div class="col-md-6 mb-4 d-none">
+              <label for="payment_method" class="form-label mb-0">Payment Method</label>
+              <select class="form-select" id="payment_method" name="payment_method">
+                <option class="">Select</option>
+                <option value="Cash">Cash</option>
+                <option value="Online">Online</option>
+                <option value="Cheque">Cheque</option>
+                <option value="Paypal">Paypal</option>
+                <option value="Wallet">Wallet</option>
+              </select>
+            </div>
+            <div class="col-md-12 text-end mt-3">
+              <button type="submit" class="btn btn-sm btn-primary px-3 py-2">Update</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- <div class="row">
+          <div class="col-lg-12 mb-4 order-0">
+            <div class="card bg-light p-3">
+              <div class="col-md-12">
+                <h5>User Registration plans</h5>
+              </div>
+              <form id="pricingPlansForm">
+                <div class="row p-3">
+                  <div class="col-md-6 mb-4">
+                    <label for="title" class="form-label mb-0">Title</label>
+                    <input type="text" class="form-control" id="title" placeholder="Enter here" name="title" required>
+                  </div>
+                  <div class="col-md-6 mb-4">
+                    <label for="price" class="form-label mb-0">Price</label>
+                    <input type="text" class="form-control" id="price" placeholder="Enter price" name="price" required>
+                  </div>
+                  <div class="col-md-6 mb-4">
+                    <label for="maximum_discount" class="form-label mb-0">Maximum Discount</label>
+                    <input type="text" class="form-control" id="maximum_discount" placeholder="Enter here"
+                      name="maximum_discount">
+                  </div>
+
+                  <div class="col-md-6 mb-4">
+                    <label for="description">Description</label>
+                    <textarea class="form-control" rows="2" id="description" name="description"
+                      placeholder="Enter here"></textarea>
+                  </div>
+                  <div class="col-md-6 mb-4 d-none">
+                    <label for="payment_method" class="form-label mb-0">Payment Method</label>
+                    <select class="form-select" id="payment_method" name="payment_method">
+                      <option class="">Select</option>
+                      <option value="Cash">Cash</option>
+                      <option value="Online">Online</option>
+                      <option value="Cheque">Cheque</option>
+                      <option value="Paypal">Paypal</option>
+                      <option value="Wallet">Wallet</option>
+                    </select>
+                  </div>
+                  <div class="col-md-12 text-end mt-3">
+                    <button type="submit" class="btn btn-sm btn-primary px-3 py-2">Save</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div> -->

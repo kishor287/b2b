@@ -1,0 +1,261 @@
+<div class="content-wrapper">
+   <!-- Content -->
+   <div class="container-xxl flex-grow-1 container-p-y">
+      <div class="row">
+         <div class="col-md-6">
+            <h4 class="fw-bold  mb-2"><span class="text-muted fw-light">User Registration </span></h4>
+         </div>
+      
+
+        <form id="followUpFilter">
+             
+            <div class="row d-inline-block gx-2">
+               <div class="w-auto d-inline-block mb-2">
+                  <label>Select Date Range :</label>
+                  <input type="text" class="form-control bg-white" name="daterange"  readonly="" id="dateRange">
+               </div>
+               <div class="w-auto d-inline-block mb-2">
+                  <label>Search</label>
+                  <div class="input-group input-group-merge">
+                     <span class="input-group-text" id=""><i class="bx bx-search"></i></span>
+                     <input type="text" name="searchOrganization" id="searchOrganization" class="form-control" placeholder="Search By ID,Phone,Organization " aria-label="Search..." aria-describedby="basic-addon-search31">
+                  </div>
+               </div>
+               <div class="w-auto d-inline-block mb-2">
+            <label>Status</label>
+            <select class="form-select" id="statusFilter" name="Status" aria-label="">
+                <option value="" selected>Select</option>
+               <option value="1">Active</option>
+               <option value="0">Deactive</option>
+            </select>
+         </div>
+  
+
+               <div class="w-auto d-inline-block mt-2" >
+                  <button type="submit" class="btn btn-primary px-2" id="applyFilters">Apply Filters</button>
+                  <button type="reset" class="btn btn-secondary" id="resetFilters">Reset</button>
+               </div>
+            </div>
+         </form>
+      
+
+           <div class="col-md-12 mb-2 mt-3">
+                     <button type="button" class="btn btn-primary btn-sm float-end mx-1" data-bs-toggle="modal" data-bs-target="#basicModal">
+            Add User
+                        </button>
+                        </div>
+                 
+         
+</div>
+
+
+                         
+                         
+      <div class="card">
+         <div class="table-responsive text-nowrap">
+            <table class="table ">
+               <thead></thead>
+               <tbody></tbody>
+            </table>
+         </div>
+         <div class="col px-3">
+            <nav aria-label="Page navigation">
+               <ul class="pagination my-3 pagination-sm"></ul>
+            </nav>
+         </div>
+      </div>
+   </div>
+</div>
+
+<!-- Button trigger modal -->
+<!-- Modal -->
+<div class="modal fade" id="basicModal" tabindex="-1" aria-hidden="true">
+   <div class="modal-dialog" role="document">
+      <div class="modal-content">
+         <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel1"> User Details</h5>
+            <button
+               type="button"
+               class="btn-close"
+               data-bs-dismiss="modal"
+               aria-label="Close"
+               ></button>
+         </div>
+         <form  id="user_form">
+            <div class="modal-body">
+               <div class="row">
+                  <div class="col mb-0">
+                     <label for="nameBasic" class="form-label">First Name</label>
+                     <input type="text" id="fname" name="first_name" class="form-control" required placeholder="Enter First Name" />
+                  </div>
+                  <div class="col mb-0">
+                     <label for="nameBasic" class="form-label">Last Name</label>
+                     <input type="text" id="lname" name="last_name" class="form-control"  placeholder="Enter Last Name" />
+                  </div>
+               </div>
+               <div class="row">
+                  <div class="col mb-0">
+                     <label for="nameBasic" class="form-label">Username</label>
+                     <input type="text" id="uname" name="user_name" class="form-control" required placeholder="Enter Userame" />
+                  </div>
+                  <div class="col mb-0">
+                     <label for="nameBasic" class="form-label">Password</label>
+                     <input type="password" id="pass" name="password" class="form-control" required placeholder="Enter Password" />
+                  </div>
+               </div>
+               <div class="row g-2">
+                  <div class="col mb-0">
+                     <label for="formFile" class="form-label">Select Image</label>
+                     <input class="form-control" type="file" id="pimg"  accept="image/png, image/gif, image/jpeg" name="pimage" required >
+                  </div>
+               </div>
+               <div class="row g-1">
+                    <div class="col-lg-6 mb-0">
+                         <label for="dobBasic" class="form-label">Phone</label>
+                         <input type="tel" id="user_phone"  name="phone"  class="form-control" minlength="10" maxlength="10" placeholder="+91 xxxxx xxxxx" />
+                    </div>
+                    <div class="col-lg-6 mb-0">
+                        <label for="dobBasic" class="form-label">Role</label>
+                            <select required name="role" id="_role" class="form-control">
+                                                            </select>
+                    </div>
+                    <div class="col-lg-6 mb-0" id="selectReportingManager">
+                        <label for="reportingManager" class="form-label">Reporting Manager</label>
+                            <select name="reporting_manager" id="reportingMan" class="form-control">
+                                                            </select>
+                    </div>
+                    <div class="col-lg-6 mb-0" id="newUserEmail">
+                        <label for="emailBasic" class="form-label">Email</label>
+                        <input type="email" id="email" name="email"  class="form-control" placeholder="xxxx@xxx.xxX" />
+                    </div>
+                    
+               
+                 <div class="col-md-6 mb-0">
+                         <label for="emailBasic" class="form-label">Campaign</label>
+                         <input type="text" id="campaign" name="campaign"  class="form-control" placeholder="" />
+                    </div>
+                     <div class="col-md-6 mb-0">
+                         <label for="emailBasic" class="form-label">Meeting Link</label>
+                         <input type="text" id="meeting_link" name="meeting_link"  class="form-control" placeholder="" />
+                    </div>
+                          <div class="col-md-6 mb-0">
+        <label for="dob" class="form-label">Date of Birth</label>
+        <input type="date" id="dob" name="dob" class="form-control" placeholder="" />
+</div>
+                    </div>
+            </div>
+            <div class="modal-footer">
+               <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
+               Close
+               </button>
+               <button type="submit" class="btn btn-primary">Save changes</button>
+            </div>
+         </form>
+      </div>
+   </div>
+</div>
+<!-- Button trigger modal -->
+
+<!-- Edit Modal for editing the users details -->
+<div class="modal fade" id="basicModaledit" tabindex="-1" aria-hidden="true">
+   <div class="modal-dialog" role="document">
+      <div class="modal-content">
+         <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel1"> User Details</h5>
+            <button
+               type="button"
+               class="btn-close"
+               data-bs-dismiss="modal"
+               aria-label="Close"
+               ></button>
+         </div>
+         <form  id="user_form_edit">
+            <div class="modal-body">
+               <div class="row">
+                    <input type="hidden"  name="id" id="_id" >
+                  <div class="col mb-0">
+                     <label for="nameBasic" class="form-label">First Name</label>
+                     <input type="text" id="fname" name="first_name" class="form-control" required placeholder="Enter First Name" />
+                  </div>
+                  <div class="col mb-0">
+                     <label for="nameBasic" class="form-label">Last Name</label>
+                     <input type="text" id="lname" name="last_name" class="form-control"  placeholder="Enter Last Name" />
+                  </div>
+               </div>
+               <div class="row">
+                  <div class="col mb-0">
+                     <label for="nameBasic" class="form-label">Username</label>
+                     <input type="text" id="uname" name="user_name" class="form-control" required placeholder="Enter Userame" />
+                  </div>
+                  <div class="col mb-0">
+                     <label for="nameBasic" class="form-label">Password</label>
+                     <input type="password" id="pass" name="password" class="form-control" required placeholder="Enter Password" />
+                  </div>
+               </div>
+               <div class="row g-2">
+                  <div class="col mb-0">
+                     <label for="formFile" class="form-label">Select Image</label>
+                     <input class="form-control" type="file" id="pimg"  accept="image/png, image/gif, image/jpeg" name="pimage">
+                  </div>
+               </div>
+               <div class="row g-2">
+                    <div class="col-sm-6 mb-0">
+                         <label for="dobBasic" class="form-label">Phone</label>
+                         <input type="tel" id="user_phone"  name="phone"  minlength="10" maxlength="10" class="form-control" placeholder="+91 xxxxx xxxxx" />
+                    </div>
+                    <div class="col-sm-6 mb-0">
+                         <label for="dobBasic" class="form-label">Role</label>
+                         <select name="role" id="_role" class="form-control" required>
+                            </select>
+                         <!--<input type="text" id="_role" required name="role" class="form-control" placeholder="Eg: Admin,Manager,..etc" />-->
+                    </div>
+                    <div class="col-sm-6 mb-0">
+                         <label for="emailBasic" class="form-label">Email</label>
+                         <input type="email" id="email" name="email"  class="form-control" placeholder="xxxx@xxx.xxX" />
+                    </div>
+                   
+               
+                 <div class="col-md-6 mb-0">
+                         <label for="emailBasic" class="form-label">Campaign</label>
+                         <input type="text" id="campaign" name="campaign"  class="form-control" placeholder="" />
+                    </div>
+                     <div class="col-md-6 mb-0">
+                         <label for="emailBasic" class="form-label">Meeting Link</label>
+                         <input type="text" id="meeting_link" name="meeting_link"  class="form-control" placeholder="" />
+                    </div>
+                    
+                    <div class="col-md-6 mb-0">
+    <label for="dob" class="form-label">Date of Birth</label>
+    <input type="date" id="dob" name="dob" class="form-control" placeholder="" />
+</div>
+                    </div> 
+               
+            </div>
+            <div class="modal-footer">
+               <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
+               Close
+               </button>
+               <button type="submit" class="btn btn-primary">Save changes</button>
+            </div>
+         </form>
+      </div>
+   </div>
+</div>
+<!-- Button trigger modal -->
+
+
+
+<!-- Button trigger modal -->
+<div class="modal fade bd-example-modal-sm "  data-backdrop="static" data-keyboard="false" id="_delete_modal" style="display: none;"  aria-hidden="true">
+   <div class="modal-dialog modal-sm">
+      <div class="modal-content">
+         <form id="_delete_user_form">
+            <div class="alert alert-danger notification mb-0">
+               <p class="notificaiton-title mb-4 mt-3"><strong>Do you really want to remove?</strong></p>
+               <button type="submit" class="btn btn-danger btn-sm">Confirm</button>
+               <button type="button" data-bs-dismiss="modal" class="btn btn-link btn-sm">Cancel</button>
+            </div>
+         </form>
+      </div>
+   </div>
+</div>

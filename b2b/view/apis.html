@@ -1,0 +1,165 @@
+   <div class="content-wrapper">
+       <!-- Content -->
+       <div class="container-xxl flex-grow-1 container-p-y">
+           <div class="row">
+               <div class="col-md-6">
+                   <h4 class="fw-bold py-3 mb-2"><span class="text-muted fw-light">APIS Registration</span></h4>
+               </div>
+               <div class="col-md-6">
+                       <button type="button" class="btn btn-primary float-end " data-bs-toggle="modal" data-bs-target="#resModal">
+                       Response API
+                   </button>
+                   <button type="button" class="btn btn-primary float-end me-1" data-bs-toggle="modal" data-bs-target="#basicModal">
+                       Add API
+                   </button>
+               
+               </div>
+           </div>
+           <div class="card">
+               <div class="table-responsive text-nowrap">
+                   <table class="table  table-layout-fixed">
+                       <thead></thead>
+                       <tbody></tbody>
+                   </table>
+               </div>
+               <div class="col px-3">
+                   <nav aria-label="Page navigation">
+                       <ul class="pagination my-3 pagination-sm"></ul>
+                   </nav>
+               </div>
+           </div>
+       </div>
+   </div>
+   <!-- Button trigger modal -->
+   <!-- Modal -->
+   <div class="modal fade" id="basicModal" tabindex="-1" aria-hidden="true">
+       <div class="modal-dialog" role="document">
+           <div class="modal-content">
+               <div class="modal-header">
+                   <h5 class="modal-title" id="exampleModalLabel1"> APIs Details</h5>
+                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+               </div>
+               <form id="organization_form">
+                   <div class="modal-body">
+                       <div class="row">
+                           <div class="col-12 mb-0">
+                               <label for="defaultSelect" class="form-label">Organization Name</label>
+                               <select id="_dir" name="organization" required class="form-select">
+                                   <option value="">Organization</option>
+                               </select>
+                           </div>
+                           <div class="col-12 mb-0">
+                               <label for="emailBasic" class="form-label">SMS API</label>
+                               <input type="text" id="_email" name="sms_api" required class="form-control" placeholder=" " />
+                           </div>
+                           <div class="col-12 mb-0">
+                               <label for="dobBasic" class="form-label">Dialer API</label>
+                               <input type="text" id="_phone" required name="dialer_api" class="form-control" placeholder=" " />
+                           </div>
+                           <div class="col-12 mb-0">
+                               <label for="dobBasic" class="form-label">Click2dial API</label>
+                               <input type="text" id="_phone" required name="click2dial_api" class="form-control" placeholder=" " />
+                           </div>
+                           <div class="col-12 mb-0">
+                               <label for="dobBasic" class="form-label">Whatsapp APIs</label>
+                               <div class="input-group">
+                                   <input type="text" name="w_channel_id" aria-label="First name" class="form-control" placeholder="Channel Id">
+                                   <input type="text" name="w_api" aria-label="First name" class="form-control" placeholder="API Key ID">
+                                   <input type="text" name="w_secret" aria-label="Last name" class="form-control" placeholder="API SECRET">
+                               </div>
+                           </div>
+                       </div>
+                   </div>
+                   <div class="modal-footer">
+                       <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
+                           Close
+                       </button>
+                       <button type="submit" class="btn btn-primary">Save changes</button>
+                   </div>
+               </form>
+           </div>
+       </div>
+   </div>
+   <!-- Button trigger modal -->
+   <!-- Modal -->
+   <div class="modal fade" id="basicModaledit" tabindex="-1" aria-hidden="true">
+       <div class="modal-dialog" role="document">
+           <div class="modal-content">
+               <div class="modal-header">
+                   <h5 class="modal-title" id="exampleModalLabel1"> APIs Details</h5>
+                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+               </div>
+               <form id="organization_form_edit">
+                   <div class="modal-body">
+                       <div class="row">
+                      <input type="hidden" name="id" id="_id">
+                           <div class="col-12 mb-0">
+                               <label for="emailBasic" class="form-label">SMS API</label>
+                               <input type="text" id="_email" name="sms_api" required class="form-control" placeholder=" " />
+                           </div>
+                           <div class="col-12 mb-0">
+                               <label for="dobBasic" class="form-label">Dialer API</label>
+                               <input type="text" id="_phone" required name="dialer_api" class="form-control" placeholder=" " />
+                           </div>
+                           <div class="col-12 mb-0">
+                               <label for="dobBasic" class="form-label">Click2dial API</label>
+                               <input type="text" id="_phone" required name="click2dial_api" class="form-control" placeholder=" " />
+                           </div>
+                           <div class="col-12 mb-0">
+                               <label for="dobBasic" class="form-label">Whatsapp APIs</label>
+                               <div class="input-group">
+                                   <input type="text" name="w_channel_id" aria-label="First name" class="form-control" placeholder="Channel Id">
+                                   <input type="text" name="w_api" aria-label="First name" class="form-control" placeholder="API Key ID">
+                                   <input type="text" name="w_secret" aria-label="Last name" class="form-control" placeholder="API SECRET">
+                               </div>
+                           </div>
+                       </div>
+                   </div>
+                   <div class="modal-footer">
+                       <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
+                           Close
+                       </button>
+                       <button type="submit" class="btn btn-primary">Save changes</button>
+                   </div>
+               </form>
+           </div>
+       </div>
+   </div>
+   <!-- Button trigger modal -->
+      <div class="modal fade" id="resModal" tabindex="-1" aria-hidden="true">
+       <div class="modal-dialog modal-lg" role="document">
+           <div class="modal-content">
+               <div class="modal-header">
+                   <h5 class="modal-title" id="exampleModalLabel1"> Response API Details</h5>
+                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+               </div>
+               <form id="organization_form_edit">
+                   <div class="modal-body">
+                       <div class="row">
+                         <p><b>Dialer Response API:</b> <small>https://<i class="text-danger">subdomain</i>.innerxcrm.com/api/galaxy-dialer?</small> <a  id="_apicopy" href="javascript:"><i class="bx bx-copy"></i></a></p><br>
+                          <p><b>Click2Dial OutBound Response API:</b> <small>https://<i class="text-danger">subdomain</i>.innerxcrm.com/api/click2dial-outbound?</small> <a  id="_apicopy" href="javascript:"><i class="bx bx-copy"></i></a></p><br>
+                           <p><b>Click2Dial InBound Response API:</b> <small>https://<i class="text-danger">subdomain</i>.innerxcrm.com/api/click2dial-inbound?</small> <a id="_apicopy" href="javascript:"><i class="bx bx-copy"></i></a></p>
+                       </div>
+                   </div>
+                   <div class="modal-footer">
+                       
+                      
+                   </div>
+               </form>
+           </div>
+       </div>
+   </div>
+   
+   <div class="modal fade bd-example-modal-sm " data-backdrop="static" data-keyboard="false" id="_delete_modal" style="display: none;" aria-hidden="true">
+       <div class="modal-dialog modal-sm">
+           <div class="modal-content">
+               <form id="_delete_form">
+                   <div class="alert alert-danger notification mb-0">
+                       <p class="notificaiton-title mb-4 mt-3"><strong>Do you really want to remove?</strong></p>
+                       <button type="submit" class="btn btn-danger btn-sm">Confirm</button>
+                       <button type="button" data-bs-dismiss="modal" class="btn btn-link btn-sm">Cancel</button>
+                   </div>
+               </form>
+           </div>
+       </div>
+   </div>

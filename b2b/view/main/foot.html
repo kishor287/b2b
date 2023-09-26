@@ -1,0 +1,110 @@
+<!-- <div class="loading">
+  <div class="spinner-border spinner-border-lg text-primary" role="status">
+    <span class="visually-hidden">Loading...</span>
+  </div>
+</div> -->
+
+<!-- Footer -->
+<footer class="content-footer footer bg-footer-theme">
+  <div class="container-xxl d-flex flex-wrap justify-content-between py-2 flex-md-row flex-column">
+    <div class="mb-2 mb-md-0">
+      2023 Innerx CRM.
+    </div>
+    <div>
+      <!--<a href="" target="_blank" class="footer-link me-4">Support</a>-->
+    </div>
+  </div>
+</footer>
+<!-- / Footer -->
+
+<div class="content-backdrop fade">
+
+</div>
+</div>
+<!-- Content wrapper -->
+</div>
+<!-- / Layout page -->
+</div>
+
+<!-- Overlay -->
+<div class="layout-overlay layout-menu-toggle"></div>
+</div>
+<!-- / Layout wrapper -->
+
+
+<!-- Core JS -->
+<!-- build:js assets/vendor/js/core.js 
+    <script src="../assets/vendor/libs/jquery/jquery.js"></script>-->
+
+<script>
+  $(document).ready(function () {
+    $(function () {
+      $('input[name="daterange"]').daterangepicker({
+        "startDate": "01/01/2023",
+        // "endDate": "17/01/2023",
+        opens: 'center',
+        locale: {
+          format: 'DD/MM/YYYY'
+        }
+      });
+    });
+  });</script>
+
+
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+<script src="/b2b/controller/functions.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+<script src="/b2b/controller/chunk.js"></script>
+<script defer="defer" src="/b2b/assets/vendor/libs/popper/popper.js"></script>
+<script defer="defer" src="/b2b/assets/vendor/js/bootstrap.js"></script>
+<script defer="defer" src="/b2b/assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
+<script defer="defer" src="/b2b/assets/vendor/js/menu.js"></script>
+<!-- endbuild -->
+
+<!-- Vendors JS -->
+<script defer="defer" src="/b2b/assets/vendor/libs/apex-charts/apexcharts.js"></script>
+
+<!-- Main JS -->
+<script defer="defer" src="/b2b/assets/js/main.js"></script>
+<script src="/b2b/assets/js/toastr.min.js"></script>
+<script src="/b2b/assets/js/toastr-init.js"></script>
+
+<!-- Page JS -->
+<script defer="defer" src="/b2b/assets/js/ui-modals.js"></script>
+<script defer="defer" src="/b2b/assets/js/dashboards-analytics.js"></script>
+
+<!-- Place this tag in your head or just before your close body tag. -->
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+<script type="text/javascript" src="/b2b/controller/helper.js"></script>
+
+<script>
+  // JavaScript code to handle the dynamic display of user avatar based on user type
+
+  // Function to set the user avatar image based on the user type
+  function setUserAvatar() {
+    // Replace this with the appropriate logic to check if the user is an admin
+    // In this example, I'm using a variable called 'isAdmin' which holds the information about the user type (true for admin, false for normal user)
+    // var isAdmin = <?php echo ($_SESSION['u_type'] = '1') ? 'true' : 'false'; ?>;
+    var isAdmin = false;
+    // Target the user avatar element
+    var userAvatar = document.getElementById("user-avatar");
+
+    // Define the image sources for admin and normal users
+    var adminImagePath = "/uploads/images/qggm4GAwmy9v6ql3d91P9FFrH.jpg";
+    var normalUserImagePath = "../assets/img/avatars/1.png";
+
+    // Update the image source based on the isAdmin value
+    userAvatar.src = isAdmin ? adminImagePath : normalUserImagePath;
+  }
+
+  // Call the function to set the user avatar when the page is loaded
+  window.onload = function() {
+    setUserAvatar();
+  };
+</script>
+
+
+</body>
+
+</html>

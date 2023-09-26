@@ -1,0 +1,455 @@
+[25-Apr-2023 07:37:45 UTC] PHP Fatal error:  Uncaught TypeError: json_decode(): Argument #1 ($json) must be of type string, array given in /home/innerxcrm/public_html/beta/api/lead.php:4
+Stack trace:
+#0 /home/innerxcrm/public_html/beta/api/lead.php(4): json_decode(Array)
+#1 {main}
+  thrown in /home/innerxcrm/public_html/beta/api/lead.php on line 4
+[25-Apr-2023 07:38:07 UTC] PHP Fatal error:  Uncaught TypeError: json_decode(): Argument #1 ($json) must be of type string, array given in /home/innerxcrm/public_html/beta/api/lead.php:4
+Stack trace:
+#0 /home/innerxcrm/public_html/beta/api/lead.php(4): json_decode(Array)
+#1 {main}
+  thrown in /home/innerxcrm/public_html/beta/api/lead.php on line 4
+[25-Apr-2023 07:38:09 UTC] PHP Fatal error:  Uncaught TypeError: json_decode(): Argument #1 ($json) must be of type string, array given in /home/innerxcrm/public_html/beta/api/lead.php:4
+Stack trace:
+#0 /home/innerxcrm/public_html/beta/api/lead.php(4): json_decode(Array)
+#1 {main}
+  thrown in /home/innerxcrm/public_html/beta/api/lead.php on line 4
+[25-Apr-2023 07:38:11 UTC] PHP Fatal error:  Uncaught TypeError: json_decode(): Argument #1 ($json) must be of type string, array given in /home/innerxcrm/public_html/beta/api/lead.php:4
+Stack trace:
+#0 /home/innerxcrm/public_html/beta/api/lead.php(4): json_decode(Array)
+#1 {main}
+  thrown in /home/innerxcrm/public_html/beta/api/lead.php on line 4
+[25-Apr-2023 07:38:13 UTC] PHP Fatal error:  Uncaught TypeError: json_decode(): Argument #1 ($json) must be of type string, array given in /home/innerxcrm/public_html/beta/api/lead.php:4
+Stack trace:
+#0 /home/innerxcrm/public_html/beta/api/lead.php(4): json_decode(Array)
+#1 {main}
+  thrown in /home/innerxcrm/public_html/beta/api/lead.php on line 4
+[25-Apr-2023 07:38:56 UTC] PHP Fatal error:  Uncaught TypeError: Cannot access offset of type string on string in /home/innerxcrm/public_html/beta/api/lead.php:5
+Stack trace:
+#0 {main}
+  thrown in /home/innerxcrm/public_html/beta/api/lead.php on line 5
+[25-Apr-2023 07:39:21 UTC] PHP Warning:  Attempt to read property "phone" on string in /home/innerxcrm/public_html/beta/api/lead.php on line 5
+[25-Apr-2023 07:39:30 UTC] PHP Warning:  Attempt to read property "phone" on string in /home/innerxcrm/public_html/beta/api/lead.php on line 5
+[25-Apr-2023 07:41:18 UTC] PHP Warning:  Attempt to read property "phone" on array in /home/innerxcrm/public_html/beta/api/lead.php on line 6
+[23-May-2023 07:42:43 UTC] PHP Warning:  Undefined variable $cp_action in /home/innerxcrm/public_html/beta/api/control-panel.php on line 7
+[23-May-2023 07:46:35 UTC] PHP Warning:  Undefined variable $cp_action in /home/innerxcrm/public_html/beta/api/control-panel.php on line 7
+[23-May-2023 07:46:42 UTC] PHP Warning:  Undefined variable $cp_action in /home/innerxcrm/public_html/beta/api/control-panel.php on line 7
+[23-May-2023 07:47:58 UTC] PHP Warning:  Undefined variable $cp_action in /home/innerxcrm/public_html/beta/api/control-panel.php on line 7
+[23-May-2023 07:48:06 UTC] PHP Warning:  Undefined variable $cp_action in /home/innerxcrm/public_html/beta/api/control-panel.php on line 7
+[23-May-2023 07:52:31 UTC] PHP Warning:  Undefined variable $cp_action in /home/innerxcrm/public_html/beta/api/control-panel.php on line 7
+[23-May-2023 07:53:52 UTC] PHP Warning:  Undefined variable $cp_action in /home/innerxcrm/public_html/beta/api/control-panel.php on line 7
+[23-May-2023 07:54:10 UTC] PHP Warning:  Undefined variable $cp_action in /home/innerxcrm/public_html/beta/api/control-panel.php on line 7
+[23-May-2023 07:54:13 UTC] PHP Warning:  Undefined variable $cp_action in /home/innerxcrm/public_html/beta/api/control-panel.php on line 7
+[23-May-2023 07:54:19 UTC] PHP Warning:  Undefined variable $cp_action in /home/innerxcrm/public_html/beta/api/control-panel.php on line 7
+[23-May-2023 07:55:15 UTC] PHP Warning:  Undefined variable $cp_action in /home/innerxcrm/public_html/beta/api/control-panel.php on line 7
+[23-May-2023 07:57:52 UTC] PHP Warning:  Undefined variable $cp_action in /home/innerxcrm/public_html/beta/api/control-panel.php on line 7
+[23-May-2023 07:57:52 UTC] PHP Fatal error:  Uncaught Error: Cannot use object of type stdClass as array in /home/innerxcrm/public_html/beta/api/control-panel.php:29
+Stack trace:
+#0 {main}
+  thrown in /home/innerxcrm/public_html/beta/api/control-panel.php on line 29
+[23-May-2023 07:58:21 UTC] PHP Warning:  Undefined variable $cp_action in /home/innerxcrm/public_html/beta/api/control-panel.php on line 7
+[23-May-2023 07:58:44 UTC] PHP Warning:  Undefined variable $cp_action in /home/innerxcrm/public_html/beta/api/control-panel.php on line 7
+[23-May-2023 07:58:57 UTC] PHP Warning:  Undefined variable $cp_action in /home/innerxcrm/public_html/beta/api/control-panel.php on line 7
+[23-May-2023 07:58:58 UTC] PHP Warning:  Undefined variable $cp_action in /home/innerxcrm/public_html/beta/api/control-panel.php on line 7
+[23-May-2023 07:59:15 UTC] PHP Warning:  Undefined variable $cp_action in /home/innerxcrm/public_html/beta/api/control-panel.php on line 7
+[23-May-2023 07:59:16 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/innerxcrm/public_html/beta/api/control-panel.php on line 29
+[23-May-2023 07:59:16 UTC] PHP Warning:  Undefined variable $cp_action in /home/innerxcrm/public_html/beta/api/control-panel.php on line 7
+[23-May-2023 07:59:41 UTC] PHP Warning:  Undefined variable $cp_action in /home/innerxcrm/public_html/beta/api/control-panel.php on line 7
+[23-May-2023 07:59:41 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/innerxcrm/public_html/beta/api/control-panel.php on line 29
+[23-May-2023 07:59:41 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/innerxcrm/public_html/beta/api/control-panel.php on line 29
+[23-May-2023 07:59:41 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/innerxcrm/public_html/beta/api/control-panel.php on line 29
+[23-May-2023 07:59:42 UTC] PHP Warning:  Undefined variable $cp_action in /home/innerxcrm/public_html/beta/api/control-panel.php on line 7
+[23-May-2023 07:59:45 UTC] PHP Warning:  Undefined variable $cp_action in /home/innerxcrm/public_html/beta/api/control-panel.php on line 7
+[23-May-2023 07:59:54 UTC] PHP Warning:  Undefined variable $cp_action in /home/innerxcrm/public_html/beta/api/control-panel.php on line 7
+[23-May-2023 09:20:33 UTC] PHP Warning:  Undefined variable $cp_action in /home/innerxcrm/public_html/beta/api/control-panel.php on line 7
+[23-May-2023 09:34:42 UTC] PHP Warning:  Undefined variable $cp_action in /home/innerxcrm/public_html/beta/api/control-panel.php on line 7
+[23-May-2023 09:42:23 UTC] PHP Warning:  Undefined variable $cp_action in /home/innerxcrm/public_html/beta/api/control-panel.php on line 7
+[23-May-2023 09:42:23 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/innerxcrm/public_html/beta/api/control-panel.php on line 39
+[23-May-2023 09:42:23 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/innerxcrm/public_html/beta/api/control-panel.php on line 39
+[23-May-2023 09:42:23 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/innerxcrm/public_html/beta/api/control-panel.php on line 39
+[23-May-2023 09:42:25 UTC] PHP Warning:  Undefined variable $cp_action in /home/innerxcrm/public_html/beta/api/control-panel.php on line 7
+[23-May-2023 09:43:04 UTC] PHP Warning:  Undefined variable $cp_action in /home/innerxcrm/public_html/beta/api/control-panel.php on line 7
+[23-May-2023 09:43:04 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/innerxcrm/public_html/beta/api/control-panel.php on line 39
+[23-May-2023 09:43:04 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/innerxcrm/public_html/beta/api/control-panel.php on line 39
+[23-May-2023 09:43:04 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/innerxcrm/public_html/beta/api/control-panel.php on line 39
+[23-May-2023 09:43:04 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/innerxcrm/public_html/beta/api/control-panel.php on line 39
+[23-May-2023 09:43:04 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/innerxcrm/public_html/beta/api/control-panel.php on line 39
+[23-May-2023 09:43:04 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/innerxcrm/public_html/beta/api/control-panel.php on line 39
+[23-May-2023 09:43:04 UTC] PHP Fatal error:  Uncaught DivisionByZeroError: Division by zero in /home/innerxcrm/public_html/beta/api/control-panel.php:39
+Stack trace:
+#0 {main}
+  thrown in /home/innerxcrm/public_html/beta/api/control-panel.php on line 39
+[23-May-2023 09:43:06 UTC] PHP Warning:  Undefined variable $cp_action in /home/innerxcrm/public_html/beta/api/control-panel.php on line 7
+[23-May-2023 09:44:44 UTC] PHP Warning:  Undefined variable $cp_action in /home/innerxcrm/public_html/beta/api/control-panel.php on line 7
+[23-May-2023 09:44:44 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/innerxcrm/public_html/beta/api/control-panel.php on line 28
+[23-May-2023 09:44:44 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/innerxcrm/public_html/beta/api/control-panel.php on line 28
+[23-May-2023 09:44:44 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/innerxcrm/public_html/beta/api/control-panel.php on line 28
+[23-May-2023 09:44:44 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/innerxcrm/public_html/beta/api/control-panel.php on line 35
+[23-May-2023 09:44:44 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/innerxcrm/public_html/beta/api/control-panel.php on line 35
+[23-May-2023 09:44:44 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/innerxcrm/public_html/beta/api/control-panel.php on line 35
+[23-May-2023 09:44:44 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/innerxcrm/public_html/beta/api/control-panel.php on line 35
+[23-May-2023 09:44:44 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/innerxcrm/public_html/beta/api/control-panel.php on line 35
+[23-May-2023 09:44:44 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/innerxcrm/public_html/beta/api/control-panel.php on line 35
+[23-May-2023 09:44:44 UTC] PHP Fatal error:  Uncaught DivisionByZeroError: Division by zero in /home/innerxcrm/public_html/beta/api/control-panel.php:35
+Stack trace:
+#0 {main}
+  thrown in /home/innerxcrm/public_html/beta/api/control-panel.php on line 35
+[23-May-2023 09:44:46 UTC] PHP Warning:  Undefined variable $cp_action in /home/innerxcrm/public_html/beta/api/control-panel.php on line 7
+[23-May-2023 09:44:46 UTC] PHP Fatal error:  Uncaught TypeError: json_decode(): Argument #1 ($json) must be of type string, array given in /home/innerxcrm/public_html/beta/api/control-panel.php:38
+Stack trace:
+#0 /home/innerxcrm/public_html/beta/api/control-panel.php(38): json_decode(Array)
+#1 {main}
+  thrown in /home/innerxcrm/public_html/beta/api/control-panel.php on line 38
+[23-May-2023 09:45:05 UTC] PHP Warning:  Undefined variable $cp_action in /home/innerxcrm/public_html/beta/api/control-panel.php on line 7
+[23-May-2023 09:45:05 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/innerxcrm/public_html/beta/api/control-panel.php on line 28
+[23-May-2023 09:45:05 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/innerxcrm/public_html/beta/api/control-panel.php on line 28
+[23-May-2023 09:45:05 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/innerxcrm/public_html/beta/api/control-panel.php on line 28
+[23-May-2023 09:45:05 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/innerxcrm/public_html/beta/api/control-panel.php on line 35
+[23-May-2023 09:45:05 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/innerxcrm/public_html/beta/api/control-panel.php on line 35
+[23-May-2023 09:45:05 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/innerxcrm/public_html/beta/api/control-panel.php on line 35
+[23-May-2023 09:45:05 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/innerxcrm/public_html/beta/api/control-panel.php on line 35
+[23-May-2023 09:45:05 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/innerxcrm/public_html/beta/api/control-panel.php on line 35
+[23-May-2023 09:45:05 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/innerxcrm/public_html/beta/api/control-panel.php on line 35
+[23-May-2023 09:45:05 UTC] PHP Fatal error:  Uncaught DivisionByZeroError: Division by zero in /home/innerxcrm/public_html/beta/api/control-panel.php:35
+Stack trace:
+#0 {main}
+  thrown in /home/innerxcrm/public_html/beta/api/control-panel.php on line 35
+[23-May-2023 09:45:06 UTC] PHP Warning:  Undefined variable $cp_action in /home/innerxcrm/public_html/beta/api/control-panel.php on line 7
+[23-May-2023 09:46:11 UTC] PHP Warning:  Undefined variable $cp_action in /home/innerxcrm/public_html/beta/api/control-panel.php on line 7
+[23-May-2023 09:46:11 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/innerxcrm/public_html/beta/api/control-panel.php on line 28
+[23-May-2023 09:46:11 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/innerxcrm/public_html/beta/api/control-panel.php on line 28
+[23-May-2023 09:46:11 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/innerxcrm/public_html/beta/api/control-panel.php on line 28
+[23-May-2023 09:46:11 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/innerxcrm/public_html/beta/api/control-panel.php on line 35
+[23-May-2023 09:46:11 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/innerxcrm/public_html/beta/api/control-panel.php on line 35
+[23-May-2023 09:46:11 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/innerxcrm/public_html/beta/api/control-panel.php on line 35
+[23-May-2023 09:46:11 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/innerxcrm/public_html/beta/api/control-panel.php on line 35
+[23-May-2023 09:46:11 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/innerxcrm/public_html/beta/api/control-panel.php on line 35
+[23-May-2023 09:46:11 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/innerxcrm/public_html/beta/api/control-panel.php on line 35
+[23-May-2023 09:46:11 UTC] PHP Fatal error:  Uncaught DivisionByZeroError: Division by zero in /home/innerxcrm/public_html/beta/api/control-panel.php:35
+Stack trace:
+#0 {main}
+  thrown in /home/innerxcrm/public_html/beta/api/control-panel.php on line 35
+[23-May-2023 09:46:13 UTC] PHP Warning:  Undefined variable $cp_action in /home/innerxcrm/public_html/beta/api/control-panel.php on line 7
+[23-May-2023 09:47:08 UTC] PHP Warning:  Undefined variable $cp_action in /home/innerxcrm/public_html/beta/api/control-panel.php on line 7
+[23-May-2023 09:47:48 UTC] PHP Warning:  Undefined variable $cp_action in /home/innerxcrm/public_html/beta/api/control-panel.php on line 7
+[23-May-2023 09:47:48 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/innerxcrm/public_html/beta/api/control-panel.php on line 28
+[23-May-2023 09:47:48 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/innerxcrm/public_html/beta/api/control-panel.php on line 28
+[23-May-2023 09:47:48 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/innerxcrm/public_html/beta/api/control-panel.php on line 28
+[23-May-2023 09:47:48 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/innerxcrm/public_html/beta/api/control-panel.php on line 35
+[23-May-2023 09:47:48 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/innerxcrm/public_html/beta/api/control-panel.php on line 35
+[23-May-2023 09:47:48 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/innerxcrm/public_html/beta/api/control-panel.php on line 35
+[23-May-2023 09:47:48 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/innerxcrm/public_html/beta/api/control-panel.php on line 35
+[23-May-2023 09:47:48 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/innerxcrm/public_html/beta/api/control-panel.php on line 35
+[23-May-2023 09:47:48 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/innerxcrm/public_html/beta/api/control-panel.php on line 35
+[23-May-2023 09:47:48 UTC] PHP Fatal error:  Uncaught DivisionByZeroError: Division by zero in /home/innerxcrm/public_html/beta/api/control-panel.php:35
+Stack trace:
+#0 {main}
+  thrown in /home/innerxcrm/public_html/beta/api/control-panel.php on line 35
+[23-May-2023 09:47:52 UTC] PHP Warning:  Undefined variable $cp_action in /home/innerxcrm/public_html/beta/api/control-panel.php on line 7
+[23-May-2023 09:48:06 UTC] PHP Warning:  Undefined variable $cp_action in /home/innerxcrm/public_html/beta/api/control-panel.php on line 7
+[23-May-2023 09:48:06 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/innerxcrm/public_html/beta/api/control-panel.php on line 35
+[23-May-2023 09:48:06 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/innerxcrm/public_html/beta/api/control-panel.php on line 35
+[23-May-2023 09:48:06 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/innerxcrm/public_html/beta/api/control-panel.php on line 35
+[23-May-2023 09:48:06 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/innerxcrm/public_html/beta/api/control-panel.php on line 35
+[23-May-2023 09:48:06 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/innerxcrm/public_html/beta/api/control-panel.php on line 35
+[23-May-2023 09:48:06 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/innerxcrm/public_html/beta/api/control-panel.php on line 35
+[23-May-2023 09:48:06 UTC] PHP Fatal error:  Uncaught DivisionByZeroError: Division by zero in /home/innerxcrm/public_html/beta/api/control-panel.php:35
+Stack trace:
+#0 {main}
+  thrown in /home/innerxcrm/public_html/beta/api/control-panel.php on line 35
+[23-May-2023 09:48:43 UTC] PHP Warning:  Undefined variable $cp_action in /home/innerxcrm/public_html/beta/api/control-panel.php on line 7
+[23-May-2023 09:48:43 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/innerxcrm/public_html/beta/api/control-panel.php on line 29
+[23-May-2023 09:48:43 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/innerxcrm/public_html/beta/api/control-panel.php on line 29
+[23-May-2023 09:48:43 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/innerxcrm/public_html/beta/api/control-panel.php on line 29
+[23-May-2023 09:48:43 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/innerxcrm/public_html/beta/api/control-panel.php on line 36
+[23-May-2023 09:48:43 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/innerxcrm/public_html/beta/api/control-panel.php on line 36
+[23-May-2023 09:48:43 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/innerxcrm/public_html/beta/api/control-panel.php on line 36
+[23-May-2023 09:48:43 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/innerxcrm/public_html/beta/api/control-panel.php on line 36
+[23-May-2023 09:48:43 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/innerxcrm/public_html/beta/api/control-panel.php on line 36
+[23-May-2023 09:48:43 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/innerxcrm/public_html/beta/api/control-panel.php on line 36
+[23-May-2023 09:48:43 UTC] PHP Fatal error:  Uncaught DivisionByZeroError: Division by zero in /home/innerxcrm/public_html/beta/api/control-panel.php:36
+Stack trace:
+#0 {main}
+  thrown in /home/innerxcrm/public_html/beta/api/control-panel.php on line 36
+[23-May-2023 09:48:47 UTC] PHP Warning:  Undefined variable $cp_action in /home/innerxcrm/public_html/beta/api/control-panel.php on line 7
+[23-May-2023 09:48:47 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/innerxcrm/public_html/beta/api/control-panel.php on line 36
+[23-May-2023 09:48:47 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/innerxcrm/public_html/beta/api/control-panel.php on line 36
+[23-May-2023 09:48:47 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/innerxcrm/public_html/beta/api/control-panel.php on line 36
+[23-May-2023 09:48:47 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/innerxcrm/public_html/beta/api/control-panel.php on line 36
+[23-May-2023 09:48:47 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/innerxcrm/public_html/beta/api/control-panel.php on line 36
+[23-May-2023 09:48:47 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/innerxcrm/public_html/beta/api/control-panel.php on line 36
+[23-May-2023 09:48:47 UTC] PHP Fatal error:  Uncaught DivisionByZeroError: Division by zero in /home/innerxcrm/public_html/beta/api/control-panel.php:36
+Stack trace:
+#0 {main}
+  thrown in /home/innerxcrm/public_html/beta/api/control-panel.php on line 36
+[23-May-2023 09:49:13 UTC] PHP Warning:  Undefined variable $cp_action in /home/innerxcrm/public_html/beta/api/control-panel.php on line 9
+[23-May-2023 09:49:13 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/innerxcrm/public_html/beta/api/control-panel.php on line 31
+[23-May-2023 09:49:13 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/innerxcrm/public_html/beta/api/control-panel.php on line 31
+[23-May-2023 09:49:13 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/innerxcrm/public_html/beta/api/control-panel.php on line 31
+[23-May-2023 09:49:13 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/innerxcrm/public_html/beta/api/control-panel.php on line 38
+[23-May-2023 09:49:13 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/innerxcrm/public_html/beta/api/control-panel.php on line 38
+[23-May-2023 09:49:13 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/innerxcrm/public_html/beta/api/control-panel.php on line 38
+[23-May-2023 09:49:13 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/innerxcrm/public_html/beta/api/control-panel.php on line 38
+[23-May-2023 09:49:13 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/innerxcrm/public_html/beta/api/control-panel.php on line 38
+[23-May-2023 09:49:13 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/innerxcrm/public_html/beta/api/control-panel.php on line 38
+[23-May-2023 09:49:13 UTC] PHP Fatal error:  Uncaught DivisionByZeroError: Division by zero in /home/innerxcrm/public_html/beta/api/control-panel.php:38
+Stack trace:
+#0 {main}
+  thrown in /home/innerxcrm/public_html/beta/api/control-panel.php on line 38
+[23-May-2023 09:50:40 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/innerxcrm/public_html/beta/api/control-panel.php on line 40
+[23-May-2023 09:50:40 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/innerxcrm/public_html/beta/api/control-panel.php on line 40
+[23-May-2023 09:50:40 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/innerxcrm/public_html/beta/api/control-panel.php on line 40
+[23-May-2023 09:50:40 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/innerxcrm/public_html/beta/api/control-panel.php on line 40
+[23-May-2023 09:50:40 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/innerxcrm/public_html/beta/api/control-panel.php on line 40
+[23-May-2023 09:50:40 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/innerxcrm/public_html/beta/api/control-panel.php on line 40
+[23-May-2023 09:50:40 UTC] PHP Fatal error:  Uncaught DivisionByZeroError: Division by zero in /home/innerxcrm/public_html/beta/api/control-panel.php:40
+Stack trace:
+#0 {main}
+  thrown in /home/innerxcrm/public_html/beta/api/control-panel.php on line 40
+[23-May-2023 09:52:19 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/innerxcrm/public_html/beta/api/control-panel.php on line 33
+[23-May-2023 09:52:19 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/innerxcrm/public_html/beta/api/control-panel.php on line 33
+[23-May-2023 09:52:19 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/innerxcrm/public_html/beta/api/control-panel.php on line 33
+[23-May-2023 10:24:41 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/innerxcrm/public_html/beta/api/control-panel.php on line 32
+[23-May-2023 10:24:41 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/innerxcrm/public_html/beta/api/control-panel.php on line 32
+[23-May-2023 10:24:41 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/innerxcrm/public_html/beta/api/control-panel.php on line 32
+[09-Jun-2023 06:24:20 UTC] PHP Warning:  Undefined array key "username" in /home/innerxcrm/public_html/beta/api/control-panel.php on line 57
+[09-Jun-2023 06:24:20 UTC] PHP Warning:  Undefined variable $sub_domain in /home/innerxcrm/public_html/beta/api/control-panel.php on line 57
+[09-Jun-2023 06:24:20 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/innerxcrm/public_html/beta/api/control-panel.php on line 57
+[09-Jun-2023 06:26:21 UTC] PHP Warning:  Undefined array key "username" in /home/innerxcrm/public_html/beta/api/control-panel.php on line 57
+[09-Jun-2023 06:26:21 UTC] PHP Warning:  Undefined variable $sub_domain in /home/innerxcrm/public_html/beta/api/control-panel.php on line 57
+[09-Jun-2023 06:26:21 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/innerxcrm/public_html/beta/api/control-panel.php on line 57
+[09-Jun-2023 06:29:26 UTC] PHP Warning:  Undefined array key "username" in /home/innerxcrm/public_html/beta/api/control-panel.php on line 57
+[09-Jun-2023 06:30:58 UTC] PHP Warning:  Undefined array key "username" in /home/innerxcrm/public_html/beta/api/control-panel.php on line 57
+[09-Jun-2023 07:11:01 UTC] PHP Warning:  Undefined array key "username" in /home/innerxcrm/public_html/beta/api/control-panel.php on line 57
+[09-Jun-2023 07:19:52 UTC] PHP Warning:  Undefined array key "username" in /home/innerxcrm/public_html/beta/api/control-panel.php on line 57
+[09-Jun-2023 07:19:58 UTC] PHP Warning:  Undefined array key "username" in /home/innerxcrm/public_html/beta/api/control-panel.php on line 57
+[09-Jun-2023 07:20:09 UTC] PHP Warning:  Undefined array key "username" in /home/innerxcrm/public_html/beta/api/control-panel.php on line 57
+[09-Jun-2023 07:20:22 UTC] PHP Warning:  Undefined array key "username" in /home/innerxcrm/public_html/beta/api/control-panel.php on line 57
+[09-Jun-2023 07:20:33 UTC] PHP Warning:  Undefined array key "username" in /home/innerxcrm/public_html/beta/api/control-panel.php on line 57
+[09-Jun-2023 09:51:06 UTC] PHP Warning:  Undefined array key "username" in /home/innerxcrm/public_html/beta/api/control-panel.php on line 57
+[09-Jun-2023 09:51:11 UTC] PHP Warning:  Undefined array key "username" in /home/innerxcrm/public_html/beta/api/control-panel.php on line 57
+[09-Jun-2023 09:55:13 UTC] PHP Warning:  Undefined array key "username" in /home/innerxcrm/public_html/beta/api/control-panel.php on line 57
+[09-Jun-2023 10:31:25 UTC] PHP Warning:  Undefined array key "username" in /home/innerxcrm/public_html/beta/api/control-panel.php on line 57
+[09-Jun-2023 10:34:53 UTC] PHP Warning:  Undefined array key "username" in /home/innerxcrm/public_html/beta/api/control-panel.php on line 57
+[09-Jun-2023 10:34:53 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/innerxcrm/public_html/beta/api/control-panel.php on line 92
+[09-Jun-2023 10:40:40 UTC] PHP Warning:  Undefined array key "username" in /home/innerxcrm/public_html/beta/api/control-panel.php on line 57
+[09-Jun-2023 10:40:40 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/innerxcrm/public_html/beta/api/control-panel.php on line 91
+[09-Jun-2023 10:46:43 UTC] PHP Warning:  Undefined array key "username" in /home/innerxcrm/public_html/beta/api/control-panel.php on line 57
+[09-Jun-2023 10:46:43 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/innerxcrm/public_html/beta/api/control-panel.php on line 91
+[09-Jun-2023 10:50:23 UTC] PHP Warning:  Undefined array key "username" in /home/innerxcrm/public_html/beta/api/control-panel.php on line 57
+[09-Jun-2023 10:50:23 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/innerxcrm/public_html/beta/api/control-panel.php on line 91
+[09-Jun-2023 10:58:10 UTC] PHP Warning:  Undefined array key "username" in /home/innerxcrm/public_html/beta/api/control-panel.php on line 57
+[09-Jun-2023 10:58:59 UTC] PHP Warning:  Undefined array key "username" in /home/innerxcrm/public_html/beta/api/control-panel.php on line 57
+[09-Jun-2023 10:59:36 UTC] PHP Warning:  Undefined array key "username" in /home/innerxcrm/public_html/beta/api/control-panel.php on line 57
+[09-Jun-2023 11:01:19 UTC] PHP Warning:  Undefined array key "username" in /home/innerxcrm/public_html/beta/api/control-panel.php on line 57
+[09-Jun-2023 11:03:11 UTC] PHP Warning:  Undefined array key "username" in /home/innerxcrm/public_html/beta/api/control-panel.php on line 57
+[09-Jun-2023 11:04:05 UTC] PHP Warning:  Undefined array key "username" in /home/innerxcrm/public_html/beta/api/control-panel.php on line 57
+[09-Jun-2023 11:04:13 UTC] PHP Warning:  Undefined array key "username" in /home/innerxcrm/public_html/beta/api/control-panel.php on line 57
+[09-Jun-2023 11:04:25 UTC] PHP Warning:  Undefined array key "username" in /home/innerxcrm/public_html/beta/api/control-panel.php on line 57
+[09-Jun-2023 11:05:11 UTC] PHP Warning:  Undefined array key "username" in /home/innerxcrm/public_html/beta/api/control-panel.php on line 60
+[09-Jun-2023 11:12:08 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/innerxcrm/public_html/beta/api/control-panel.php on line 90
+[09-Jun-2023 11:15:11 UTC] PHP Fatal error:  Uncaught TypeError: Cannot access offset of type string on string in /home/innerxcrm/public_html/beta/api/control-panel.php:89
+Stack trace:
+#0 {main}
+  thrown in /home/innerxcrm/public_html/beta/api/control-panel.php on line 89
+[09-Jun-2023 11:17:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/innerxcrm/public_html/beta/api/control-panel.php on line 90
+[09-Jun-2023 11:19:03 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/innerxcrm/public_html/beta/api/control-panel.php on line 90
+[09-Jun-2023 11:23:24 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/innerxcrm/public_html/beta/api/control-panel.php on line 89
+[09-Jun-2023 11:30:12 UTC] PHP Parse error:  syntax error, unexpected token "}" in /home/innerxcrm/public_html/beta/api/control-panel.php on line 90
+[09-Jun-2023 11:32:14 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/innerxcrm/public_html/beta/api/control-panel.php on line 89
+[09-Jun-2023 11:46:13 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/innerxcrm/public_html/beta/api/control-panel.php on line 90
+[09-Jun-2023 11:50:02 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/innerxcrm/public_html/beta/api/control-panel.php on line 90
+[09-Jun-2023 11:59:34 UTC] PHP Warning:  Undefined variable $server_output in /home/innerxcrm/public_html/beta/api/control-panel.php on line 94
+[09-Jun-2023 11:59:34 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/innerxcrm/public_html/beta/api/control-panel.php on line 94
+[09-Jun-2023 12:00:41 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/innerxcrm/public_html/beta/api/control-panel.php on line 93
+[09-Jun-2023 12:04:24 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/innerxcrm/public_html/beta/api/control-panel.php on line 91
+[09-Jun-2023 12:18:58 UTC] PHP Fatal error:  Uncaught TypeError: Cannot access offset of type string on string in /home/innerxcrm/public_html/beta/api/control-panel.php:91
+Stack trace:
+#0 {main}
+  thrown in /home/innerxcrm/public_html/beta/api/control-panel.php on line 91
+[09-Jun-2023 12:19:32 UTC] PHP Fatal error:  Uncaught TypeError: Cannot access offset of type string on string in /home/innerxcrm/public_html/beta/api/control-panel.php:91
+Stack trace:
+#0 {main}
+  thrown in /home/innerxcrm/public_html/beta/api/control-panel.php on line 91
+[09-Jun-2023 12:20:24 UTC] PHP Fatal error:  Uncaught TypeError: Cannot access offset of type string on string in /home/innerxcrm/public_html/beta/api/control-panel.php:91
+Stack trace:
+#0 {main}
+  thrown in /home/innerxcrm/public_html/beta/api/control-panel.php on line 91
+[09-Jun-2023 12:20:48 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/innerxcrm/public_html/beta/api/control-panel.php on line 91
+[09-Jun-2023 12:34:07 UTC] PHP Warning:  Undefined variable $rest in /home/innerxcrm/public_html/beta/api/control-panel.php on line 89
+[09-Jun-2023 12:34:07 UTC] PHP Warning:  Undefined variable $rest in /home/innerxcrm/public_html/beta/api/control-panel.php on line 92
+[09-Jun-2023 12:34:07 UTC] PHP Deprecated:  json_decode(): Passing null to parameter #1 ($json) of type string is deprecated in /home/innerxcrm/public_html/beta/api/control-panel.php on line 92
+[09-Jun-2023 12:41:07 UTC] PHP Fatal error:  Uncaught TypeError: Cannot access offset of type string on string in /home/innerxcrm/public_html/beta/api/control-panel.php:95
+Stack trace:
+#0 {main}
+  thrown in /home/innerxcrm/public_html/beta/api/control-panel.php on line 95
+[09-Jun-2023 12:45:41 UTC] PHP Fatal error:  Uncaught TypeError: Cannot access offset of type string on string in /home/innerxcrm/public_html/beta/api/control-panel.php:90
+Stack trace:
+#0 {main}
+  thrown in /home/innerxcrm/public_html/beta/api/control-panel.php on line 90
+[09-Jun-2023 13:03:41 UTC] PHP Fatal error:  Uncaught TypeError: Cannot access offset of type string on string in /home/innerxcrm/public_html/beta/api/control-panel.php:91
+Stack trace:
+#0 {main}
+  thrown in /home/innerxcrm/public_html/beta/api/control-panel.php on line 91
+[12-Jun-2023 04:27:15 UTC] PHP Warning:  Array to string conversion in /home/innerxcrm/public_html/beta/api/control-panel.php on line 91
+[15-Jun-2023 10:14:53 UTC] PHP Warning:  Undefined array key "ticket_id" in /home/innerxcrm/public_html/beta/api/control-panel.php on line 59
+[15-Jun-2023 10:16:36 UTC] PHP Warning:  Undefined array key "ticket_id" in /home/innerxcrm/public_html/beta/api/control-panel.php on line 59
+[15-Jun-2023 10:18:06 UTC] PHP Warning:  Undefined array key "ticket_id" in /home/innerxcrm/public_html/beta/api/control-panel.php on line 59
+[15-Jun-2023 10:18:38 UTC] PHP Warning:  Undefined array key "ticket_id" in /home/innerxcrm/public_html/beta/api/control-panel.php on line 59
+[15-Jun-2023 10:19:40 UTC] PHP Warning:  Undefined array key "ticket_id" in /home/innerxcrm/public_html/beta/api/control-panel.php on line 59
+[15-Jun-2023 10:24:59 UTC] PHP Warning:  Undefined array key "ticket_id" in /home/innerxcrm/public_html/beta/api/control-panel.php on line 59
+[19-Jun-2023 05:38:11 UTC] PHP Warning:  Undefined array key "ticket_id" in /home/innerxcrm/public_html/beta/api/control-panel.php on line 59
+[19-Jun-2023 05:47:38 UTC] PHP Warning:  Undefined array key "ticket_id" in /home/innerxcrm/public_html/beta/api/control-panel.php on line 58
+[19-Jun-2023 05:47:38 UTC] PHP Warning:  Undefined array key "ticket_id" in /home/innerxcrm/public_html/beta/api/control-panel.php on line 60
+[19-Jun-2023 10:42:53 UTC] PHP Warning:  Undefined array key "ticket_id" in /home/innerxcrm/public_html/beta/api/control-panel.php on line 59
+[19-Jun-2023 10:44:33 UTC] PHP Warning:  Undefined array key "ticket_id" in /home/innerxcrm/public_html/beta/api/control-panel.php on line 59
+[19-Jun-2023 10:45:39 UTC] PHP Warning:  Undefined array key "ticket_id" in /home/innerxcrm/public_html/beta/api/control-panel.php on line 59
+[19-Jun-2023 10:50:54 UTC] PHP Warning:  Undefined array key "ticket_id" in /home/innerxcrm/public_html/beta/api/control-panel.php on line 59
+[19-Jun-2023 10:52:34 UTC] PHP Warning:  Undefined array key "ticket_id" in /home/innerxcrm/public_html/beta/api/control-panel.php on line 59
+[19-Jun-2023 11:22:12 UTC] PHP Parse error:  Unmatched '}' in /home/innerxcrm/public_html/beta/api/control-panel.php on line 105
+[19-Jun-2023 11:22:55 UTC] PHP Parse error:  Unmatched '}' in /home/innerxcrm/public_html/beta/api/control-panel.php on line 105
+[19-Jun-2023 11:32:46 UTC] PHP Parse error:  Unmatched '}' in /home/innerxcrm/public_html/beta/api/control-panel.php on line 105
+[19-Jun-2023 12:02:13 UTC] PHP Warning:  Undefined variable $conn in /home/innerxcrm/public_html/beta/api/control-panel.php on line 59
+[19-Jun-2023 12:02:13 UTC] PHP Warning:  Undefined variable $query in /home/innerxcrm/public_html/beta/api/control-panel.php on line 59
+[19-Jun-2023 12:02:13 UTC] PHP Fatal error:  Uncaught TypeError: mysqli_query(): Argument #1 ($mysql) must be of type mysqli, null given in /home/innerxcrm/public_html/beta/api/control-panel.php:59
+Stack trace:
+#0 /home/innerxcrm/public_html/beta/api/control-panel.php(59): mysqli_query(NULL, NULL)
+#1 {main}
+  thrown in /home/innerxcrm/public_html/beta/api/control-panel.php on line 59
+[19-Jun-2023 12:02:36 UTC] PHP Warning:  Undefined variable $conn in /home/innerxcrm/public_html/beta/api/control-panel.php on line 59
+[19-Jun-2023 12:02:36 UTC] PHP Warning:  Undefined variable $query in /home/innerxcrm/public_html/beta/api/control-panel.php on line 59
+[19-Jun-2023 12:02:36 UTC] PHP Fatal error:  Uncaught TypeError: mysqli_query(): Argument #1 ($mysql) must be of type mysqli, null given in /home/innerxcrm/public_html/beta/api/control-panel.php:59
+Stack trace:
+#0 /home/innerxcrm/public_html/beta/api/control-panel.php(59): mysqli_query(NULL, NULL)
+#1 {main}
+  thrown in /home/innerxcrm/public_html/beta/api/control-panel.php on line 59
+[19-Jun-2023 12:06:08 UTC] PHP Warning:  Undefined variable $cp in /home/innerxcrm/public_html/beta/api/control-panel.php on line 60
+[19-Jun-2023 12:06:08 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/innerxcrm/public_html/beta/api/control-panel.php on line 60
+[19-Jun-2023 12:06:08 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/innerxcrm/public_html/beta/api/control-panel.php on line 60
+[19-Jun-2023 12:06:08 UTC] PHP Warning:  Undefined variable $cp in /home/innerxcrm/public_html/beta/api/control-panel.php on line 61
+[19-Jun-2023 12:06:08 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/innerxcrm/public_html/beta/api/control-panel.php on line 61
+[19-Jun-2023 12:06:08 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/innerxcrm/public_html/beta/api/control-panel.php on line 61
+[19-Jun-2023 12:06:08 UTC] PHP Warning:  Undefined variable $cp in /home/innerxcrm/public_html/beta/api/control-panel.php on line 62
+[19-Jun-2023 12:06:08 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/innerxcrm/public_html/beta/api/control-panel.php on line 62
+[19-Jun-2023 12:06:08 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/innerxcrm/public_html/beta/api/control-panel.php on line 62
+[19-Jun-2023 12:06:08 UTC] PHP Warning:  Undefined variable $cp in /home/innerxcrm/public_html/beta/api/control-panel.php on line 63
+[19-Jun-2023 12:06:08 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/innerxcrm/public_html/beta/api/control-panel.php on line 63
+[19-Jun-2023 12:06:08 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/innerxcrm/public_html/beta/api/control-panel.php on line 63
+[19-Jun-2023 12:06:08 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [1045] Access denied for user ''@'localhost' (using password: NO) in /home/innerxcrm/public_html/beta/api/control-panel.php:64
+Stack trace:
+#0 /home/innerxcrm/public_html/beta/api/control-panel.php(64): PDO->__construct('mysql:host=;dbn...', NULL, NULL)
+#1 {main}
+  thrown in /home/innerxcrm/public_html/beta/api/control-panel.php on line 64
+[19-Jun-2023 12:06:45 UTC] PHP Warning:  Undefined variable $cp in /home/innerxcrm/public_html/beta/api/control-panel.php on line 61
+[19-Jun-2023 12:06:45 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/innerxcrm/public_html/beta/api/control-panel.php on line 61
+[19-Jun-2023 12:06:45 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/innerxcrm/public_html/beta/api/control-panel.php on line 61
+[19-Jun-2023 12:06:45 UTC] PHP Warning:  Undefined variable $cp in /home/innerxcrm/public_html/beta/api/control-panel.php on line 62
+[19-Jun-2023 12:06:45 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/innerxcrm/public_html/beta/api/control-panel.php on line 62
+[19-Jun-2023 12:06:45 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/innerxcrm/public_html/beta/api/control-panel.php on line 62
+[19-Jun-2023 12:06:45 UTC] PHP Warning:  Undefined variable $cp in /home/innerxcrm/public_html/beta/api/control-panel.php on line 63
+[19-Jun-2023 12:06:45 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/innerxcrm/public_html/beta/api/control-panel.php on line 63
+[19-Jun-2023 12:06:45 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/innerxcrm/public_html/beta/api/control-panel.php on line 63
+[19-Jun-2023 12:06:45 UTC] PHP Warning:  Undefined variable $cp in /home/innerxcrm/public_html/beta/api/control-panel.php on line 64
+[19-Jun-2023 12:06:45 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/innerxcrm/public_html/beta/api/control-panel.php on line 64
+[19-Jun-2023 12:06:45 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/innerxcrm/public_html/beta/api/control-panel.php on line 64
+[19-Jun-2023 12:06:45 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [1045] Access denied for user ''@'localhost' (using password: NO) in /home/innerxcrm/public_html/beta/api/control-panel.php:65
+Stack trace:
+#0 /home/innerxcrm/public_html/beta/api/control-panel.php(65): PDO->__construct('mysql:host=;dbn...', NULL, NULL)
+#1 {main}
+  thrown in /home/innerxcrm/public_html/beta/api/control-panel.php on line 65
+[19-Jun-2023 12:13:12 UTC] PHP Warning:  Undefined variable $cp in /home/innerxcrm/public_html/beta/api/control-panel.php on line 61
+[19-Jun-2023 12:13:12 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/innerxcrm/public_html/beta/api/control-panel.php on line 61
+[19-Jun-2023 12:13:12 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/innerxcrm/public_html/beta/api/control-panel.php on line 61
+[19-Jun-2023 12:13:12 UTC] PHP Warning:  Undefined variable $cp in /home/innerxcrm/public_html/beta/api/control-panel.php on line 62
+[19-Jun-2023 12:13:12 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/innerxcrm/public_html/beta/api/control-panel.php on line 62
+[19-Jun-2023 12:13:12 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/innerxcrm/public_html/beta/api/control-panel.php on line 62
+[19-Jun-2023 12:13:12 UTC] PHP Warning:  Undefined variable $cp in /home/innerxcrm/public_html/beta/api/control-panel.php on line 63
+[19-Jun-2023 12:13:12 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/innerxcrm/public_html/beta/api/control-panel.php on line 63
+[19-Jun-2023 12:13:12 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/innerxcrm/public_html/beta/api/control-panel.php on line 63
+[19-Jun-2023 12:13:12 UTC] PHP Warning:  Undefined variable $cp in /home/innerxcrm/public_html/beta/api/control-panel.php on line 64
+[19-Jun-2023 12:13:12 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/innerxcrm/public_html/beta/api/control-panel.php on line 64
+[19-Jun-2023 12:13:12 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/innerxcrm/public_html/beta/api/control-panel.php on line 64
+[19-Jun-2023 12:13:12 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [1045] Access denied for user ''@'localhost' (using password: NO) in /home/innerxcrm/public_html/beta/api/control-panel.php:65
+Stack trace:
+#0 /home/innerxcrm/public_html/beta/api/control-panel.php(65): PDO->__construct('mysql:host=;dbn...', NULL, NULL)
+#1 {main}
+  thrown in /home/innerxcrm/public_html/beta/api/control-panel.php on line 65
+[19-Jun-2023 12:14:09 UTC] PHP Warning:  Undefined array key "ticket_id" in /home/innerxcrm/public_html/beta/api/control-panel.php on line 60
+[20-Jun-2023 06:07:58 UTC] PHP Warning:  Undefined array key "subject" in /home/innerxcrm/public_html/beta/api/control-panel.php on line 60
+[20-Jun-2023 06:08:06 UTC] PHP Warning:  Undefined array key "subject" in /home/innerxcrm/public_html/beta/api/control-panel.php on line 60
+[20-Jun-2023 06:08:21 UTC] PHP Warning:  Undefined array key "subject" in /home/innerxcrm/public_html/beta/api/control-panel.php on line 60
+[20-Jun-2023 06:08:37 UTC] PHP Warning:  Undefined array key "subject" in /home/innerxcrm/public_html/beta/api/control-panel.php on line 60
+[20-Jun-2023 06:08:49 UTC] PHP Warning:  Undefined array key "subject" in /home/innerxcrm/public_html/beta/api/control-panel.php on line 60
+[20-Jun-2023 06:16:24 UTC] PHP Warning:  Undefined array key "subject" in /home/innerxcrm/public_html/beta/api/control-panel.php on line 60
+[20-Jun-2023 06:17:15 UTC] PHP Warning:  Undefined array key "subject" in /home/innerxcrm/public_html/beta/api/control-panel.php on line 60
+[20-Jun-2023 06:18:02 UTC] PHP Warning:  Undefined array key "subject" in /home/innerxcrm/public_html/beta/api/control-panel.php on line 60
+[20-Jun-2023 06:18:07 UTC] PHP Warning:  Undefined array key "subject" in /home/innerxcrm/public_html/beta/api/control-panel.php on line 60
+[20-Jun-2023 06:34:56 UTC] PHP Warning:  Undefined array key "subject" in /home/innerxcrm/public_html/beta/api/control-panel.php on line 60
+[20-Jun-2023 06:39:23 UTC] PHP Warning:  Undefined array key "subject" in /home/innerxcrm/public_html/beta/api/control-panel.php on line 60
+[20-Jun-2023 06:41:11 UTC] PHP Warning:  Undefined variable $url in /home/innerxcrm/public_html/beta/api/control-panel.php on line 86
+[20-Jun-2023 06:41:31 UTC] PHP Warning:  Undefined variable $url in /home/innerxcrm/public_html/beta/api/control-panel.php on line 86
+[20-Jun-2023 06:41:31 UTC] PHP Warning:  Undefined array key "subject" in /home/innerxcrm/public_html/beta/api/control-panel.php on line 60
+[20-Jun-2023 06:44:38 UTC] PHP Warning:  Undefined array key "subject" in /home/innerxcrm/public_html/beta/api/control-panel.php on line 60
+[20-Jun-2023 06:45:10 UTC] PHP Warning:  Undefined array key "subject" in /home/innerxcrm/public_html/beta/api/control-panel.php on line 60
+[20-Jun-2023 06:48:23 UTC] PHP Warning:  Undefined array key "subject" in /home/innerxcrm/public_html/beta/api/control-panel.php on line 60
+[20-Jun-2023 07:05:50 UTC] PHP Warning:  Undefined array key "ticket_id" in /home/innerxcrm/public_html/beta/api/control-panel.php on line 66
+[20-Jun-2023 12:09:43 UTC] PHP Warning:  Undefined variable $id in /home/innerxcrm/public_html/beta/api/control-panel.php on line 59
+[20-Jun-2023 12:10:34 UTC] PHP Warning:  Undefined variable $id in /home/innerxcrm/public_html/beta/api/control-panel.php on line 59
+[20-Jun-2023 12:10:42 UTC] PHP Warning:  Undefined variable $id in /home/innerxcrm/public_html/beta/api/control-panel.php on line 59
+[20-Jun-2023 12:44:23 UTC] PHP Warning:  Undefined variable $id in /home/innerxcrm/public_html/beta/api/control-panel.php on line 59
+[20-Jun-2023 12:46:14 UTC] PHP Warning:  Undefined array key "id" in /home/innerxcrm/public_html/beta/api/control-panel.php on line 59
+[20-Jun-2023 12:48:44 UTC] PHP Warning:  Undefined array key "ticket_id" in /home/innerxcrm/public_html/beta/api/control-panel.php on line 59
+[20-Jun-2023 12:49:09 UTC] PHP Warning:  Undefined array key "ticket_id" in /home/innerxcrm/public_html/beta/api/control-panel.php on line 59
+[20-Jun-2023 12:49:31 UTC] PHP Warning:  Undefined array key "ticket_id" in /home/innerxcrm/public_html/beta/api/control-panel.php on line 59
+[20-Jun-2023 12:50:41 UTC] PHP Warning:  Undefined array key "ticket_id" in /home/innerxcrm/public_html/beta/api/control-panel.php on line 59
+[20-Jun-2023 12:52:55 UTC] PHP Warning:  Undefined array key "ticket_id" in /home/innerxcrm/public_html/beta/api/control-panel.php on line 59
+[20-Jun-2023 12:53:44 UTC] PHP Warning:  Undefined array key "ticket_id" in /home/innerxcrm/public_html/beta/api/control-panel.php on line 59
+[20-Jun-2023 12:59:59 UTC] PHP Warning:  Undefined array key "ticket_id" in /home/innerxcrm/public_html/beta/api/control-panel.php on line 59
+[20-Jun-2023 13:01:43 UTC] PHP Warning:  Undefined array key "ticket_id" in /home/innerxcrm/public_html/beta/api/control-panel.php on line 59
+[20-Jun-2023 13:01:58 UTC] PHP Warning:  Undefined array key "ticket_id" in /home/innerxcrm/public_html/beta/api/control-panel.php on line 59
+[20-Jun-2023 13:01:58 UTC] PHP Warning:  Undefined array key "ticket_id" in /home/innerxcrm/public_html/beta/api/control-panel.php on line 59
+[20-Jun-2023 13:10:32 UTC] PHP Warning:  Undefined array key "ticket_id" in /home/innerxcrm/public_html/beta/api/control-panel.php on line 59
+[20-Jun-2023 13:12:24 UTC] PHP Warning:  Undefined array key "ticket_id" in /home/innerxcrm/public_html/beta/api/control-panel.php on line 59
+[20-Jun-2023 13:14:00 UTC] PHP Warning:  Undefined array key "ticket_id" in /home/innerxcrm/public_html/beta/api/control-panel.php on line 59
+[28-Jun-2023 09:18:22 UTC] PHP Warning:  Undefined array key "subject" in /home/innerxcrm/public_html/beta/api/control-panel.php on line 59
+[28-Jun-2023 09:18:22 UTC] PHP Warning:  Undefined array key "chat" in /home/innerxcrm/public_html/beta/api/control-panel.php on line 59
+[28-Jun-2023 09:18:22 UTC] PHP Warning:  Undefined array key "ticket_id" in /home/innerxcrm/public_html/beta/api/control-panel.php on line 59
+[28-Jun-2023 09:18:22 UTC] PHP Warning:  Undefined array key "subject" in /home/innerxcrm/public_html/beta/api/control-panel.php on line 59
+[28-Jun-2023 09:18:22 UTC] PHP Warning:  Undefined array key "chat" in /home/innerxcrm/public_html/beta/api/control-panel.php on line 59
+[28-Jun-2023 09:18:22 UTC] PHP Warning:  Undefined array key "ticket_id" in /home/innerxcrm/public_html/beta/api/control-panel.php on line 59
+[03-Jul-2023 05:37:27 UTC] PHP Warning:  Undefined array key "subject" in /home/innerxcrm/public_html/beta/api/control-panel.php on line 59
+[03-Jul-2023 05:37:27 UTC] PHP Warning:  Undefined array key "chat" in /home/innerxcrm/public_html/beta/api/control-panel.php on line 59
+[03-Jul-2023 05:37:27 UTC] PHP Warning:  Undefined array key "ticket_id" in /home/innerxcrm/public_html/beta/api/control-panel.php on line 59
+[03-Jul-2023 05:37:39 UTC] PHP Warning:  Undefined array key "subject" in /home/innerxcrm/public_html/beta/api/control-panel.php on line 59
+[03-Jul-2023 05:37:39 UTC] PHP Warning:  Undefined array key "chat" in /home/innerxcrm/public_html/beta/api/control-panel.php on line 59
+[03-Jul-2023 05:37:39 UTC] PHP Warning:  Undefined array key "ticket_id" in /home/innerxcrm/public_html/beta/api/control-panel.php on line 59
+[03-Aug-2023 04:35:53 UTC] PHP Warning:  Undefined array key "subject" in /home/innerxcrm/public_html/beta/api/control-panel.php on line 59
+[03-Aug-2023 04:35:53 UTC] PHP Warning:  Undefined array key "chat" in /home/innerxcrm/public_html/beta/api/control-panel.php on line 59
+[03-Aug-2023 04:35:53 UTC] PHP Warning:  Undefined array key "ticket_id" in /home/innerxcrm/public_html/beta/api/control-panel.php on line 59
+[09-Aug-2023 06:45:29 UTC] PHP Warning:  Undefined array key "subject" in /home/innerxcrm/public_html/beta/api/control-panel.php on line 59
+[11-Aug-2023 10:48:35 UTC] PHP Warning:  Undefined array key "subject" in /home/innerxcrm/public_html/beta/api/control-panel.php on line 59
+[11-Aug-2023 10:48:35 UTC] PHP Warning:  Undefined array key "chat" in /home/innerxcrm/public_html/beta/api/control-panel.php on line 59
+[11-Aug-2023 10:48:35 UTC] PHP Warning:  Undefined array key "ticket_id" in /home/innerxcrm/public_html/beta/api/control-panel.php on line 59
+[11-Aug-2023 10:49:03 UTC] PHP Warning:  Undefined array key "subject" in /home/innerxcrm/public_html/beta/api/control-panel.php on line 59
+[11-Aug-2023 10:49:03 UTC] PHP Warning:  Undefined array key "chat" in /home/innerxcrm/public_html/beta/api/control-panel.php on line 59
+[11-Aug-2023 10:49:03 UTC] PHP Warning:  Undefined array key "ticket_id" in /home/innerxcrm/public_html/beta/api/control-panel.php on line 59
+[24-Aug-2023 11:50:39 UTC] PHP Warning:  Undefined array key "subject" in /home/innerxcrm/public_html/beta/api/control-panel.php on line 59
+[24-Aug-2023 11:50:39 UTC] PHP Warning:  Undefined array key "chat" in /home/innerxcrm/public_html/beta/api/control-panel.php on line 59
+[24-Aug-2023 11:50:39 UTC] PHP Warning:  Undefined array key "ticket_id" in /home/innerxcrm/public_html/beta/api/control-panel.php on line 59
+[24-Aug-2023 11:51:06 UTC] PHP Warning:  Undefined array key "subject" in /home/innerxcrm/public_html/beta/api/control-panel.php on line 59
+[24-Aug-2023 11:51:06 UTC] PHP Warning:  Undefined array key "chat" in /home/innerxcrm/public_html/beta/api/control-panel.php on line 59
+[24-Aug-2023 11:51:06 UTC] PHP Warning:  Undefined array key "ticket_id" in /home/innerxcrm/public_html/beta/api/control-panel.php on line 59
+[24-Aug-2023 11:51:29 UTC] PHP Warning:  Undefined array key "subject" in /home/innerxcrm/public_html/beta/api/control-panel.php on line 59
+[24-Aug-2023 11:51:29 UTC] PHP Warning:  Undefined array key "chat" in /home/innerxcrm/public_html/beta/api/control-panel.php on line 59
+[24-Aug-2023 11:51:29 UTC] PHP Warning:  Undefined array key "ticket_id" in /home/innerxcrm/public_html/beta/api/control-panel.php on line 59
+[24-Aug-2023 12:13:46 UTC] PHP Warning:  Undefined array key "subject" in /home/innerxcrm/public_html/beta/api/control-panel.php on line 59
+[24-Aug-2023 12:13:46 UTC] PHP Warning:  Undefined array key "chat" in /home/innerxcrm/public_html/beta/api/control-panel.php on line 59
+[24-Aug-2023 12:13:46 UTC] PHP Warning:  Undefined array key "ticket_id" in /home/innerxcrm/public_html/beta/api/control-panel.php on line 59
+[24-Aug-2023 12:14:24 UTC] PHP Warning:  Undefined array key "subject" in /home/innerxcrm/public_html/beta/api/control-panel.php on line 59
+[24-Aug-2023 12:14:24 UTC] PHP Warning:  Undefined array key "chat" in /home/innerxcrm/public_html/beta/api/control-panel.php on line 59
+[24-Aug-2023 12:14:24 UTC] PHP Warning:  Undefined array key "ticket_id" in /home/innerxcrm/public_html/beta/api/control-panel.php on line 59
+[25-Aug-2023 05:57:23 UTC] PHP Warning:  Undefined array key "subject" in /home/innerxcrm/public_html/beta/api/control-panel.php on line 59
+[25-Aug-2023 05:57:23 UTC] PHP Warning:  Undefined array key "chat" in /home/innerxcrm/public_html/beta/api/control-panel.php on line 59
+[25-Aug-2023 05:57:23 UTC] PHP Warning:  Undefined array key "ticket_id" in /home/innerxcrm/public_html/beta/api/control-panel.php on line 59
+[29-Aug-2023 10:21:53 UTC] PHP Warning:  Undefined array key "subject" in /home/innerxcrm/public_html/beta/api/control-panel.php on line 59
+[29-Aug-2023 10:21:53 UTC] PHP Warning:  Undefined array key "chat" in /home/innerxcrm/public_html/beta/api/control-panel.php on line 59
+[29-Aug-2023 10:21:53 UTC] PHP Warning:  Undefined array key "ticket_id" in /home/innerxcrm/public_html/beta/api/control-panel.php on line 59

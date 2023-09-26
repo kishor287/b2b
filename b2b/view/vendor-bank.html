@@ -1,0 +1,116 @@
+<div class="content-wrapper">
+    <div class="container-xxl flex-grow-1 container-p-y">
+
+        <div class="row mb-2">
+            <div class="col-md-12 mt-4">
+                <button type="button" class="btn btn-sm btn-primary float-end mx-1" data-bs-toggle="modal"
+                    data-bs-target="#vendorBankModal">
+                    + Add New
+                </button>
+            </div>
+        </div>
+
+        <div class="card">
+
+            <div class="table-responsive text-nowrap">
+                <table class="table">
+                    <thead></thead>
+                    <tbody id="banksListing"> 
+                        
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="vendorBankModal" tabindex="-1" aria-labelledby="vendorBankModal" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Vendor Bank Detail</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <form id="vendorBank">
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-4 mb-0">
+                            <label for="vendors" class="form-label">Vendors</label>
+                            <select class="form-select form-select bg-light vendorsSelect" required id="vendors" name="vendors"></select>
+                        </div>
+                        <div class="col-md-4 mb-0">
+                            <label for="bank_name" class="form-label">Bank Name</label>
+                            <input type="text" class="form-control" id="bank_name" placeholder="Bank name" required name="bank_name">
+                        </div>
+                        <div class="col-md-4 mb-0">
+                            <label for="account_number" class="form-label">Account Number</label>
+                            <input type="text" class="form-control" id="account_number" placeholder="Account number" required name="account_number">
+                        </div>
+                        <div class="col-md-4 mb-0">
+                            <label for="ifsc_code" class="form-label">IFSC Code</label>
+                            <input type="text" class="form-control text-uppercase" id="ifsc_code" placeholder="IFSC Code" required name="ifsc_code">
+                        </div>
+                        <div class="col-md-4 mb-0">
+                            <label for="micr_code" class="form-label">MICR Code</label>
+                            <input type="text" class="form-control text-uppercase" id="micr_code" placeholder="MICR Code" required name="micr_code">
+                        </div>
+                        <div class="col-md-4 mb-0">
+                            <label for="branch_name" class="form-label">Branch Name</label>
+                            <input type="text" class="form-control " id="branch_name" placeholder="Branch name" required name="branch_name">
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-primary">Save</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<!-- Button trigger modal -->
+<div class="modal fade" id="editForexModal" tabindex="-1" aria-labelledby="editForexModal" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Edit Vendor Bank Details</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <form id="editVendorBank">
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-4 mb-0">
+                            <input type="hidden" id="edit_id" name="id">
+                            <label for="vendors" class="form-label">Vendors</label>
+                            <select class="form-select form-select bg-light vendorsSelect" id="editVendor" name="vendors"></select>
+                        </div>
+                        <div class="col-md-4 mb-0">
+                            <label for="bank_name" class="form-label">Bank Name</label>
+                            <input type="text" class="form-control" id="edit_name" placeholder="Bank name" name="bank_name">
+                        </div>
+                        <div class="col-md-4 mb-0">
+                            <label for="account_number" class="form-label">Account Number</label>
+                            <input type="text" class="form-control" id="edit_account_number" placeholder="Account number" name="account_number">
+                        </div>
+                        <div class="col-md-4 mb-0">
+                            <label for="ifsc_code" class="form-label">IFSC Code</label>
+                            <input type="text" class="form-control text-uppercase" id="edit_ifsc" placeholder="IFSC Code" name="ifsc_code">
+                        </div>
+                        <div class="col-md-4 mb-0">
+                            <label for="micr_code" class="form-label">MICR Code</label>
+                            <input type="text" class="form-control text-uppercase" id="edit_micr" placeholder="MICR Code" name="micr_code">
+                        </div>
+                        <div class="col-md-4 mb-0">
+                            <label for="branch_name" class="form-label">Branch Name</label>
+                            <input type="text" class="form-control " id="edit_branch" placeholder="Branch name" name="branch_name">
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-primary">Save</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

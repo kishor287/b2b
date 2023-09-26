@@ -1,0 +1,215 @@
+<div class="content-wrapper">
+   <!-- Content -->
+
+   <div class="container-xxl flex-grow-1 container-p-y">
+      <div class="row my-3 justify-content-md-center row-cols-2 gx-2 row-cols-lg-6 row-cols-sm-3 mx-auto">
+         <div class="col mb-2">
+              <a href="/forex-service-users">
+           <div class="card align-items-center text-center border-dash py-3">
+             <span class="badge rounded bg-label-sec mb-2 position-relative">
+               <i class="bx bx-sm bx-dollar"></i>
+               <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" id="todaysForexRequests">
+                  0
+                 </span>
+               </span>
+             <p class="mb-0 tx-11">FOREX</p>
+           </div>
+            </a>
+         </div>
+         <div class="col mb-2">
+              <a href="/gic-service-users">
+           <div class="card align-items-center text-center border-dash py-3">
+             <span class="badge rounded bg-label-sec mb-2  position-relative">
+               <i class="bx bx-sm bx-bar-chart-alt-2"></i>
+                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" id="todaysGicRequests">
+                  0
+                 </span>
+               
+               </span>
+             <p class="mb-0 tx-11">GIC</p>
+           </div>
+           </a>
+         </div>
+         <div class="col mb-2">
+              <a href="/creditcard-service-users">
+           <div class="card align-items-center text-center border-dash py-3">
+             <span class="badge rounded bg-label-sec mb-2 position-relative">
+               <i class="bx bx-sm bx-credit-card-front"></i>
+                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"  id="todaysCreditCardRequests">
+                  0
+                 </span>
+               </span>
+             <p class="mb-0 tx-11">CREDIT CARD</p>
+           </div>
+           </a>
+         </div>
+         <div class="col mb-2">
+              <a href="/sim-service-users">
+           <div class="card align-items-center text-center border-dash py-3">
+             <span class="badge rounded bg-label-sec mb-2 position-relative">
+               <i class="bx bx-sm bx-memory-card"></i>
+                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"  id="todaysSimCardRequests">
+                  0
+                 </span>
+               </span>
+             <p class="mb-0 tx-11">SIM CARD </p>
+           </div>
+           </a>
+         </div>
+         <div class="col mb-2">
+              <a href="/loan-service-users">
+           <div class="card align-items-center text-center border-dash py-3">
+             <span class="badge rounded bg-label-sec mb-2 position-relative">
+               <i class="bx bx-sm bx-rupee"></i>
+                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"  id="todaysLoanRequests">
+                 0
+                 </span>
+               </span>
+             <p class="mb-0 tx-11">LOAN</p>
+           </div>
+           </a>
+         </div>
+         <div class="col  mb-2">
+                  <a href="/insurance-service-users">
+           <div class="card align-items-center text-center border-dash py-3">
+             <span class="badge rounded bg-label-sec mb-2 position-relative">
+               <i class="bx bx-sm bx-check-shield"></i>
+                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"  id="todaysInsuranceRequests">
+                  0
+                 </span>
+               </span>
+             <p class="mb-0 tx-11">INSURANCE</p>
+           </div>
+           </a>
+         </div>
+         
+       </div>
+
+
+      <form id="filterFintech">
+         <div class="row d-inline-block mb-2">
+            <div class="w-auto  d-inline-block mb-2">
+               <label>Organizations</label>
+               <select class="form-select mw-2" id="organizationFilter" name="organization" aria-label=""></select>
+            </div>
+            <div class="w-auto d-inline-block mb-2">
+               <label>Month</label>
+               <select class="form-select" name="month" id="month">
+                  <option value="">Select</option>
+                  <option value="01">Jan</option>
+                  <option value="02">Feb</option>
+                  <option value="03">Mar</option>
+                  <option value="04">Apr</option>
+                  <option value="05">May</option>
+                  <option value="06">Jun</option>
+                  <option value="07">Jul</option>
+                  <option value="08">Aug</option>
+                  <option value="09">Sep</option>
+                  <option value="10">Oct</option>
+                  <option value="11">Nov</option>
+                  <option value="12">Dec</option>
+               </select>
+            </div>
+
+
+            <div class="w-auto d-inline-block mb-2">
+               <label>Year</label>
+               <select class="form-select w-auto" name="year" id="year">
+                  <option value="">Select</option>
+                  <option value="2021">2021</option>
+                  <option value="2022">2022</option>
+                  <option value="2023">2023</option>
+                  <option value="2024">2024</option>
+                  <option value="2025">2025</option>
+                  <option value="2026">2026</option>
+                  <option value="2027">2027</option>
+                  <option value="2028">2028</option>
+               </select>
+            </div>
+
+
+
+
+
+            <!-- <div class="w-auto d-inline-block mb-2">
+            <label for="date-range">Date-Range</label>
+            <input type="date" class="form-control" id="daterangeFilter" placeholder="" name="date-range">
+         </div> -->
+
+            <div class="w-auto d-inline-block mt-2">
+               <button type="submit" class="btn btn-primary">Apply Filters </button>
+
+               <button type="button" class="btn btn-secondary">Reset </button>
+            </div>
+
+
+         </div>
+      </form>
+      
+      <div class="card">
+ 
+         <div class="table-responsive text-nowrap">
+            <table class="table">
+               <thead>
+                  <tr>
+                     <th>Date</th>
+                     <th>Organisation</th>
+                     <th>GIC</th>
+                     <th>Forex</th>
+                     <th>Credit Card </th>
+                     <th>SIM </th>
+                     <th>Loan </th>
+                     <th>Insurance </th>
+                  </tr>
+
+               </thead>
+               <tbody>
+                  <tr aria-colspan="7">
+                     <td>Loading...</td>
+                  </tr>
+               </tbody>
+            </table>
+         </div>
+
+      </div>
+
+   </div>
+
+</div>
+
+<!-- <div class="offcanvas offcanvas-end can-width " tabindex="-1" id="offcanvasEnd" aria-labelledby="offcanvasEndLabel"
+   style="visibility: hidden; " aria-hidden="true">
+   <div class="offcanvas-header">
+      <h5 id="offcanvasEndLabel" class="offcanvas-title">Forex Details</h5>
+      <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+   </div>
+   <div class="offcanvas-body  mx-0 flex-grow-0">
+      <div class="accordion mt-3" id="servicesBox">
+         <div class="card accordion-item">
+            <h2 class="accordion-header" id="headingOne">
+               <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse"
+                  data-bs-target="#accordionOne" aria-expanded="false" aria-controls="accordionOne">
+                  Gic Abc
+               </button>
+            </h2>
+            <div id="accordionOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample" style="">
+               <div class="accordion-body">
+                   
+                   
+                  <p class="mb-1"><b class="text-mute"> FIRST NAME :</b> <span id="_selected_vendor">Abc</span></p>
+                  <p class="mb-1"><b>LAST NAME :</b> ₹ <span id="_selected_vendor_rate">64</span></p>
+                  <p class="mb-1"><b>D.O.B. :</b> <span id="_selected_vendor_date">2023/05/29</span></p>
+                  <p class="mb-1"><b>PHONE :</b> <span id="_selected_vendor_date">--</span></p>
+
+                  <p class="mb-1"><b>PASSPORT :</b> <span id="_selected_vendor_date">--</span></p>
+
+                  <p class="mb-1"><b>COLLEGE :</b> <span id="_selected_vendor_date">--</span></p>
+
+                  <p class="mb-1"><b>COUNTRY :</b> <span id="_selected_vendor_date">--</span></p>
+               </div>
+            </div>
+         </div>
+
+      </div>
+   </div>
+</div> -->

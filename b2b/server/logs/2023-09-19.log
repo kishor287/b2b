@@ -1,0 +1,12 @@
+2023-09-19 09:53:45 - Sending Registeration Mail with : {"to":"kulbhushan@innerxcrm.com","cc":["info@innerxcrm.com","training@innerxcrm.com","gurpreet@innerxcrm.com"],"subject":"Login Credentials for your CRM"}---- Response:1
+2023-09-19 09:55:17 - Sending Registeration Mail with : {"to":"kulbhushan@innerxcrm.com","cc":["info@innerxcrm.com","training@innerxcrm.com","gurpreet@innerxcrm.com"],"subject":"Login Credentials for your CRM"}---- Response:1
+2023-09-19 09:59:42 - Mail is sending with params{"to":["kishor@innerxcrm.com"],"subject":"Agreement | InnerxCRM","content":"Please see the attached document","attachment":"..\/storage\/agreements\/agreement-6509710e7afb0.pdf"}
+2023-09-19 10:14:59 - Mail is sending with params{"to":["gurpreet@innerxcrm.com"],"subject":"Agreement | InnerxCRM","content":"Please see the attached document","attachment":"..\/storage\/agreements\/agreement-6509710e7afb0.pdf"}
+2023-09-19 10:15:44 - Mail is sending with params{"to":["gurpreet@innerxcrm.com"],"subject":"Agreement | InnerxCRM","content":"Please see the attached document","attachment":"..\/storage\/agreements\/agreement-6509710e7afb0.pdf"}
+2023-09-19 10:16:21 - Mail is sending with params{"to":["gurpreetkait.codes@gmail.com"],"subject":"Agreement | InnerxCRM","content":"Please see the attached document","attachment":"..\/storage\/agreements\/agreement-6509710e7afb0.pdf"}
+2023-09-19 10:20:42 - Mail is sending with params{"to":["gurpreetkait.codes@gmail.com"],"subject":"Agreement | InnerxCRM","content":"Please see the attached document","attachment":"..\/storage\/agreements\/agreement-6509710e7afb0.pdf"}
+2023-09-19 10:20:42 - and Response
+2023-09-19 10:24:04 - Mail is sending with params{"to":["gurpreetkait.codes@gmail.com"],"subject":"Agreement | InnerxCRM","content":"Please see the attached document","attachment":"..\/storage\/agreements\/agreement-6509710e7afb0.pdf"}
+2023-09-19 10:24:04 - and Response
+2023-09-19 10:24:04 - Sending Registeration Mail with : {"to":"gurpreetkait.codes@gmail.com","cc":[],"subject":"Agreement | Innerxcrm"}---- Response:1
+2023-09-19 10:26:01 - Sending Registeration Mail with : {"to":"gurpreet@innerxcrm.com","cc":[],"subject":"Agreement | Innerxcrm"}---- Response:1

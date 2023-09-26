@@ -1,0 +1,116 @@
+<div class="content-wrapper">
+    <div class="container-xxl flex-grow-1 container-p-y">
+
+        <div class="row mb-2">
+            <div class="col-md-12 mt-4">
+                <button type="button" class="btn btn-sm btn-primary float-end mx-1" data-bs-toggle="modal"
+                    data-bs-target="#forexModal">
+                    + Add New
+                </button>
+            </div>
+        </div>
+
+        <div class="card">
+
+            <div class="table-responsive text-nowrap">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Action</th>
+                            <th>Vendor Name</th>
+                            <th>Currency</th>
+                            <th>Today Rate</th>
+                        </tr>
+                    </thead>
+                    <tbody id="forexListing"> 
+                        
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="forexModal" tabindex="-1" aria-labelledby="forexModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Add Forex Vendor</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <form id="forexMaster">
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-4 mb-0">
+                            <label for="trainsched" class="form-label">Currency</label>
+                            <select class="form-select form-select bg-light" required id="currency" name="currency">
+                                <option value="CAD ($)">CAD ($)</option>
+                                <option value="USD ($)">USD ($)</option>
+                                <option value="AUD ($)">AUD ($)</option>
+                                <option value="NZD ($)">NZD ($)</option>
+                                <option value="GBP (£)">GBP (£)</option>
+                            </select>
+                        </div>
+                        <div class="col-md-4 mb-0">
+                            <label for="trainsched" class="form-label">Vendor Name</label>
+                            <!-- <select class="form-select form-select bg-light" required id="bankName" name="bank_name">
+                                <option value="EbixCash">EbixCash</option>
+                                <option value="Paul Merchants">Paul Merchants</option>
+                                <option value="ICICI">ICICI</option>
+                            </select> -->
+                            <input type="text" class="form-control" id="bankName" required name="bank_name">
+                        </div>
+                        <div class="col-md-4 mb-0">
+                            <label for="trainsched" class="form-label">Today Rate</label>
+                            <input type="text" class="form-control" id="todayRate" required name="today_rate">
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-primary">Save</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<!-- Edit Modal-->
+<div class="modal fade" id="editForexModal" tabindex="-1" aria-labelledby="editForexModal" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Edit Vendor Details</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <form id="editforexMaster">
+
+
+                <div class="modal-body">
+                    <input type="hidden" id="editForexId" name="id">
+                    <div class="row">
+                        <div class="col-md-6 mb-0">
+                            <label for="currency" class="form-label">Currency</label>
+                            <select class="form-select form-select bg-light" id="editCurrency" name="currency">
+                                <option value="CAD ($)">CAD ($)</option>
+                                <option value="USD ($)">USD ($)</option>
+                                <option value="AUD ($)">AUD ($)</option>
+                                <option value="NZD ($)">NZD ($)</option>
+                                <option value="GBP (£)">GBP (£)</option>
+                            </select>
+                              
+                        </div>
+                       
+                        <div class="col-md-6 mb-0">
+                            <label for="editRate" class="form-label">Today Rate</label>
+                            <input type="text" class="form-control" id="editRate" name="today_rate">
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-primary">Update</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

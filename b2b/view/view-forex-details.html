@@ -1,0 +1,114 @@
+<div class="content-wrapper">
+            <!-- Content -->
+
+            <div class="container-xxl flex-grow-1 container-p-y">
+              
+               <div class="row d-inline-block mb-2"> 
+
+   <div class="w-auto d-inline-block mb-2">
+                  <label>Contracts</label>
+                  <select class="form-select" id="contractFilter" name="contract" aria-label="">
+                     <option value="" selected="">Select</option>
+                     <option value="2">Pending</option>
+                     <option value="1">Done</option>
+                  </select>
+               </div>
+               
+  <div class="w-auto d-inline-block mb-2">  
+             <label for="date-range">Date-Range</label>
+    <input type="date" class="form-control" id="date-range" placeholder="" name="date-range">
+                 </div>
+                 
+                 <div class="w-auto d-inline-block mt-2">
+                  <button type="button" class="btn btn-primary">Apply Filters </button>
+
+                  <button type="button" class="btn btn-secondary">Reset </button>
+               </div>
+   
+
+              </div>         
+          
+<div class="card">
+
+  <div class="table-responsive text-nowrap">
+    <table class="table">
+     <thead>
+ <tr>
+			      <th>Action</th>  
+			    <th >S No.</th>  
+            	<th>First Name</th>
+				<th>Last Name</th>
+				<th>D.O.B.</th>
+				<th>Email</th>
+				<th>Phone</th>
+				<th>Passport</th>
+				<th>College</th>
+				<th>Country</th>
+				<th>City</th>
+				<th>Created</th>
+				<th>Updated</th>
+			</tr>
+     
+     </thead>
+      <tbody>
+         
+         <tr>
+        <td><button class="btn btn-xs btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasEnd" aria-controls="offcanvasEnd">View</button></td>
+        <td>...</td>
+        <td>...</td>      
+        <td>...</td>
+        <td>...</td>
+        <td>...</td>
+        <td>...</td>
+        <td>...</td>
+        <td>...</td>
+        <td>...</td>
+        <td>...</td>
+        <td>...</td>
+      </tr>
+
+          
+      </tbody>
+    </table>
+  </div>
+  
+</div>
+
+</div>
+</div>
+
+
+
+          
+          <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasEnd" aria-labelledby="offcanvasEndLabel" style="visibility: hidden;" aria-hidden="true">
+            <div class="offcanvas-header">
+              <h5 id="offcanvasEndLabel" class="offcanvas-title">Forex Details</h5>
+              <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body my-auto mx-0 flex-grow-0">
+             
+             
+             <div class="card bg-light p-3 mb-3">
+          <p class="mb-1"><b class="text-mute">	FIRST NAME :</b> <span id="_selected_vendor">ICICI</span></p>
+          <p class="mb-1"><b>LAST NAME :</b> ₹ <span id="_selected_vendor_rate">64</span></p>
+          <p class="mb-1"><b>D.O.B. :</b> <span id="_selected_vendor_date">2023/05/29</span></p>
+         <p class="mb-1"><b>PHONE :</b> <span id="_selected_vendor_date">--</span></p>
+       
+        <p class="mb-1"><b>PASSPORT :</b> <span id="_selected_vendor_date">--</span></p>
+       
+        <p class="mb-1"><b>COLLEGE :</b> <span id="_selected_vendor_date">--</span></p>
+       
+        <p class="mb-1"><b>COUNTRY :</b> <span id="_selected_vendor_date">--</span></p>
+       
+          
+          							
+          	
+         </div>
+         
+              <button type="button" class="btn btn-primary mb-2 d-grid w-100">Continue</button>
+              <button type="button" class="btn btn-outline-secondary d-grid w-100" data-bs-dismiss="offcanvas">Cancel</button>
+            </div>
+          </div>
+       
+
+

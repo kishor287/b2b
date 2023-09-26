@@ -1,0 +1,123 @@
+<div class="content-wrapper">
+    <div class="container-xxl flex-grow-1 container-p-y">
+        <div class="row">
+            <div class="col-lg-12 d-flex justify-content-start">
+                <button class="btn btn-sm btn-primary" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasEnd" aria-controls="offcanvasEnd">Add Coupon</button>
+            </div>
+            <div class="col-lg-12 mt-2">
+                <div class="card">
+                    <div class="table-responsive text-nowrap">
+                        <table class="table ">
+                            <thead>
+                                <tr>
+                                    <td>Action</td>
+                                    <td>Id</td>
+                                    <td>Amount</td>
+                                    <td>Services</td>
+                                    <td>Banner</td>
+                                    <td>Created At</td>
+                                </tr>
+                            </thead>
+                            <tbody></tbody>
+                        </table>
+                    </div>
+                    <div class="col px-3">
+                        <nav aria-label="Page navigation">
+                            <ul class="pagination my-3 pagination-sm"></ul>
+                        </nav>
+                    </div>
+        
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="offcanvas offcanvas-end" style="width:750px;" tabindex="-1" id="offcanvasEnd"
+        aria-labelledby="offcanvasEndLabel" style="visibility: hidden;" aria-hidden="true">
+        <div class="offcanvas-header">
+            <h5 id="offcanvasEndLabel" class="offcanvas-title">Add Coupon</h5>
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body  mx-0 flex-grow-0">
+            <div class="card p-3">
+                <form id="coupon_form">
+                    <div>
+                        <ul class="nav nav-pills mb-3">
+                            <li class="nav-item">
+                                <a class="nav-link active" data-bs-toggle="tab" href="#image-tab">Upload Image</a>
+                            </li>
+                        </ul>
+                        <div class="tab-content pt-3 px-0">
+                            <div class="tab-pane fade show active" id="image-tab">
+                                <div class="mb-3">
+                                    <label for="file1" class="form-label">Image:</label>
+                                    <input type="file" class="form-control" required name="coupon">
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="text-tab">
+                                <div class="mb-3">
+                                    <label for="text1" class="form-label">Text:</label>
+                                    <textarea class="form-control" id="text1" name="text1" rows="4"
+                                        cols="30"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mb-1">
+                        <label for="discount" class="form-label">Amount ($) :</label>
+                        <input type="number" class="form-control" id="discount" name="reward" required>
+                    </div>
+                    <div class="mb-2">
+                        <label class="form-label">Service:</label><br><br>
+                        <div class="form-check me-4">
+                            <input class="form-check-input services" type="checkbox" id="gic" name="gic" value="gic">
+                            <label class="form-check-label" id="gicService" for="gic">GIC</label>
+                            <div class="gicsubServices">
+
+                            </div>
+                        </div>
+                        <div class="form-check me-4">
+                            <input class="form-check-input services" type="checkbox" id="forex" name="forex" value="forex">
+                            <label class="form-check-label" id="forexService" for="forex">Forex</label>.
+                            <div class="forexsubServices">
+
+                            </div>
+                        </div>
+                        <div class="form-check me-4">
+                            <input class="form-check-input services" type="checkbox" id="sim" name="sim" value="sim">
+                            <label class="form-check-label"  for="sim">Sim</label>
+                        </div>
+
+                        <div class="form-check me-4">
+                            <input class="form-check-input services" type="checkbox" id="loan" name="loan" value="loan">
+                            <label class="form-check-label" for="loan">Loan</label>
+                        </div>
+                        <div class="form-check me-4">
+                            <input class="form-check-input services" type="checkbox" id="insurance" name="insurance"
+                                value="insurance">
+                            <label class="form-check-label" for="insurance">Insurance</label>
+                        </div>
+                        <div class="form-check me-4">
+                            <input class="form-check-input services" type="checkbox" id="credit_card" name="credit_card"
+                                value="credit_card">
+                            <label class="form-check-label" for="credit_card">Credit Card</label>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="organization" class="form-label">Organization:</label>
+                        <select id="_dir" class="form-select" multiple name="organization[]">
+                            <!--<option value="">All Organization</option>-->
+                            <!--<option value="org1">Organization 1</option>-->
+                            <!--<option value="org2">Organization 2</option>-->
+                            <!--<option value="org3">Organization 3</option>-->
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div>

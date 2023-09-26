@@ -1,0 +1,98 @@
+<!doctype html>
+<HTML>
+   <HEAD>
+      <TITLE></TITLE>
+      <style>
+         .description {
+         font-size: 2em;
+         line-height: 4;
+         }
+      </style>
+      <style>
+         /* Reset styles */ 
+         body { margin: 0; padding: 0; min-width: 100%; width: 100% !important; height: 100% !important;}
+         body, table, td, div, p, a { -webkit-font-smoothing: antialiased; text-size-adjust: 100%; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; line-height: 100%; }
+         table, td { mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-collapse: collapse !important; border-spacing: 0; }
+         img { border: 0; line-height: 100%; outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; }
+         #outlook a { padding: 0; }
+         .ReadMsgBody { width: 100%; } .ExternalClass { width: 100%; }
+         .ExternalClass, .ExternalClass p, .ExternalClass span, .ExternalClass font, .ExternalClass td, .ExternalClass div { line-height: 100%; }
+         /* Rounded corners for advanced mail clients only */ 
+         @media all and (min-width: 560px) {
+         .container { border-radius: 8px; -webkit-border-radius: 8px; -moz-border-radius: 8px; -khtml-border-radius: 8px;}
+         }
+         /* Set color for auto links (addresses, dates, etc.) */ 
+         a, a:hover {
+         color: #127DB3;
+         }
+         .footer a, .footer a:hover {
+         color: #999999;
+         }
+      </style>
+   </HEAD>
+   <BODY>
+      <div class="outer-content">
+         <div id="pdf-content">
+            <body topmargin="0" rightmargin="0" bottommargin="0" leftmargin="0" marginwidth="0" marginheight="0" width="100%" style="border-collapse: collapse; border-spacing: 0; margin: 0; padding: 0; width: 100%; height: 100%; -webkit-font-smoothing: antialiased; text-size-adjust: 100%; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; line-height: 100%;
+               background-color: #F0F0F0;
+               color: #000000;" bgcolor="#F0F0F0" text="#000000">
+               <table width="100%" align="center" border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse; border-spacing: 0; margin: 0; padding: 0; width: 100%;" class="background">
+                  <tbody>
+                     <tr>
+                        <td align="center" valign="top" style="border-collapse: collapse; border-spacing: 0; margin: 0; padding: 0;" bgcolor="#F0F0F0">
+                           <table border="0" cellpadding="0" cellspacing="0" align="center" bgcolor="#FFFFFF" width="560" style="border-collapse: collapse; border-spacing: 0; padding: 0; width: inherit;
+                              max-width: 560px;" class="container">
+                              <tbody>
+                                 <tr>
+                                    <td align="left" valign="top" style="border-collapse: collapse; border-spacing: 0; margin: 0; padding: 0; padding-left: 6.25%; padding-right: 6.25%; width: 87.5%; font-size: 15px; font-weight: 300; line-height: 160%;
+                                       padding-top: 25px;                         
+                                       padding-bottom: 25px; 
+                                       color: #000000;
+                                       background: #edf2f8;
+                                       font-family: sans-serif;" class="paragraph">
+                                       <b>Dear Student,</b><br><br>
+                                       Student Name:  {{student_name}}<br>
+                                       Passport Number: {{passport_number}}<br>
+                                       Phone:{{phone_number}}<br>
+                                       College: {{college}}
+                                       <br>
+                                       <br>
+                                       <p>We have registered your request for {{request_type}}. Our team will get in touch with you shortly.
+                                       </p>
+                                       <br>
+                                       Should you need any help, feel free to reach us at the below contact details. 
+                                       <br><br>
+                                       <b>Best Regards,<br>
+                                       Customer Support, Innerx Informatics<br>
+                                       Email: support@innerxcrm.com<br>
+                                       <a href="tel:+91-9888099669">+91-9888099669</a>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td align="center" valign="top" style="border-collapse: collapse; border-spacing: 0; margin: 0; padding: 0; padding-left: 6.25%; padding-right: 6.25%; width: 87.5%; font-size: 14px; font-weight: 400; line-height: 160%;
+                                       padding-top: 20px;
+                                       padding-bottom: 25px;
+                                       color: #555;
+                                       font-family: sans-serif;" class="paragraph">
+                                       <p>If you need assistance, get in touch with us:</p>
+                                       <a style="color: #011169;">support@innerxcrm.com</a>   / <a href="tel: +91-9888812654" style="color: #011169;">  +91-9888099669</a>
+                                    </td>
+                                 </tr>
+                              </tbody>
+                           </table>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td align="center" valign="top" style="border-collapse: collapse; border-spacing: 0; margin: 0; padding: 0; padding-left: 6.25%; padding-right: 6.25%; width: 87.5%; font-size: 13px; font-weight: 400; line-height: 150%;
+                           padding-top: 20px;
+                           padding-bottom: 20px;
+                           color: #999999;
+                           font-family: sans-serif;" class="footer">
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+         </div>
+      </div>
+   </BODY>
+</HTML>

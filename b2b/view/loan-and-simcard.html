@@ -1,0 +1,133 @@
+<div class="content-wrapper">
+
+  <div class="container-xxl flex-grow-1 container-p-y">
+    <div class="row mb-2">
+      <div class="col-md-4">
+        <div class="w-auto d-inline-block mb-2">
+          <label>Select Date Range :</label>
+          <input type="text" class="form-control" id="daterange" name="daterange" readonly="">
+        </div>
+        <button type="button" id="exportLoanSimcardReport" class="btn btn-primary ms-1">
+          <i class="bx bx-download"></i>
+        </button>
+      </div>
+      <div class="col-md-8 text-end mt-4">
+        <a href="/add-loan-and-simcard" class="btn btn-primary">+ Create New </a>
+      </div>
+
+    </div>
+
+    <div class="card p-3">
+      <h5>Sim Card</h5>
+      <div class="table-responsive text-nowrap">
+        <table class="table" id="loanAndSimReportTable">
+          <thead>
+            <tr>
+              <th>Actions</th>
+              <th>Created At</th>
+              <th>Agent Name</th>
+              <th>Student Name</th>
+              <th>Contact No</th>
+              <th>Location</th>
+              <th>Amount</th>
+              <th>Status</th>
+              <th>SIM Card Quantity Issued</th>
+              <th>Sim Card Number</th>
+              <th>Sim Card Bar-Code</th>
+            </tr>
+
+          </thead>
+          <tbody id="loanSimTbody"></tbody>
+        </table>
+      </div>
+
+    </div>
+  </div>
+</div>
+<script src="js/table2excel.js" type="text/javascript"></script>
+<script type="text/javascript">
+  $(function () {
+    $("#exportLoanSimcardReport").click(function () {
+      $("#loanAndSimReportTable").table2excel({
+        filename: "loan&sim_report.xls"
+      });
+    });
+  });
+
+</script>
+
+<script src="https://cdn.rawgit.com/rainabba/jquery-table2excel/1.1.0/dist/jquery.table2excel.min.js"></script>
+
+<!-- Modal -->
+<div class="modal fade" id="editLoanSimModal" tabindex="-1" aria-labelledby="exampleModal1Label" aria-hidden="true">
+  <div class="modal-dialog modal-xl">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Edit Details</h4>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+
+      <div class="modal-body">
+        <form id="updateSimLoan" class="">
+          <div class="row mb-2">
+            <div class="col-md-4 mb-0">
+              <input type="hidden" id="recordId" name="id" />
+              <label for="emailBasic" class="form-label">AGENT NAME</label>
+              <input type="text" id="agentName" required="" class="form-control"  name="agent_name">
+            </div>
+            <div class="col-md-4 mb-0">
+              <label for="emailBasic" class="form-label">STUDENT NAME</label>
+              <input type="text" id="studentName" required="" class="form-control"  name="student_name">
+            </div>
+            <div class="col-md-4 mb-0">
+              <label for="emailBasic" class="form-label">CONTACT NO</label>
+              <input type="text" id="contactNumber" required="" class="form-control" 
+                name="contact_number">
+            </div>
+            <div class="col-md-4 mb-0">
+              <label for="emailBasic" class="form-label">LOCATION</label>
+              <input type="text" id="location" required="" class="form-control"  name="location">
+            </div>
+            <div class="col-md-4 mb-0">
+              <label for="emailBasic" class="form-label">AMOUNT</label>
+              <input type="number" id="amount" required="" class="form-control"  name="amount">
+            </div>
+            <div class="col-md-4 mb-0">
+              <label for="emailBasic" class="form-label">STATUS</label>
+              <!-- <input type="text" id="status" required="" class="form-control"  name="status"> -->
+              <select id="status" class="form-control" name="status">
+                <option value="COMPLETE">Complete</option>
+                <option value="PENDING">Pending</option>
+            </select>
+            </div>
+            <div class="col-md-4 mb-0">
+              <label for="emailBasic" class="form-label">SIM CARD QUANTITY ISSUED</label>
+              <input type="text" id="simCardQuantity" required="" class="form-control" 
+                name="sim_card_quantity">
+            </div>
+            <div class="col-md-4 mb-0">
+              <label for="emailBasic" class="form-label">SIM CARD NUMBER</label>
+              <input type="number" id="simCardNumber" required="" class="form-control" 
+                name="sim_card_number">
+              <input type="hidden" name="_action" value="updateSimAndLoan" />
+              <input type="hidden" name="payload" value="add-sim-and-loan" />
+            </div>
+            <div class="col-md-4 mb-0">
+              <label for="barCode" class="form-label">SIM CARD QUANTITY ISSUED <span class="text-primary">(Update)</span></label>
+              <input type="file" id="barCode" class="form-control" 
+                name="sim_card_barcode">
+            </div>
+            <div class=" mt-2">
+              <button class="btn btn-primary">Update</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Button trigger modal -->
+
+
+<div id="_pdf" class=""></div>

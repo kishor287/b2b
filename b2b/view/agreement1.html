@@ -1,0 +1,419 @@
+   <div class="content-wrapper">
+            <!-- Content -->
+
+            <div class="container-xxl flex-grow-1 container-p-y">
+              <div class="row"> 
+             <div class="col-md-6">   
+              <h4 class="fw-bold py-3 mb-2"><span class="text-muted fw-light">Agreements </span></h4>
+              </div>
+         <div class="col-md-6 mb-2">  
+ <button type="button" class="btn btn-primary float-end" data-bs-toggle="modal" data-bs-target="#basicModal">
+                         Add Agreement
+                        </button>
+                        </div>
+                         </div>
+                        
+          
+<div class="card">
+    
+
+  <div class="table-responsive text-nowrap">
+    <table class="table ">
+      <thead></thead>
+      <tbody></tbody>
+    </table>
+  </div>
+  <div class="col px-3">
+  <nav aria-label="Page navigation">
+  <ul class="pagination my-3 pagination-sm"></ul>
+  </nav>
+  </div>
+  
+</div>
+
+
+</div>
+</div>
+
+          <!-- Button trigger modal -->
+                  
+
+                        <!-- Modal -->
+                        <div class="modal fade" id="basicModal" tabindex="-1" aria-hidden="true">
+                          <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel1"> Agreements Details</h5>
+                                <button
+                                  type="button"
+                                  class="btn-close"
+                                  data-bs-dismiss="modal"
+                                  aria-label="Close"
+                                ></button>
+                              </div>
+                               <form  id="organization_form">
+
+                              <div class="modal-body">
+                                     
+                                <div class="row">
+                              
+              <div class="col-md-6 mb-0">
+               <label for="emailBasic" class="form-label">
+                   Business Owner Name
+               </label>
+                <input type="text" id=""  required class="form-control" placeholder=" " name="companyowner" />
+                </div>
+          
+                <div class="col-md-6 mb-0">
+                   <label for="nameBasic" class="form-label">Organization Name</label>
+                    <input type="text" id="nameBasic" name="organization" class="form-control" required placeholder="" />
+                  </div>
+                  
+                   <div class="col-md-6 mb-0">
+               <label for="emailBasic" class="form-label">
+                   Phone
+               </label>
+                <input type="text" id=""  required class="form-control" placeholder="" name="phone" />
+                </div>
+          
+                <div class="col-md-6 mb-0">
+                   <label for="nameBasic" class="form-label">Email</label>
+                    <input type="text" id="nameBasic" name="email" class="form-control" required placeholder="" />
+                  </div>
+                                  
+                <div class=" mb-0">
+          <label for="exampleFormControlTextarea1" class="form-label">Address</label>
+          <textarea class="form-control" id="exampleFormControlTextarea1"  name="address"></textarea>
+           </div>
+           
+ 
+              <div class="col-md-12 mb-0">
+               <label for="emailBasic" class="form-label">
+                   Organization Services 
+               </label>
+                <textarea type="text" id=""  required class="form-control" placeholder=" " name="companytype"></textarea>
+             </div>
+            
+
+                 
+                 <div class="col-md-6 mb-0">
+               <label for="emailBasic" class="form-label">Number of GIC(s)</label>
+                <input type="text" id=""  required class="form-control" placeholder=" " name="committed" />
+                 </div>
+                                  
+                
+                       <div class="col-md-6 mb-0">
+               <label for="emailBasic" class="form-label">Reward (CAD)</label>
+                <input type="text" id=""  required class="form-control" placeholder=" " name="reward" />
+                                  </div>                  
+                                  
+                                  
+                                  
+                                  <div>
+                                            <label for="dobBasic" class="form-label">Credit Card with a limit of CAD</label>
+                                 
+                <div class="d-flex mb-0">
+                              
+                                    <input type="text"  required name="credit_card" class="form-control" placeholder="" /> 
+                                        <input type="text"  name="credit_card2" class="form-control d-none" placeholder="" name="address"/>
+                                  </div>
+                        </div>           
+                                  
+                                   <div class="col mb-0">
+                                    <label for="dobBasic" class="form-label">Loan Benefit for Partner</label>
+                                    <input type="text" required name="benefits" class="form-control" placeholder="" />
+                                  </div>
+                                  
+                                   <div class="col mb-0">
+                                    <label for="dobBasic" class="form-label">Forex:</label>
+                                    <input type="text" required name="forex" class="form-control" placeholder="" />
+                                  </div>
+                                  
+                                  
+                                  <div class=" mb-0">
+                                    <label for="dobBasic" class="form-label"> Other Services:</label>
+                                    <input type="text" required name="other" class="form-control" placeholder="" />
+                                  </div>
+                                  
+                                 
+                                  
+                                  
+                                  
+                                  
+                                </div>
+                              </div>
+                              <div class="modal-footer">
+                                <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
+                                  Close
+                                </button>
+                                <button type="submit" class="btn btn-primary">Save changes</button>
+                                
+                               
+                              </div>
+                                 </form> 
+                            </div>
+                          </div>
+                        </div>
+                        
+                     <!-- Button trigger modal -->
+                     
+                      <!-- Modal -->
+                        <div class="modal fade" id="basicModaledit" tabindex="-1" aria-hidden="true">
+                          <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel1"> Agreement Details</h5>
+                                <button
+                                  type="button"
+                                  class="btn-close"
+                                  data-bs-dismiss="modal"
+                                  aria-label="Close"
+                                ></button>
+                              </div>
+                               <form  id="organization_form_edit">  
+                              <div class="modal-body">
+                                <div class="row">
+                              
+                                  
+                             <input type="hidden"  name="id" id="_id" >
+    
+    
+     <div class="col-md-6 mb-0">
+               <label for="emailBasic" class="form-label">
+                   Business Owner
+                   
+               </label>
+                <input type="text" id=""  required class="form-control" placeholder=" " name="companyowner" />
+            </div>
+        
+                    <div class="col-md-6  mb-0">
+                                    <label for="nameBasic" class="form-label">Organization Name</label>
+                                    <input type="text" id="nameBasic" name="organization" class="form-control" required placeholder="Enter Name" />
+                                  </div>
+                                  
+                                     <div class="col-md-6 mb-0">
+               <label for="emailBasic" class="form-label">
+                   Phone
+               </label>
+                <input type="text" id=""  required class="form-control" placeholder="" name="phone" />
+                </div>
+          
+                <div class="col-md-6 mb-0">
+                   <label for="nameBasic" class="form-label">Email</label>
+                    <input type="text" id="nameBasic" name="email" class="form-control" required placeholder="" />
+                  </div>
+                
+                    
+                    <div class=" mb-0">
+          <label for="exampleFormControlTextarea1" class="form-label">Address</label>
+          <textarea class="form-control" name="address" id="exampleFormControlTextarea1" ></textarea>
+           </div>
+           
+           
+             
+            
+              <div class="col-md-12 mb-0">
+               <label for="emailBasic" class="form-label">
+                   Organization Services
+               </label>
+                <textarea  type="text" id=""  required class="form-control" placeholder=" " name="companytype" > </textarea>
+             </div>
+            
+            
+                 <div class="col-md-6 mb-0">
+               <label for="emailBasic" class="form-label">Number of GIC(s)</label>
+                <input type="text" name="committed"  required class="form-control" placeholder=" " />
+                                  </div>
+                                  
+                
+                       <div class="col-md-6 mb-0">
+               <label for="emailBasic" class="form-label">Reward (CAD)</label>
+                <input type="text" name="reward"  required class="form-control" placeholder=" " />
+                                  </div>                  
+                                  
+                                  
+                                  
+                                  <div>
+                                            <label for="dobBasic" class="form-label">Credit Card with a limit of CAD</label>
+                                 
+                <div class="d-flex mb-0">
+                              
+                                    <input type="text"  required name="credit_card" class="form-control" placeholder="" />
+                                        <input type="text"  name="credit_card2" class="form-control d-none" placeholder="" />
+                                  </div>
+                        </div>           
+                                  
+                                   <div class="col mb-0">
+                                    <label for="dobBasic" class="form-label">Loan Benefit for Partner</label>
+                                    <input type="text" required name="benefits" class="form-control" placeholder="" />
+                                  </div>
+                                  
+                                   <div class="col mb-0">
+                                    <label for="dobBasic" class="form-label">Forex:</label>
+                                    <input type="text" required name="forex" class="form-control" placeholder="" />
+                                  </div>
+                                  
+                                  
+                                  <div class=" mb-0">
+                                    <label for="dobBasic" class="form-label"> Other Services:</label>
+                                    <input type="text" required name="other" class="form-control" placeholder="" />
+                                  </div>
+                                  
+                                 
+                                  
+                                  
+                            
+      
+                               
+                                  
+                                
+                                </div>
+                              </div>
+                              <div class="modal-footer">
+                                <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
+                                  Close
+                                </button>
+                                <button type="submit" class="btn btn-primary">Save changes</button>
+                                
+                                  
+                              </div>
+                              </form> 
+                            </div>
+                          </div>
+                        </div>
+          <!-- Button trigger modal -->
+                  
+                   <div class="modal fade" id="basicModalemail" tabindex="-1" aria-hidden="true">
+                          <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel1"> Email Agreement</h5>
+                                <button
+                                  type="button"
+                                  class="btn-close"
+                                  data-bs-dismiss="modal"
+                                  aria-label="Close"
+                                ></button>
+                              </div>
+                               <form  id="organization_form_email">  
+                              <div class="modal-body">
+                                <div class="row">
+                              
+                                  
+                             <input type="hidden"  name="id" id="_id" >
+    
+    
+        
+                                  <div class=" mb-0">
+                                    <label for="nameBasic" class="form-label">Emails <small> (support multiple emails)</small></label>
+                                    <input type="text" id="nameBasic" name="emails" class="form-control" required placeholder="abc@xyz.com, xyz@company.com" />
+                                  </div>
+                                  
+                                
+                                  
+                                     
+                                  
+                                 
+                                 
+                                  
+                                  
+                            
+      
+                               
+                                  
+                                
+                                </div>
+                              </div>
+                              <div class="modal-footer">
+                                <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
+                                  Close
+                                </button>
+                                <button type="submit" class="btn btn-primary">Send</button>
+                                
+                                  
+                              </div>
+                              </form> 
+                            </div>
+                          </div>
+                        </div>
+
+                        <!-- Modal -->
+                        <div class="modal fade" id="basicModal" tabindex="-1" aria-hidden="true">
+                          <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel1"> Organization Details</h5>
+                                <button
+                                  type="button"
+                                  class="btn-close"
+                                  data-bs-dismiss="modal"
+                                  aria-label="Close"
+                                ></button>
+                              </div>
+                              <div class="modal-body">
+                                <div class="row">
+                               <form  id="organization_form">  
+                                    <div class="col mb-0">
+          <label for="defaultSelect" class="form-label">Sub Domain</label>
+          <select id="_dir"  name="sub_domain" required class="form-select">
+            <option value="">Sub Domains</option>
+          </select>
+        </div>
+        
+                                  <div class="col mb-0">
+                                    <label for="nameBasic" class="form-label">Organization Name</label>
+                                    <input type="text" id="nameBasic" name="organization" class="form-control" required placeholder="Enter Name" />
+                                  </div>
+                                </div>
+                                
+                                 <div class="row g-2">
+                                  <div class="col mb-0">
+          <label for="formFile" class="form-label">Organization Logo</label>
+          <input class="form-control" type="file" id="_logo" name="logo" required id="formFile">
+        </div>
+     </div>
+                                <div class="row g-2">
+                                  <div class="col mb-0">
+                                    <label for="emailBasic" class="form-label">Email</label>
+                                    <input type="text" id="_email" name="email" required class="form-control" placeholder="xxxx@xxx.xx" />
+                                  </div>
+                                  
+                                  <div class="col mb-0">
+                                    <label for="dobBasic" class="form-label">Phone</label>
+                                    <input type="text" id="_phone" required name="phone" class="form-control" placeholder="+91 xxxxx xxxxx" />
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="modal-footer">
+                                <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
+                                  Close
+                                </button>
+                                <button type="submit" class="btn btn-primary">Save changes</button>
+                                
+                                </form>   
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        
+                     <!-- Button trigger modal -->
+                     
+                     
+     <div class="modal fade bd-example-modal-sm "  data-backdrop="static" data-keyboard="false" id="_delete_modal" style="display: none;"  aria-hidden="true">
+                                        <div class="modal-dialog modal-sm">
+                                            <div class="modal-content">
+                                                <form id="_delete_form">
+                                         <div class="alert alert-danger notification mb-0">
+                                            <p class="notificaiton-title mb-4 mt-3"><strong>Do you really want to remove?</strong></p>
+                                            <button type="submit" class="btn btn-danger btn-sm">Confirm</button>
+                                            <button type="button" data-bs-dismiss="modal" class="btn btn-link btn-sm">Cancel</button>
+                                         
+                                        </div>
+                                           </form>
+                                    </div></div>
+                                                
+                                          
+                                    </div>
+                                    
+                 <div id="_pdf" class=""></div>
+                 

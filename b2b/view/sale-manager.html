@@ -1,0 +1,513 @@
+<div class="content-wrapper">
+    
+          <div class="container-xxl flex-grow-1 container-p-y">
+
+<div class="row">
+<div class="col-lg-8">
+<div class="row">   
+<div class="col-lg-6">
+    
+        <div class="card mb-4">
+            <div class="card-title d-flex mb-0 align-items-start justify-content-between">
+              <div class="flex-shrink-0">
+                  <a href="/today-followup">
+             <h5 class="card-header m-0 me-2 ps-3 pb-3" >Today Follow</h5>
+             </a>
+              </div>
+              <div class="card-header m-0 me-2 pe-3 pb-3">
+                Total
+               <h5 class="mb-0 text-primary" id="followup_count">
+               
+               </h5>
+              </div>
+            </div>
+
+          <div class="card-body pt-0">
+            <div class="row item-align-center">  
+            <div class="col-4">
+                 <p class="text-success mt-2 mb-2">Done :  76 </p>
+                 <p class="text-danger">Pending :  76 </p>
+                 
+                </div>
+                <div class="col-8">
+               <div id="profileReportChart"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="card mb-4">
+            <div class="card-title d-flex mb-0 align-items-start justify-content-between">
+              <div class="flex-shrink-0">
+                  <a href="/schedule-meeting">
+             <h5 class="card-header m-0 me-2 ps-3 pb-3" >Today Meeting</h5>
+             </a>
+              </div>
+              <div class="card-header m-0 me-2 pe-3 pb-3" >
+                Total 
+               <h5 class="mb-0 text-primary" id="today_meetings"></h5>
+              </div>
+            </div>
+           
+
+          <div class="card-body pt-0 ">
+            <div class="row gx-3 item-align-center">  
+               
+              <div class="col-4">
+                <div class="border rounded bg-light text-center">
+                 <p class="mt-4 mb-0">Rescheduled</p>
+                 <p class="text-primary fs-4" >0</p>
+                </div>
+                </div>
+                <div class="col-4">
+                <div class="border rounded bg-light text-center">
+                 <p class="mt-4 mb-0">Done </p>
+                 <p class="text-success fs-4">0 </p>
+                </div>
+                </div>
+                 <div class="col-4">
+                <div class="border rounded bg-light text-center">
+                 <p class="mt-4 mb-0">Pending</p>
+                 <p class="text-danger fs-4"> 0 </p>
+                </div>
+                </div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+ 
+ 
+ <div class="col-lg-6">
+          <div class="card p-3 mb-4">
+  <a href="/all-lead" >
+        <h5>Total Leads</h5>
+        </a>
+  
+         <div class="col-12">  
+         <div class="row">  
+         <div class="col-4">
+             <a href="/all-lead" >
+         <h6 class="mb-1 text-primary">All Leads
+          
+          </h6>
+          </a>
+          <h6 class="mb-1 text-primary" id= "lead_count">
+          </h6>
+         </div>
+         <div class="col-4 p-0"> 
+         
+           <div id="orderStatisticsChart"></div>
+         </div>
+         <div class="col-4"> 
+         <h6 class="mb-1 text-danger">New Leads
+          </h6>
+           <h6 class="mb-1 text-danger" id="today_lead_count">
+          </h6>
+         </div>
+           </div>
+       </div>
+
+        </div>
+            <div class="card  p-3 mb-4">
+
+         <div class="col-12">  
+         <div class="row">  
+         <div class="col-lg-6 text-center"> 
+           <h6 class="text-primary">Today Agreement</h6>
+ <!-- <table class="w-100">-->
+ <!-- <tr>-->
+ <!--   <td>Monthly</td>-->
+ <!--   <td>100</td>-->
+
+ <!-- </tr>-->
+ <!-- <tr>-->
+ <!--   <td>Weekly</td>-->
+ <!--   <td>100</td>-->
+ <!-- </tr>-->
+ <!--  <tr>-->
+ <!--   <td>Yesterday</td>-->
+ <!--   <td>100</td>-->
+ <!-- </tr>-->
+ <!--  <tr>-->
+ <!--   <td>Today</td>-->
+ <!--   <td>100</td>-->
+ <!-- </tr>-->
+ <!--</table>-->
+
+  <h6 class="mt-3 mb-0"  id="today_agreements" ></h6>
+
+         </div>
+
+          <div class="col-lg-6 text-center"> 
+           <h6 class="text-primary">Today Contract</h6>
+         
+<!--          <table class="w-100">-->
+<!--  <tr>-->
+<!--    <td>Monthly</td>-->
+<!--    <td>100</td>-->
+
+<!--  </tr>-->
+<!--  <tr>-->
+<!--    <td>Weekly</td>-->
+<!--    <td>100</td>-->
+<!--  </tr>-->
+<!--   <tr>-->
+<!--    <td>Yesterday</td>-->
+<!--    <td>100</td>-->
+<!--  </tr>-->
+<!--   <tr>-->
+<!--    <td>Today</td>-->
+<!--    <td>100</td>-->
+<!--  </tr>-->
+  
+<!--</table>-->
+
+
+ <h6 class="mt-3 mb-0"><span class="text-primary">Total:</span> 200</h6>
+
+         </div>
+         </div>
+         </div>
+         </div>
+      </div>
+
+      <div class="col-lg-8">
+    <div class="card mb-4 p-3">
+       
+                    <h5 class="card-title">Today Ticket</h5>
+
+                  <div class="row align-items-center">
+                    <div class="col-lg-6 pl-0">
+                      <h2 class="mb-0 text-primary">157</h2>
+                      <p class="t-t5 mb-4">Total Tickets</p>
+                      <ul class="m-0 p-0">
+                        <li class="d-flex mb-2">
+                          <div class="me-3">
+                            <span class="badge bg-label-primary"><i class="bx bx-home-circle"></i></span>
+                          </div>
+                          <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
+                            <div>
+                              <p class="t-t6 tx-14 mb-0">New Tickets</p>
+                              <small class="text-primary">142</small>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="d-flex mb-2">
+                          <div class="me-3">
+                              <span class="badge rounded bg-label-success"><i class="bx bx-home-circle"></i></span>
+                          </div>
+                          <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
+                            <div>
+                              <p class="mb-0 tx-14 t-t6">Open Tickets</p>
+                              <small class="text-primary">12</small>
+                            </div>
+                          
+                          </div>
+                        </li>
+                        <li class="d-flex mb-0">
+                            <div class="me-3">
+                                  <span class="badge rounded bg-label-info"><i class="bx bx-home-circle"></i></span>
+                              </div>
+                          <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
+                            <div class="me-2">
+                              <p class="mb-0 tx-14 t-t6">Closed Ticket</p>
+                              <small class="text-primary">3</small>
+                            </div>
+                            
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="col-lg-6">
+                 <div id="growthChart"></div>
+                </div>
+              </div>
+            </div>
+        </div>
+        
+        <div class="col-lg-4">
+         
+         
+                   <div class="card p-3 mb-3">
+
+         <div class="col-12">  
+         <div class="row">  
+            <h5 class="mb-4">Today Calls</h5>
+           
+         <div class="col-6 text-center"> 
+        <span class="badge rounded bg-label-info"><i class="bx bx-phone"></i></span>
+            
+            <h6 class="my-4">Total Calls</h6>
+
+
+         <h5>140</h5>
+         
+         
+         <span class="badge bg-label-success mb-2">+90%</span>
+         </div>
+
+          <div class="col-6 text-center"> 
+      
+         <span class="badge rounded bg-label-primary"><i class="bx bx-phone-call"></i></span>
+            
+            <h6 class="my-4">Answer</h6>
+
+
+         <h5>140</h5>
+         
+         
+         <span class="badge bg-label-primary">+90%</span>
+         
+         </div>
+         
+         <div class="col-lg-12 mt-4"> 
+        <div class="progress w-100 me-2">
+             <div class="progress-bar" role="progressbar" style="width: 50%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">50%</div>
+             </div>
+       
+         </div>
+         </div>
+         </div>
+         </div>
+            
+            
+        </div>
+        
+     
+    <div class="col-12">
+     <div class="card">
+      <div class="row row-bordered g-0">
+        <div class="col-md-12">
+          <h5 class="card-header m-0 me-2 pb-3">Fintech Services</h5>
+          <div class="row my-2 px-3">
+
+
+<div class="col">
+        <div class="card align-items-center text-center border-dash py-3">
+          <span class="badge rounded bg-label-sec mb-2">
+              <i class="bx bx-dollar"></i></span>
+                <p class="mb-0 tx-11">FOREX</p>
+        </div>
+        </div>
+
+
+    <div class="col">
+        <div class="card align-items-center text-center border-dash py-3">
+          <span class="badge rounded bg-label-sec mb-2">
+              <i class="bx bx-bar-chart-alt-2"></i></span>
+                <p class="mb-0 tx-11">GIC</p>
+        </div>
+        </div>
+
+    <div class="col">
+        <div class="card align-items-center text-center border-dash py-3">
+          <span class="badge rounded bg-label-sec mb-2">
+              <i class="bx bx-card"></i></span>
+                <p class="mb-0 tx-11">CREDIT CARD</p>
+        </div>
+        </div>
+
+<div class="col">
+        <div class="card align-items-center text-center border-dash py-3">
+          <span class="badge rounded bg-label-sec mb-2">
+              <i class="bx bx-memory-card"></i></span>
+                <p class="mb-0 tx-11">SIM CARD </p>
+        </div>
+        </div>
+
+        <div class="col">
+        <div class="card align-items-center text-center border-dash py-3">
+          <span class="badge rounded bg-label-sec mb-2">
+              <i class="bx bx-rupee"></i></span>
+                <p class="mb-0 tx-11">LOAN</p>
+        </div>
+        </div>
+
+
+</div>
+          <div id="totalRevenueChart" class="px-2"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+  
+  
+      
+ </div>
+ </div>
+ 
+ <div class="col-lg-4">
+      <div class="card mb-4">
+            <div class="card-title d-flex mb-0 align-items-start justify-content-between">
+              <div class="flex-shrink-0">
+              <h5 class="card-header m-0 me-2 ps-3 pb-3">Today Training</h5>
+              </div>
+              <div class="card-header m-0 me-2 pe-3 pb-3" >
+                Total 
+               <h5 class="mb-0 text-primary" id="today_trainings">
+               
+               </h5>
+              </div>
+            </div>
+
+          <div class="card-body pt-0">
+            <div class="row gx-3 item-align-center">  
+            
+
+             <div class="col-6">
+                  <p class="text-primary  mb-1">Sahil   :    0 </p>
+                  <p class="text-primary  mb-1">Aarti   :    0 </p>
+                  <p class="text-primary  mb-1">Sunil   :    0 </p>
+                 
+                </div>
+                  <div class="col-6">
+               <div id="expensesOfWeek"></div>
+            </div>
+   
+              
+                <div class="col-4 mt-2">
+                <div class="border rounded bg-light text-center">
+                  <img src="assets/img/dashboard/re-icon.png" class="img-fluid mt-2">  
+                 <p class="mt-2">Rescheduled</p>
+                 <p class="text-primary fs-4">76 </p>
+                 <p class="text-primary">+2.6%</p>
+                </div>
+                </div>
+                
+                <div class="col-4 mt-2">
+            <div class="border rounded bg-light text-center">
+                  <img src="assets/img/dashboard/iop.png" class="img-fluid mt-2">  
+                 <p class="mt-2">Done </p>
+                 <p class="text-success fs-4">76 </p>
+                 <p class="text-success">+2.6%</p>
+                </div>
+                </div>
+                 <div class="col-4 mt-2">
+                 <div class="border rounded bg-light text-center">
+                  <img src="assets/img/dashboard/iop2.png" class="img-fluid mt-2">  
+                 <p class="mt-2">Pending</p>
+                 <p class="text-danger fs-4"> 16 </p>
+                 <p class="text-danger">+2.6%</p>
+                </div>
+                </div>
+            
+            </div>
+           </div>
+         </div>
+
+      
+         
+         
+         
+         <!--<div class="card border-0 shadow p-3 mb-4">-->
+
+	   <!--<h5 class="mb-2">Chat</h5>-->
+		  <!--   <div class="sidebar-body ps ps--active-y">-->
+
+      
+        <!--<ul class="list-unstyled chat-contact-list py-3" id="chat-list">-->
+         
+        <!--  <li class="chat-contact-list-item mb-3">-->
+        <!--    <a class="d-flex align-items-center">-->
+        <!--        <span class="text-success me-3"><i class="bx bx-check-circle"></i></span>-->
+        <!--      <div class="flex-shrink-0 avatar avatar-busy mb-1">-->
+        <!--        <span class="avatar-initial rounded-circle bg-label-success">CM</span>-->
+        <!--      </div>-->
+        <!--      <div class="chat-contact-info flex-grow-1 ms-1">-->
+        <!--        <h6 class="chat-contact-name text-truncate fw-normal fs-6 mb-0">Waldemar Mannering</h6>-->
+        <!--        <p class="chat-contact-status text-truncate mb-0 text-muted">Refer friends. Get rewards.</p>-->
+        <!--      </div>-->
+        <!--      <small class="text-muted mb-3">5 Minutes</small>-->
+        <!--    </a>-->
+        <!--  </li>-->
+        <!--  <li class="chat-contact-list-item mb-3">-->
+        <!--    <a class="d-flex align-items-center">-->
+        <!--        <span class="text-success me-3"><i class="bx bx-check-circle"></i></span>-->
+        <!--      <div class="flex-shrink-0 avatar avatar-busy mb-1">-->
+        <!--        <span class="avatar-initial rounded-circle bg-label-success">CM</span>-->
+        <!--      </div>-->
+        <!--      <div class="chat-contact-info flex-grow-1 ms-1">-->
+        <!--        <h6 class="chat-contact-name text-truncate fw-normal fs-6 mb-0">Felecia Rower</h6>-->
+        <!--        <p class="chat-contact-status text-truncate mb-0 text-muted">I will purchase it for sure. </p>-->
+        <!--      </div>-->
+        <!--      <small class="text-muted mb-3">30 Minutes</small>-->
+        <!--    </a>-->
+        <!--  </li>-->
+        <!--  <li class="chat-contact-list-item">-->
+        <!--    <a class="d-flex align-items-center">-->
+        <!--        <span class="text-danger me-3"><i class="bx bx-x-circle"></i></span>-->
+        <!--      <div class="flex-shrink-0 avatar avatar-busy mb-1">-->
+        <!--        <span class="avatar-initial rounded-circle bg-label-success">CM</span>-->
+        <!--      </div>-->
+        <!--      <div class="chat-contact-info flex-grow-1 ms-1">-->
+        <!--        <h6 class="chat-contact-name text-truncate fw-normal fs-6 mb-0">Calvin Moore</h6>-->
+        <!--        <p class="chat-contact-status text-truncate mb-0 text-muted">I will purchase it for sure.</p>-->
+        <!--      </div>-->
+        <!--      <small class="text-muted mb-3">1 Day</small>-->
+        <!--    </a>-->
+        <!--  </li>-->
+        <!--</ul>-->
+        
+        
+        
+        
+        
+      <!--</div>-->
+		        
+		      	
+		      	 <!--</div>-->
+		      	 	
+		<div class="card p-3 mt-4">
+		  <h5>Activity Timeline</h5>	     
+			<div class="row mt-2">
+		   <div class="col-md-12">
+		
+			<ul class="timeline">
+				<li>
+					<span class="mb-1 text-5d fs-6">Client Meeting</span>
+					<a href="#" class="float-end">21 March, 2014</a>
+					<p class="text-5d">Project meeting with John @10:50am</p>
+					<div class="d-flex ml-5 mb-3">
+    
+        <img class="img-fluid img-1 rounded-circle me-2" src="../assets/img/avatars/1.png" width="40px" alt="User">
+        
+      <div class="ml-2 mt-1">
+        <p class="mb-0 p-demo3 tx-11">Lester McCarthy (Client)</p>
+        <small class="p-demo3 tx-11">CEO of Infibeam</small>
+      </div>
+  
+    </div>
+				</li>
+				<li>
+					<span href="#" class="mb-1 fs-6">21 000 Job Seekers</span>
+					<a href="#" class="float-end">4 March, 2014</a>
+					<p class="text-5d">Curabitur purus sem, malesuada eu luctus eget, suscipit sed turpis. Nam pellentesque felis vitae justo accumsan, sed semper nisi sollicitudin...</p>
+				</li>
+				
+			</ul>
+			
+		</div>
+	</div>
+     </div>
+			    
+
+
+         </div>
+         
+         
+         
+         
+ 
+ 
+  </div>
+  </div>    
+    </div>     
+    
+ 
+
+
+
+      

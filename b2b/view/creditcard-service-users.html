@@ -1,0 +1,89 @@
+<!-- Content wrapper -->
+<div class="content-wrapper">
+  <!-- Content -->
+
+  <div class="container-xxl flex-grow-1 container-p-y">
+    <div class="row">
+      <h4 class="p-3">Credit Card Requests</h4>
+      <div class="col-lg-12 mb-4">
+        <div class="card bg-light">
+          <div class="table-responsive  text-nowrap">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>Action</th>
+                  <th>Sr No.</th>
+                  <th>Company Name</th>
+                  <th>First Name</th>
+                  <th>Last Name</th>
+                  <th>Date Of Birth</th>
+                  <th>Email</th>
+                  <th>Passport</th>
+                  <th>College</th>
+                  <th>City</th>
+                  <th>Country</th>
+                  <th>Offer Letter</th>
+                  <th>Passport File</th>
+                  <th>Visa File</th>
+                  <th>Remarks</th>
+                  <th>Created At</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td colspan="11">Loading...</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+<div class="modal" id="myModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="modal-title">Add Remarks</h4>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body">
+        <input type="hidden" id="requestId" name="requestId"/>
+        <input type="hidden" id="requestService" name="service"/>
+        <input type="hidden" id="requestSubdomain" name="request_subdomain"/>
+        <div class="col-md-12">
+          <label for="sta_tus" class="form-label">Status</label>
+          <select class="form-select" id="requestStatus" name="status">
+            <option value="UNDER REVIEW">Waiting</option>
+            <option value="APPROVED">Approved</option>
+            <option value="REJECTED">Rejected</option>
+          </select>
+        </div>
+
+        <div class="col-md-12">
+          <div class="mb-3 mt-3">
+            <label for="remarks">Remarks</label>
+            <textarea class="form-control" rows="2" id="requestRemarks" name="remarks"></textarea>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal footer -->
+      <div class="modal-footer">
+        <button type="button" id="saveRemarks" class="btn  btn-primary" data-bs-dismiss="modal">Save</button>
+      </div>
+    </div>
+  </div>
+</div>

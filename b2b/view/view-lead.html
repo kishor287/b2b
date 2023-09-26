@@ -1,0 +1,1182 @@
+<div class="content-wrapper">
+   <!-- Content -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js"></script>
+   <style>
+      /* .viewLeadDateInputs::-webkit-calendar-picker-indicator {
+    background: transparent;
+    bottom: 0;
+    color: transparent;
+    cursor: pointer;
+    height: auto;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: auto;
+} */
+      input[type="number"] {
+         /* Hide the default number arrows */
+         -moz-appearance: textfield;
+         -webkit-appearance: textfield;
+         appearance: textfield;
+      }
+   </style>
+   <div class="container-xxl flex-grow-1 container-p-y">
+      <div class="row">
+         <div class="col-md-12  select-c my-3">
+            <div class="nav-align-top mb-4">
+               <ul class="nav nav-tabs nav-fill" role="tablist">
+                  <li class="nav-item">
+                     <button type="button" class="nav-link active" role="tab" data-bs-toggle="tab"
+                        data-bs-target="#navs-justified-profile" aria-controls="navs-justified-home"
+                        aria-selected="true"><i class="tf-icons bx bx-user"></i> Profile </button>
+                  </li>
+                  
+                  <li class="nav-item" id="checkListTab">
+                     <button type="button" class="nav-link " role="tab" data-bs-toggle="tab"
+                        data-bs-target="#navs-justified-checklist" aria-controls="navs-justified-home"
+                        aria-selected="true"><i class="tf-icons bx bx-list-ul"></i> Check List</button>
+                  </li>
+
+                  <li class="nav-item">
+                     <button type="button" class="nav-link" role="tab" data-bs-toggle="tab"
+                        data-bs-target="#navs-justified-followups" aria-controls="navs-justified-profile"
+                        aria-selected="false"><i class="tf-icons bx bx-calendar"></i> Followups </button>
+                  </li>
+
+
+                  <li class="nav-item">
+                     <button type="button" class="nav-link" role="tab" data-bs-toggle="tab"
+                        data-bs-target="#navs-justified-plans" aria-controls="navs-justified-plans"
+                        aria-selected="false"><i class="tf-icons bx bx-money"></i> Plans </button>
+                  </li>
+                  <li class="nav-item">
+                     <button type="button" class="nav-link" role="tab" data-bs-toggle="tab"
+                        data-bs-target="#navs-justified-schedule" aria-controls="navs-justified-messages"
+                        aria-selected="false"><i class="tf-icons bx bxs-group"></i> Schedule Meeting</button>
+                  </li>
+
+                  <li class="nav-item" id="leadActivityTab">
+                     <button type="button" class="nav-link" role="tab" data-bs-toggle="tab"
+                        data-bs-target="#navs-justified-timeline" aria-controls="navs-justified-messages"
+                        aria-selected="false"><i class="tf-icons bx bx-list-ol"></i> Activity Timeline</button>
+                  </li>
+               </ul>
+               <div class="tab-content">
+                  <div class="tab-pane fade active show" id="navs-justified-profile" role="tabpanel">
+                     <form id="view-lead-edit">
+                        <div class="row">
+                           <input type="hidden" name="id" id="_id" value="">
+                           <p class="text-primary mb-0">Business Owner Details:</p>
+                           <div class="col-md-4 mb-0">
+                              <label for="emailBasic" class="form-label">
+                                 Name
+                              </label>
+                              <input type="text" id="" required class="form-control" placeholder=" " name="companyowner"
+                                 disabled />
+                           </div>
+                           <div class="col-md-4 mb-0">
+                              <label for="emailBasic" class="form-label">
+                                 Phone
+                              </label>
+                              <input type="text" id="" required class="form-control" placeholder="" name="companyphone"
+                                 disabled />
+                           </div>
+
+                           <div class="col-md-4 mb-0">
+                              <label for="nameBasic" class="form-label">Email</label>
+                              <input type="text" id="nameBasic" name="companyemail" class="form-control" required
+                                 placeholder="" disabled />
+                           </div>
+
+
+                           <p class="text-primary mt-3 mb-0">Contact Person/Project Manager Details:</p>
+
+                           <div class="col-md-4 mb-0">
+                              <label for="emailBasic" class="form-label">
+                                 Name
+                              </label>
+                              
+                              <input type="text" id="c_name" class="form-control" placeholder=" " name="c_name"
+                                 disabled />
+                           </div>
+
+
+                           <div class="col-md-4 mb-0">
+                              <label for="emailBasic" class="form-label">
+                                 Phone
+                              </label>
+                              <input type="text" id="c_phone" class="form-control" placeholder="" name="c_phone"
+                                 disabled />
+                           </div>
+
+                           <div class="col-md-4 mb-0">
+                              <label class="form-label">Email</label>
+                              <input type="text" name="c_email" class="form-control" id="c_email" disabled />
+                           </div>
+
+
+                           <p class="text-primary mb-0 mt-3">Fintech Details:</p>
+
+                           <div class="col-md-6 mb-0">
+                              <label for="emailBasic" class="form-label">Number of GIC(s) (yearly)</label>
+                              <input type="text" id="" required class="form-control" placeholder=" " name="committed"
+                                 disabled />
+                           </div>
+
+
+                           <div class="col-md-6 mb-0">
+                              <label for="emailBasic" class="form-label">GIC Reward (CAD)</label>
+                              <input type="text" id="" required class="form-control" placeholder=" " name="reward"
+                                 disabled />
+                           </div>
+
+
+
+                           <div>
+                              <label for="dobBasic" class="form-label">Credit Card with a limit of CAD</label>
+                              <div class="d-flex mb-0">
+                                 <input type="text" required name="credit_card" class="form-control" placeholder=""
+                                    disabled />
+                                 <input type="text" name="credit_card2" class="form-control d-none" placeholder=""
+                                    name="address" />
+                              </div>
+                           </div>
+
+                           <div class="col mb-0">
+                              <label for="dobBasic" class="form-label">Loan Benefit for Partner</label>
+                              <input type="text" required name="benefits" class="form-control" placeholder=""
+                                 disabled />
+                           </div>
+
+                           <div class="col mb-0">
+                              <label for="dobBasic" class="form-label">Forex (paisa)</label>
+                              <input type="text" required name="forex" class="form-control" placeholder="" disabled />
+                           </div>
+
+
+                           <div class=" mb-0">
+                              <label for="dobBasic" class="form-label"> Other Services</label>
+                              <input type="text" required name="fintech_otherservice" class="form-control"
+                                 placeholder="" disabled />
+                           </div>
+
+
+
+                           <p class=" text-primary mb-0 mt-3">Organization Details :</p>
+                           <div class="mb-2 col-md-4">
+
+                              <label for="nameBasic" class="form-label"> Name</label>
+                              <input type="text" id="nameBasic" name="organization" class="form-control" required
+                                 placeholder="" />
+
+                           </div>
+                           <div class="mb-2 col-md-4">
+                              <label class="form-label mb-0">Phone <span class="text-danger">*</span></label>
+                              <input type="phone" name="organization_phone" minlength="10" maxlength="10"
+                                 placeholder="Enter Phone" class="form-control" required="">
+                           </div>
+                           <div class="mb-2 col-md-4">
+                              <label class="form-label mb-0">Website</label>
+                              <input type="text" name="website" placeholder="URL" class="form-control">
+                           </div>
+                           <div class="mb-2 col-md-4">
+                              <label class="form-label mb-0">Email</label>
+                              <input type="text" name="organization_email" class="form-control"
+                                 placeholder="Enter Email">
+                           </div>
+                           <div class="mb-2 col-md-4">
+                              <label class="form-label mb-0">State</label>
+                              <input type="text" name="state" class="form-control" placeholder="Enter State">
+                           </div>
+                           <div class="mb-2 col-md-4">
+                              <label class="form-label mb-0">City</label>
+                              <input type="text" name="city" class="form-control" placeholder="Enter State">
+                           </div>
+                           <div class="mb-2 col-md-6">
+
+                              <label for="exampleFormControlTextarea1" class="form-label mb-">Address</label>
+                              <textarea class="form-control" id="exampleFormControlTextarea1" name="address"></textarea>
+
+
+                           </div>
+                           
+                           <div class="mb-2 col-md-4">
+                              <label class="form-label mb-0">Source</label>
+                              <select name="source" class="form-select">
+                                 <option value="">Select Source</option>
+                                 <option value="Website">Website</option>
+                                 <option value="Socialmedia">Socialmedia</option>
+                                 <option value="Sales Team">Sales Team</option>
+                              </select>
+                           </div>
+
+                           <div class="col-md-6 mb-0">
+                              <label for="emailBasic" class="form-label">
+                                 Nature of Business
+                              </label>
+                              <textarea type="text" id="nature" required="" class="form-control" placeholder=" "
+                                 name="companytype"></textarea>
+                           </div>
+
+                           <div class="mb-0 col-md-9">
+                              <label class="form-label mb-0 w-100"> More than one location</label>
+                              <div class="form-check form-check-inline">
+                                 <input class="form-check-input" type="radio" name="location_radio" id="inlineRadio1"
+                                    value="yes">
+                                 <label class="form-check-label" for="inlineRadio1">Yes</label>
+                              </div>
+                              <div class="form-check form-check-inline">
+                                 <input class="form-check-input" type="radio" name="location_radio" id="inlineRadio2"
+                                    value="no">
+                                 <label class="form-check-label" for="inlineRadio2">No</label>
+                              </div>
+                           </div>
+                           <div class="mb-2 col-md-11 d-none" id="_more_locations">
+                              <div class="input-group">
+                                 <input type="text" aria-label="city" placeholder="City" name="location_city[]"
+                                    class="form-control">
+                                 <input type="text" aria-label="state" placeholder="State" name="location_state[]"
+                                    class="form-control">
+                                 <span id="_add_location" class="cursor-pointer input-group-text"><i
+                                       class=" bx bx-plus"></i> </span>
+                              </div>
+                           </div>
+                           <div id="newinput"></div>
+                           <div class="mb-1 col-md-7">
+                              <label class="form-label mb-0 w-100">Services </label>
+                              <div class="form-check form-check-inline">
+                                 <input class="form-check-input" type="checkbox" name="visa" value="visa"
+                                    id="defaultCheck1">
+                                 <label class="form-check-label" for="defaultCheck1">
+                                    Visa
+                                 </label>
+                              </div>
+                              <div class="form-check form-check-inline">
+                                 <input class="form-check-input" type="checkbox" name="ielts" value="ielts"
+                                    id="defaultCheck2">
+                                 <label class="form-check-label" for="defaultCheck2">
+                                    IELTS
+                                 </label>
+                              </div>
+                              <div class="form-check form-check-inline">
+                                 <input class="form-check-input" type="checkbox" name="vistor_visa" value="vistor_visa"
+                                    id="defaultCheck3">
+                                 <label class="form-check-label" for="defaultCheck3">
+                                    Vistor Visa
+                                 </label>
+                              </div>
+                              <div class="form-check form-check-inline">
+                                 <input class="form-check-input" type="checkbox" name="work_visa" value="work_visa"
+                                    id="defaultCheck4">
+                                 <label class="form-check-label" for="defaultCheck4">
+                                    Work Visa
+                                 </label>
+                              </div>
+                              <div class="form-check form-check-inline">
+                                 <input class="form-check-input" type="checkbox" name="pr" value="pr"
+                                    id="defaultCheck5">
+                                 <label class="form-check-label" for="defaultCheck5">
+                                    PR
+                                 </label>
+                              </div>
+                           </div>
+                           <div class="mb-2 col-md-4">
+                              <label class="form-label mb-0">Other Services </label>
+                              <input type="text" name="other_services" class="form-control" placeholder="Enter Here">
+                           </div>
+                           <p class="text-primary mb-0 mt-3">Software Usage:</p>
+                           <div class="mb-2 col-md-4">
+                              <label class="form-label mb-0 w-100"> Are they using any other CRM software?</label>
+                              <div class="form-check form-check-inline">
+                                 <input class="form-check-input rad" type="radio" name="crm_soft" id="inlineRadio11"
+                                    value="yes">
+                                 <label class="form-check-label" for="inlineRadio11">Yes</label>
+                              </div>
+                              <div class="form-check form-check-inline">
+                                 <input class="form-check-input" type="radio" name="crm_soft" id="inlineRadio22"
+                                    value="no">
+                                 <label class="form-check-label" for="inlineRadio22">No</label>
+                              </div>
+                              <textarea class="form-control d-none" id="exampleFormControlTextarea1" rows="2"
+                                 name="crm_soft_text"></textarea>
+                           </div>
+                           <div class="mb-2 col-md-4">
+                              <label class="form-label mb-0 w-100"> Are they using any Calling software?</label>
+                              <div class="form-check form-check-inline">
+                                 <input class="form-check-input" type="radio" name="calling_soft" id="inlineRadio13"
+                                    value="yes">
+                                 <label class="form-check-label" for="inlineRadio13">Yes</label>
+                              </div>
+                              <div class="form-check form-check-inline">
+                                 <input class="form-check-input" type="radio" name="calling_soft" id="inlineRadio14"
+                                    value="no">
+                                 <label class="form-check-label" for="inlineRadio14">No</label>
+                              </div>
+                              <textarea class="form-control d-none" id="exampleFormControlTextarea1" rows="2"
+                                 name="calling_soft_text"></textarea>
+                           </div>
+                           <div class="mb-2 col-md-4">
+                              <label class="form-label mb-0 w-100"> Are they using any SMS software?</label>
+                              <div class="form-check form-check-inline">
+                                 <input class="form-check-input" type="radio" name="sms_soft" id="inlineRadio15"
+                                    value="yes">
+                                 <label class="form-check-label" for="inlineRadio15">Yes</label>
+                              </div>
+                              <div class="form-check form-check-inline">
+                                 <input class="form-check-input" type="radio" name="sms_soft" id="inlineRadio16"
+                                    value="no">
+                                 <label class="form-check-label" for="inlineRadio16">No</label>
+                              </div>
+                              <textarea class="form-control d-none" id="exampleFormControlTextarea1" rows="2"
+                                 name="sms_soft_text"></textarea>
+                           </div>
+                           <div class="mb-2 col-md-4">
+                              <label class="form-label mb-0 w-100"> Are they using any WhatsApp software?</label>
+                              <div class="form-check form-check-inline">
+                                 <input class="form-check-input" type="radio" name="whatsapp_soft" id="inlineRadio17"
+                                    value="yes">
+                                 <label class="form-check-label" for="inlineRadio17">Yes</label>
+                              </div>
+                              <div class="form-check form-check-inline">
+                                 <input class="form-check-input" type="radio" name="whatsapp_soft" id="inlineRadio18"
+                                    value="no">
+                                 <label class="form-check-label" for="inlineRadio18">No</label>
+                              </div>
+                              <textarea class="form-control d-none" id="exampleFormControlTextarea1" rows="2"
+                                 name="whatsapp_soft_text"></textarea>
+                           </div>
+                           <div class="mb-2 col-md-4">
+                              <label class="form-label mb-0 w-100"> Are they using any Email software?</label>
+                              <div class="form-check form-check-inline">
+                                 <input class="form-check-input" type="radio" name="email_soft" id="inlineRadio19"
+                                    value="yes">
+                                 <label class="form-check-label" for="inlineRadio19">Yes</label>
+                              </div>
+                              <div class="form-check form-check-inline">
+                                 <input class="form-check-input" type="radio" name="email_soft" id="inlineRadio20"
+                                    value="no">
+                                 <label class="form-check-label" for="inlineRadio20">No</label>
+                              </div>
+                              <textarea class="form-control d-none" id="exampleFormControlTextarea1" rows="2"
+                                 name="email_soft_text"></textarea>
+                           </div>
+
+                           <div class="mb-2 col-md-4">
+                              <label class="form-label mb-0">Users they are expecting to use CRM</label>
+                              <select class="form-select" name="crm_users" aria-label="Years of experience">
+                                 <option value="1 - 15 employees">1 - 15 employees</option>
+                                 <option value="16 - 100 employees">16 - 100 employees</option>
+                                 <option value="101 - 500 employees">101 - 500 employees</option>
+                                 <option value="501 - 1500 employees">501 - 1500 employees</option>
+                                 <option value="1501+ employees">1501+ employees</option>
+                              </select>
+                           </div>
+                           <div id="_view_upload_contract">
+                              <p class="text-primary mb-0 mt-3">Contract:</p>
+                              <div class="col-md-6 mb-3">
+                                 <label for="formFile" class="form-label">
+                                    Upload Contract
+                                 </label>
+                                 <input class="form-control" type="file" id="formFile" name="contract" accept=".pdf">
+                              </div>
+                           </div>
+
+                           <div class="mb-3  mt-3 col-md-12">
+                              <!--<a href="/" class="btn  btn-primary  px-5">-->
+                              <!--Save Details-->
+                              <!--</a>-->
+                              <button type="submit" class="btn btn-primary">Update Lead</button>
+                           </div>
+                        </div>
+
+                     </form>
+
+
+
+                  </div>
+
+
+                  <div class="tab-pane fade" id="navs-justified-checklist" role="tabpanel">
+                     <form id="checklistForm">
+                        <input type="hidden" name="payload" value="view-lead"/>
+                        <input type="hidden" name="_action" value="saveChecklist"/>
+                        <table class="table">
+                           <thead>
+                              <tr>
+                                 <th scope="col">Services</th>
+                                 <th scope="col">Selection</th>
+                              </tr>
+                           </thead>
+                           <tbody>
+                              <tr>
+                                 <td>Create Sub Domain</td>
+                                 <td>
+                                    <input name="services[domain][accepted]" class="form-check-input yesToService"
+                                       type="radio" value="yes" id="domain-yes">
+                                    <label class="form-check-label yesToService" for="domain-yes">
+                                       Yes
+                                    </label>
+                                    <input name="services[domain][accepted]"
+                                       class="form-check-input ms-2 noToService" checked type="radio" value="no" id="domain-no">
+                                    <label class="form-check-label noToService" for="domain-no">
+                                       No
+                                    </label>
+                                 </td>
+                                 <td class="d-none">
+                                    <input type="text" class="form-control" placeholder="URL "
+                                       name="services[domain][url]">
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td>Database</td>
+                                 <td>
+                                    <input name="services[database][accepted]" class="form-check-input yesToService"
+                                       type="radio"  value="yes" id="database-yes">
+                                    <label class="form-check-label yesToService" for="database-yes">
+                                       Yes
+                                    </label>
+
+                                    <input name="services[database][accepted]"
+                                       class="form-check-input ms-2 noToService" checked type="radio" value="no" id="database-no">
+                                    <label class="form-check-label noToService" for="database-no">
+                                       No
+                                    </label>
+                                 </td>
+                                 <td class="d-none">
+                                    <input type="text" class="form-control" placeholder="Mysql, Excel"
+                                       name="services[database][name]">
+                                 </td>
+                              </tr>
+
+                              <tr>
+                                 <td>Services</td>
+                                 <td>
+                                    <input name="services[multiservices][accepted]"
+                                       class="form-check-input yesToService" type="radio" value="yes" id="services-yes">
+                                    <label class="form-check-label yesToService" for="services-yes">
+                                       Yes
+                                    </label>
+
+                                    <input name="services[multiservices][accepted]"
+                                       class="form-check-input ms-2 noToService" checked type="radio" value="no"
+                                       id="services-no">
+                                    <label class="form-check-label noToService" for="services-no">
+                                       No
+                                    </label>
+                                 </td>
+                                 <td class="d-none">
+                                    <div class="form-check form-check-inline">
+                                       <input class="form-check-input" type="checkbox"
+                                          name="services[multiservices][visa]" value="visa" id="visaService">
+                                       <label class="form-check-label" for="visaService">
+                                          Visa
+                                       </label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                       <input class="form-check-input" type="checkbox"
+                                          name="services[multiservices][ielts]" value="ielts" id="ieltsService">
+                                       <label class="form-check-label" for="ieltsService">
+                                          IELTS
+                                       </label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                       <input class="form-check-input" type="checkbox" name="services[multiservices][vistor_visa]"
+                                          value="vistor_visa" id="vistorVisaService">
+                                       <label class="form-check-label" for="vistorVisaService">
+                                          Vistor Visa
+                                       </label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                       <input class="form-check-input" type="checkbox" name="services[multiservices][work_visa]"
+                                          value="" id="workVisaService">
+                                       <label class="form-check-label" for="workVisaService">
+                                          Work Visa
+                                       </label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                       <input class="form-check-input" type="checkbox"
+                                          name="services[multiservices][pr]" value="pr" id="prService">
+                                       <label class="form-check-label" for="prService">
+                                          PR
+                                       </label>
+                                    </div>
+                  </div>
+                  </td>
+                  </tr>
+
+                  <tr>
+                     <td>Country</td>
+                     <td>
+                        <input name="services[country][accepted]" class="form-check-input yesToService" type="radio"
+                           value="yes" id="country-yes">
+                        <label class="form-check-label yesToService" for="country-yes">
+                           Yes
+                        </label>
+
+                        <input name="services[country][accepted]" class="form-check-input ms-2 noToService" checked
+                           type="radio" value="" id="Country-no">
+                        <label class="form-check-label noToService" for="defaultRadio">
+                           No
+                        </label>
+                     </td>
+                     <td class="d-none">
+                        <input type="text" class="form-control" placeholder="" name="services[country][name]">
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>Institute</td>
+                     <td>
+                        <input name="services[institute][accepted]" class="form-check-input yesToService" type="radio"
+                           value="yes" id="institute-yes">
+                        <label class="form-check-label yesToService" for="institute-yes">
+                           Yes
+                        </label>
+                        <input name="services[institute][accepted]" class="form-check-input ms-2 noToService" checked
+                           type="radio" value="No" id="institute-no">
+                        <label class="form-check-label noToService" for="defaultRadio">
+                           No
+                        </label>
+                     </td>
+                     <td class="d-none">
+                        <input type="text" class="form-control" placeholder="" name="services[institute][name]">
+                     </td>
+                  </tr>
+
+
+                  <tr>
+                     <td>Registered Plan</td>
+                     <td>
+                        <input name="services[plan][accepted]" class="form-check-input yesToService" type="radio"
+                           value="yes" id="plan-yes">
+                        <label class="form-check-label yesToService" for="plan-yes">
+                           Yes
+                        </label>
+                        <input name="services[plan][accepted]" class="form-check-input ms-2 noToService" checked type="radio"
+                           value="no" id="plan-no">
+                        <label class="form-check-label noToService" for="plan-no">
+                           No
+                        </label>
+                     </td>
+                     <td class="d-none">
+                        <input type="text" class="form-control" placeholder="" name="services[plan][name]">
+                     </td>
+                  </tr>
+
+                  <tr>
+                     <td>Expenses</td>
+                     <td>
+                        <input name="services[expenses][accepted]" class="form-check-input yesToService" type="radio"
+                           value="yes" id="expenses-yes">
+                        <label class="form-check-label yesToService" for="expenses-yes">
+                           Yes
+                        </label>
+                        <input name="services[expenses][accepted]" class="form-check-input ms-2 noToService" checked
+                           type="radio" value="no" id="expenses-no">
+                        <label class="form-check-label noToService" for="defaultRadio">
+                           No
+                        </label>
+                     </td>
+                     <td class="d-none">
+                        <input type="text" class="form-control" placeholder="" name="services[expenses][name]">
+                     </td>
+                  </tr>
+
+
+                  <td>Zapier</td>
+                  <td>
+                     <input name="services[zapier][accepted]" class="form-check-input yesToService" type="radio"
+                        value="yes" id="zapier-yes">
+                     <label class="form-check-label yesToService" for="zapier-yes">
+                        Yes
+                     </label>
+                     <input name="services[zapier][accepted]" class="form-check-input ms-2 noToService" checked type="radio"
+                        value="no" id="zapier-no">
+                     <label class="form-check-label noToService" for="defaultRadio">
+                        No
+                     </label>
+                  </td>
+                  <td class="d-none">
+                     <input type="text" class="form-control" placeholder="" name="services[zapier][name]">
+                  </td>
+                  </tr>
+
+                  <tr>
+                     <td>Users/Departments</td>
+                     <td>
+                        <input name="services[users][accepted]" class="form-check-input yesToService" type="radio"
+                           value="yes" id="users-yes">
+                        <label class="form-check-label yesToService" for="users-yes">
+                           Yes
+                        </label>
+                        <input name="services[users][accepted]" class="form-check-input ms-2 noToService" checked type="radio"
+                           value="no" id="users-no">
+                        <label class="form-check-label noToService" for="defaultRadio">
+                           No
+                        </label>
+                     </td>
+                     <td class="d-none">
+                        <input type="text" class="form-control" placeholder="" name="services[users][name]">
+                     </td>
+                  </tr>
+
+                  <tr>
+                     <td>Emails</td>
+                     <td>
+                        <input name="services[emails][accepted]" class="form-check-input yesToService" type="radio"
+                           value="yes" id="emails-yes">
+                        <label class="form-check-label yesToService" for="emails-yes">
+                           Yes
+                        </label>
+                        <input name="services[emails][accepted]" class="form-check-input ms-2 noToService" checked
+                           type="radio" value="no" id="emails-no">
+                        <label class="form-check-label noToService" for="defaultRadio">
+                           No
+                        </label>
+                     </td>
+                     <td class="d-none">
+                        <input type="text" class="form-control" placeholder="" name="services[emails][name]">
+                     </td>
+                  </tr>
+
+                  <tr>
+                     <td>Whats App</td>
+                     <td>
+                        <input name="services[whatsaap][accepted]" class="form-check-input yesToService" type="radio"
+                           value="yes" id="whatsapp-yes">
+                        <label class="form-check-label yesToService" for="whatsapp-yes">
+                           Yes
+                        </label>
+                        <input name="services[whatsaap][accepted]" class="form-check-input ms-2 noToService" checked
+                           type="radio" value="no" id="whatsapp-no">
+                        <label class="form-check-label noToService" for="defaultRadio">
+                           No
+                        </label>
+                     </td>
+                     <td class="d-none">
+                        <input type="text" class="form-control" placeholder="" name="services[whatsaap][name]">
+                     </td>
+                  </tr>
+
+                  <tr>
+                     <td>SMS</td>
+                     <td>
+                        <input name="services[sms][accepted]" class="form-check-input yesToService" type="radio"
+                           value="yes" id="sms-yes">
+                        <label class="form-check-label yesToService" for="sms-yes">
+                           Yes
+                        </label>
+                        <input name="services[sms][accepted]" class="form-check-input ms-2 noToService" checked type="radio"
+                           value="no" id="sms-no">
+                        <label class="form-check-label noToService" for="defaultRadio">
+                           No
+                        </label>
+                     </td>
+                     <td class="d-none">
+                        <input type="text" class="form-control" placeholder="" name="services[sms][name]">
+                     </td>
+                  </tr>
+
+                  <tr>
+                     <td>click2dial</td>
+                     <td>
+                        <input name="services[click2dial][accepted]" class="form-check-input yesToService"
+                           type="radio" value="yes" id="click2dial-yes">
+                        <label class="form-check-label yesToService" for="click2dial-yes">
+                           Yes
+                        </label>
+                        <input name="services[click2dial][accepted]" class="form-check-input ms-2 noToService" checked
+                           type="radio" value="no" id="click2dial-no">
+                        <label class="form-check-label noToService" for="defaultRadio">
+                           No
+                        </label>
+                     </td>
+                     <td class="d-none">
+                        <input type="text" class="form-control" placeholder="" name="services[click2dial][name]">
+                     </td>
+                  </tr>
+
+                  </tbody>
+                  </table>
+
+
+                  <button type="submit" name="submit" class="btn btn-primary">
+                     Submit
+                  </button>
+                  </form>
+               </div>
+               <div class="tab-pane mt-3 fade" id="navs-justified-followups" role="tabpanel">
+                  <div>
+                     <!-- Button trigger modal -->
+                     <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal"
+                        data-bs-target="#basicModal">
+                        + Add Followups
+                     </button>
+
+                     <div class="card mt-5">
+                        <div class="table-responsive text-nowrap">
+                           <table class="table">
+                              <thead></thead>
+                              <tbody id="followupTbody"></tbody>
+                           </table>
+                        </div>
+                        <div class="col px-3">
+                           <nav aria-label="Page navigation">
+                              <ul id="followUpsPagination" class="pagination my-2 pagination-3 pagination-sm"></ul>
+                           </nav>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="tab-pane fade" id="navs-justified-schedule" role="tabpanel">
+                  <div>
+                     <!-- Button trigger modal -->
+                     <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal"
+                        data-bs-target="#meetingModal">
+                        + Add Meeting
+                     </button>
+
+                     <div class="card mt-5">
+                        <div class="table-responsive text-nowrap">
+                           <table class="table">
+                              <thead></thead>
+                              <tbody></tbody>
+                           </table>
+
+                        </div>
+                        <div class="col px-3">
+                           <nav aria-label="Page navigation">
+                              <ul class="pagination my-3 pagination-sm"></ul>
+                           </nav>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="tab-pane fade" id="navs-justified-timeline" role="tabpanel">
+                  <div class="table-responsive text-nowrap">
+                     <table class="table ">
+                        <thead>
+                           <tr>
+                              <th>Created At</th>
+                              <th>Tag</th>
+                              <th>Remarks</th>
+                           </tr>
+                        </thead>
+                        <tbody id="leadActivityTbody"></tbody>
+                     </table>
+                  </div>
+               </div>
+               <div class="tab-pane fade" id="navs-justified-plans" role="tabpanel">
+                  <div class="table-responsive text-nowrap">
+                     <div id="pricingPlanTable" class="d-none">
+                        <button id="backFromUpgrade" class="btn btn-primary btn-sm d-none" > << Back</button>
+                        <table class="table">
+                           <thead>
+                              <tr>
+                                 <th>Plan Id</th>
+                                 <th>Registration Plan</th>
+                                 <th>Price</th>
+                                 <th>Max Discount</th>
+                                 <th>Description</th>
+                                 <th>Actions</th>
+                              </tr>
+   
+   
+                           </thead>
+                           <tbody id="pricingPlansBody">
+                              <tr>
+                                 <td colspan="6">Fetching...</td>
+                              </tr>
+                           </tbody>
+                        </table>
+                     </div>
+                  </div>
+                  <form action="" id="pay_form" method="GET" class="row d-none">
+                     <div class="row">
+                        <div class="col-lg-2">
+                           <button class="btn btn-sm px-2 py-0 btn-primary mb-2" type="button" id="pricingPlanBackBtn">
+                              << Back</button>
+                        </div>
+                     </div>
+                     <h4 id="planTitle" class="mt-3"></h4>
+                     <div class="col-md-4 mb-1">
+                        <label class="control-label" for="basicinput">Package Amount <i><span
+                                 style="color:red">(Including GST)</span></i></label>
+                        <input readonly="" class="form-control" type="text" id="planPrice" name="total" value="53100">
+                        <input hidden class="form-control" name="plan_id" id="planId">
+                        <input hidden class="form-control" id="discountAmount">
+                     </div>
+                     <div class="col-md-4 mb-2">
+                        <label class="control-label">Select Payment Type</label>
+                        <select name="type" class="form-select">
+                           <option value="quarterly"> Quarterly</option>
+                           <option value="annual"> Annual</option>
+                        </select>
+                     </div>
+                     <div class="col-md-4 mb-1">
+                        <label class="control-label">Discount</label>
+                        <input type="number" min="0" onkeydown="cannotTypeNumber(event)" class="form-control "
+                           placeholder="0" name="discount" id="pricingDiscount">
+                        <p id="discountErrorText" style="color: red;" class="d-none">Discount exceeds the maximum
+                           limit! Max Limit (<span id="errorMaxDiscount"></span>)</p>
+                     </div>
+
+                     <div class="col-md-4 mb-2">
+                        <label class="control-label">Amount Paid</label>
+                        <input type="number" name="paid" readonly class="form-control disabled" id="paid">
+                     </div>
+
+                     <div class="col-md-4 mb-2">
+                        <label class="control-label">Select Payment Mode</label>
+                        <select id="mode" name="mode" class="form-select">
+                           <option value="Cash">Cash</option>
+                           <option value="Credit Card">Credit Card</option>
+                           <option value="Bank Cheque">Bank Cheque</option>
+                           <option value="Electronic Tranfer/Online">Electronic Tranfer/Online</option>
+                        </select>
+                     </div>
+
+                     <div class="col-md-4 mb-2">
+                        <label class="control-label">Receipt Attached <span style="color:red"> *</span></label>
+                        <input required="" accept="image/*" class="form-control" type="file" name="image">
+                     </div>
+
+                     <div class="col-md-12 mb-2">
+                        <label class="control-label">Remarks</label>
+                        <textarea class="form-control" name="remarks" rows="3"></textarea><br>
+                     </div>
+
+                     <div class="col-md-12 mb-2">
+                        <button id="pay_submit" type="submit" name="visa-payment" class="btn btn-primary">Submit
+                           Details</button>
+                     </div>
+                  </form>
+                  <div class="table-responsive text-nowrap">
+                     <div class="row addPlanRow d-none">
+                        <div class="col-lg-12 d-flex justify-content-end">
+                           <button class="btn btn-primary btn-sm me-1 optionBtns" id="addMorePayments"> + Add Payment
+                           </button>
+                           <button class="btn btn-primary btn-sm optionBtns" id="upgradePlan"> + Upgrade Plan </button>
+                        </div>
+                     </div>
+                     <table class="table" id="registredPlanTable">
+                        <thead>
+                           <tr>
+                              <th>Sr No.</th>
+                              <th>Actions</th>
+                              <th>REGISTRATION PLAN</th>
+                              <th>Package Amount</th>
+                              <th>Discount</th>
+                              <th>Amount Paid</th>
+                              <th>Payment Type</th>
+                              <th>Start Date</th>
+                              <th>Renew Date</th>
+                              <th>Payment Mode</th>
+                              <th>Remarks</th>
+                              <!-- <th>Action</th> -->
+                           </tr>
+                        </thead>
+                        <tbody id="registredPlanTBody">
+                        </tbody>
+                     </table>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+</div>
+
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="basicModal" tabindex="-1" style="display: none;" aria-hidden="true">
+   <div class="modal-dialog" role="document">
+      <div class="modal-content">
+         <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel1">Add New Folowups</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+         </div>
+         <form id="followup_form">
+            <div class="modal-body">
+               <div class="row">
+                  <div class="mb-2 col-md-6">
+                     <label class="form-label mb-0">Status <span class="text-danger">*</span></label>
+                     <select class="form-select" name="followup_status" id="followup_status_selector" required="">
+                        <option value="">Select</option>
+                        <option value="BOOKED">Booked</option>
+                        <option value="INTERESTED">Interested</option>
+                        <option value="NOT INTERESTED">Not Interested</option>
+                        <option value="NOT SURE">Not Sure</option>
+                     </select>
+                  </div>
+                  <div class="mb-2 col-md-6">
+                     <label class="form-label mb-0">Sub Status <span class="text-danger">*</span></label>
+                     <select class="form-select" name="followup_substatus" required="">
+                        <option value="">Select</option>
+                        <option value="Interested">Interested</option>
+                        <option value="Call Back">Call Back</option>
+                        <option value="Line Busy">Line Busy</option>
+                        <option value="Ringing Not Responding">Ringing Not Responding</option>
+                        <option value="Hangup">Hangup</option>
+                        <option value="Switched Off">Switched Off</option>
+                        <option value="Not Reachable">Not Reachable</option>
+                        <option value="Invalid No">Invalid No</option>
+                        <option value="Not Enquired">Not Enquired</option>
+                        <option value="No Out of Service">No Out of Service</option>
+                        <option value="Wrong No">Wrong No</option>
+                        <option value="Not Interested">Not Interested</option>
+                        <option value="Already Booked">Already Booked</option>
+                     </select>
+                  </div>
+                  <div class="mb-2 col-md-6" id="nextFollowUpDate">
+                     <label class="form-label mb-0">
+                        Date
+                        <span class="text-danger">*</span></label>
+                     <input type="date" name="next_followup_date" required placeholder="Enter Here "
+                        class="form-control viewLeadDateInputs">
+                  </div>
+                  <div class="mb-2 col-md-6" id="nextFollowUpDate">
+                     <label class="form-label mb-0">
+                        Time
+                        <span class="text-danger">*</span></label>
+                     <input type="time" name="next_followup_time" required placeholder="Enter Here " id="time" class="form-control">
+                  </div>
+                  
+                  <script>
+                      function print() {
+  var [h, m] = document.getElementById('time').value.split(":");
+  console.log((h % 12 ? h % 12 : 12) + ":" + m, h >= 12 ? 'PM' : 'AM');
+}
+                  </script>
+
+                  <div class="mb-2 col-md-12">
+                     <label class="form-label mb-0">
+                        Remarks <span class="text-danger">*</span>
+                     </label>
+                     <textarea required class="form-control" id="exampleFormControlTextarea1" rows="2"
+                        name="remarks"></textarea>
+                  </div>
+
+
+               </div>
+            </div>
+            <div class="modal-footer">
+               <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Close</button>
+               <button type="submit" class="btn btn-primary">Add Followup</button>
+            </div>
+         </form>
+      </div>
+   </div>
+</div>
+<div class="modal fade" id="addPaymentModal" tabindex="-1" style="display: none;" aria-hidden="true">
+   <div class="modal-dialog" role="document">
+      <div class="modal-content">
+         <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel1">Add Payment</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+         </div>
+         <div class="modal-body">
+            <form action="" id="paymentFormInModal" method="GET" class="row">
+               <h4 id="planTitle" class="mt-3"></h4>
+               <div class="col-md-6 mb-1">
+                  <label class="control-label" for="basicinput">Package Amount <i><span style="color:red">(including
+                           GST)</span></i></label>
+                  <input readonly="" class="form-control" type="text" id="planPriceInModal" name="total" value="53100">
+                  <input hidden class="form-control" name="plan_id" id="planIdInModal">
+                  <input hidden class="form-control" id="discountAmountInModal">
+               </div>
+               <div class="col-md-6 mb-1">
+                  <label class="control-label">Discount</label>
+                  <input type="number" class="form-control " placeholder="0" readonly name="discount"
+                     id="pricingDiscountInModal">
+                  <!-- <p id="discountErrorText" style="color: red;" class="d-none">Discount exceeds the maximum
+                     limit! Max Limit (<span id="errorMaxDiscount"></span>)</p> -->
+               </div>
+
+               <div class="col-md-6 mb-2">
+                  <label class="control-label">Amount Paid <span style="color:red"> *</span></label>
+                  <input type="number" value="" required="" name="paid" class="form-control" readonly id="paidInModal">
+               </div>
+               <div class="col-md-6 mb-2">
+                  <label class="control-label">Select Payment Type</label>
+                  <select name="type" class="form-select">
+                     <option value="quarterly"> Quarterly</option>
+                     <option value="annual"> Annual</option>
+                  </select>
+               </div>
+
+               <div class="col-md-6 mb-2">
+                  <label class="control-label">Select Payment Mode</label>
+                  <select name="mode" class="form-select">
+                     <option value="Cash">Cash</option>
+                     <option value="Credit Card">Credit Card</option>
+                     <option value="Bank Cheque">Bank Cheque</option>
+                     <option value="Electronic Tranfer/Online">Electronic Tranfer/Online</option>
+                  </select>
+               </div>
+
+               <div class="col-md-6 mb-2">
+                  <label class="control-label">Receipt Attached <span style="color:red"> *</span></label>
+                  <input required="" class="form-control" type="file" name="image" accept="image/*">
+               </div>
+
+               <div class="col-md-12 mb-2">
+                  <label class="control-label">Remarks</label>
+                  <textarea class="form-control" name="remarks" rows="3"></textarea><br>
+               </div>
+
+               <div class="col-md-12 mb-2">
+                  <button id="pay_submit" type="submit" name="visa-payment" class="btn btn-primary">Submit
+                     Details</button>
+               </div>
+
+            </form>
+         </div>
+      </div>
+   </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="meetingModal" tabindex="-1" style="display: none;" aria-hidden="true">
+   <div class="modal-dialog" role="document">
+      <div class="modal-content">
+         <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel1">Add New Meetings</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+         </div>
+         <form id="meeting_form">
+            <div class="modal-body">
+               <div class="row">
+
+                  <p class="text-primary mb-1 mt-2">Select Procedure:</p>
+
+                  <div class="mb-2 col-md-6">
+                     <label class="form-label mb-0">Procedure <span class="text-danger">*</span></label>
+                     <select class="form-select" name="procedure" required>
+                        <option value="">Select one option</option>
+                        <option value="schedule-demo">Schedule Demo</option>
+                        <option value="training">Training </option>
+                        <option value="onboarding">Onboarding</option>
+                        <option value="practice">Practice</option>
+                        <option value="followup">Follow-Up </option>
+                        <option value="meeting">Meeting</option>
+                        <option value="re-schedule">Reschedule</option>
+
+                     </select>
+                  </div>
+
+                  <div class="mb-2 col-md-6">
+                     <label class="form-label mb-0">Date/Time <span class="text-danger">*</span></label>
+                     <input name="meeting_date" required class="form-control" type="datetime-local"
+                        id="html5-datetime-local-input">
+                  </div>
+
+
+                  <div class="mb-2 col-md-12">
+                     <label class="form-label mb-0">
+                        Remarks <span class="text-danger">*</span>
+                     </label>
+                     <textarea required class="form-control" id="exampleFormControlTextarea1" rows="2"
+                        name="remarks"></textarea>
+                  </div>
+
+                  <!--<div id="_view_upload_contract">-->
+                  <!-- <p class="text-primary mb-1 mt-4">Contract:</p>-->
+                  <!-- <div class="col-md-6 mb-3">-->
+                  <!--    <label for="formFile" class="form-label">-->
+                  <!--    Upload Contract-->
+                  <!--    </label>-->
+                  <!--    <input class="form-control" type="file" id="formFile" name="contract" accept=".pdf">-->
+                  <!-- </div>-->
+                  <!--</div>-->
+
+                  <!--<div id="_view_contract" >-->
+                  <!-- <p class="text-primary mb-1 mt-4">Contract:</p>-->
+                  <!-- <div class="col-md-6 mb-3">-->
+                  <!--    <a target="_blank" title="View Contract"  id="_contract" class="btn btn-primary shadow btn-xs sharp me-1"><i class="menu- bx bx-right-top-arrow-circle"></i><b>View</b></a>-->
+                  <!--    <a title="Remove Contract" href="" class="btn btn-danger shadow btn-xs sharp me-1"><i class="menu- bx bx-trash"></i><b>Remove</b></a>-->
+                  <!-- </div>-->
+                  <!--</div>     -->
+
+               </div>
+            </div>
+            <div class="modal-footer">
+               <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Close</button>
+               <button type="submit" class="btn btn-primary">Add Meeting</button>
+            </div>
+         </form>
+      </div>
+   </div>
+</div>
+<!-- Modal -->
+
+<!-- Modal  -->
+<div class="modal fade" id="meeting-detail" tabindex="-1" aria-hidden="true">
+   <div class="modal-dialog" role="document">
+      <div class="modal-content">
+         <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel1">Enter Meeting Details</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+         </div>
+         <form id="meeting_link_form">
+            <div class="modal-body">
+               <div class="row">
+                  <input type="hidden" name="id" id="_id" value="">
+                  <div class="col-md-12 mb-2">
+                     <label for="emailBasic" class="form-label">
+                        Email
+                        <small> (OPTIONAL)</small>
+                        <small> (support multiple emails)</small>
+                     </label>
+                     <input type="text" id="emails" class="form-control" placeholder="abc@xyz.com, xyz@company.com"
+                        name="emails">
+                  </div>
+
+                  <div class="col-md-12 mb-0">
+                     <label for="emailBasic" class="form-label">
+                        Link
+                     </label>
+                     <input type="text" id="meeting_link" required class="form-control" placeholder=" "
+                        name="meeting_link">
+                  </div>
+
+
+               </div>
+            </div>
+            <div class="modal-footer">
+               <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Close</button>
+               <button type="submit" class="btn btn-primary">Send</button>
+            </div>
+         </form>
+      </div>
+   </div>
+</div>
+
+
+
+<div class="modal fade" id="registredPlan" tabindex="-1" aria-hidden="true">
+   <div class="modal-dialog" role="document">
+      <div class="modal-content">
+         <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel1">Enter Meeting Details</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+         </div>
+         <form id="">
+            <div class="modal-body">
+
+
+
+
+
+            </div>
+            <div class="modal-footer">
+               <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Close</button>
+               <button type="submit" class="btn btn-primary">Send</button>
+            </div>
+         </form>
+      </div>
+   </div>
+</div>
